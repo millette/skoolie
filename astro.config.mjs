@@ -1,10 +1,10 @@
 // npm
 import { defineConfig, sharpImageService } from 'astro/config'
-import markdoc from '@astrojs/markdoc'
+// import markdoc from '@astrojs/markdoc'
 import tailwind from '@astrojs/tailwind'
 
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://bus.waglo.com',
   compressHTML: true,
   trailingSlash: 'always',
   experimental: {
@@ -14,7 +14,7 @@ export default defineConfig({
     service: sharpImageService(),
   },  
   integrations: [
-    markdoc(),
+    // markdoc(),
     tailwind(),
   ],
 })
