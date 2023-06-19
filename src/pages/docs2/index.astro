@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('docs')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+)
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>docs2</title>
+	</head>
+
+	<body>
+		<main class="container mx-auto p-4">
+			<ul>
+				<li><a class="link" href="/">Frontpage</a></li>
+			</ul>		
+			<section>
+				<ul>
+					{
+						posts.map((post) => (
+							<li>
+								<span>{post.data.pubDate}</span>{' '}
+								<a class="link" href={`/docs2/${post.slug}/`}>{post.data.title}</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>
