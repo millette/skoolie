@@ -19,6 +19,14 @@ switch (url) {
 	alternateUrl = "/"
 	break
 
+	case "/details/":
+	alternateUrl = "/en/details/"
+	break
+
+	case "/en/details/":
+	alternateUrl = "/details/"
+	break
+
 	default:
 		throw new Error(`Missing url translation for "${url}"`)
 }
