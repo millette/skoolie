@@ -2,6 +2,7 @@
 import { defineConfig, sharpImageService } from 'astro/config'
 // import markdoc from '@astrojs/markdoc'
 import tailwind from '@astrojs/tailwind'
+import sitemap from '@astrojs/sitemap'
 
 export default defineConfig({
   site: 'https://bus.waglo.com',
@@ -14,7 +15,7 @@ export default defineConfig({
     service: sharpImageService(),
   },  
   integrations: [
-    // markdoc(),
+    sitemap(),
     tailwind(),
   ],
 })
