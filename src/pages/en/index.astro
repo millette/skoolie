@@ -8,13 +8,23 @@ import imgFr from '@assets/a-vendre-crop.webp'
 import imgEn from '@assets/for-sale-crop.webp'
 import bus0 from '@assets/20230614_115044-90_IMGP.jpg'
 import bus1 from '@assets/20230614_120718-90_IMGP.jpg'
+
+const description = "For sale in Otterburn Park: 38' bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive."
+
 ---
 
-<Layout url="/en/" title="Skoolie - Bus - RV - for sale">
+<Layout description = description url="/en/" title="Skoolie - Bus - RV - for sale">
 	<main class="text-center">
 		<a class="float-right italic link" href="/" hreflang="fr-ca">Français</a>
 		<h1 class="text-4xl font-bold">Skoolie <small>Bus/RV</small></h1>
-		<div class="md:flex gap-4">
+
+		<div class="my-4 alert alert-info">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+			<span class="text-lg">{description}</span>
+			<a href="/en/details/" class="btn btn-lg btn-primary">Details</a>
+		</div>
+
+		<div class="lg:flex gap-4">
 			<div class="flex-1">
 				<h2 class="text-xl font-bold"><a class="link" href="https://www.facebook.com/marketplace/item/279860211183185">Marketplace</a> ad</h2>
 				<Image class="my-4 rounded-lg" src={bus0} width={bus0.width/4} height={bus0.height/4} alt="Bus - front" />

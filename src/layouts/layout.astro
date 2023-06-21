@@ -24,13 +24,16 @@ switch (url) {
 }
 
 alternateUrl = origin + alternateUrl
+const description = (lang === "fr")
+	? "À vendre: autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5."
+	: "For sale: 38' bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive."
 ---
 
 <!DOCTYPE html>
 <html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
+		<meta name="description" content={description}>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
