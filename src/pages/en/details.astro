@@ -4,19 +4,18 @@ import { Image } from 'astro:assets'
 
 // self
 import Layout from '@layouts/layout.astro'
-import imgFr from '@assets/a-vendre-crop.webp'
 import imgEn from '@assets/for-sale-crop.webp'
-import bus0 from '@assets/20230614_115044-90_IMGP.jpg'
-import bus1 from '@assets/20230614_120718-90_IMGP.jpg'
 
-const description = "For sale in Otterburn Park: 38' bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive."
+const description = "For sale in Otterburn Park (near Mont-Saint-Hilaire & Beloeil): 38' skoolie/bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive."
 
 ---
 
 <Layout description = description url="/en/details/" title="Skoolie - Bus - RV - for sale">
-	<main class="text-center">
+	<main class="text-center mx-auto lg:w-[820px]">
 		<a class="float-right italic link" href="/details/" hreflang="fr-ca">Français</a>
 		<h1 class="text-4xl font-bold">Skoolie <small>Bus/RV</small></h1>
+
+		<Image src={imgEn} alt="For Sale" />
 
 		<div class="my-4 alert alert-info">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -24,30 +23,50 @@ const description = "For sale in Otterburn Park: 38' bus (immatriculated heavy v
 			<a href="/en/" class="btn btn-lg btn-secondary">Home</a>
 		</div>
 
-		<div class="lg:flex gap-4">
-			<div class="flex-1">
-				<h2 class="text-xl font-bold"><a class="link" href="https://www.facebook.com/marketplace/item/279860211183185">Marketplace</a> ad</h2>
-				<Image class="my-4 rounded-lg" src={bus0} width={bus0.width/4} height={bus0.height/4} alt="Bus - front" />
-				<a class="link" href="tel:5143947877">514-394-7877</a>
+		<div class="my-4 mx-auto w-full stats stats-vertical shadow">  
+			<a href="tel:5143947877">
+				<div class="stat place-items-center">
+					<div class="stat-title">✆ Call or SMS</div>
+					<div class="stat-value">514-394-7877</div>
+				</div>
+			</a>
+
+			<a href="mailto:bus@waglo.com">
+				<div class="stat place-items-center">
+					<div class="stat-title">📧 email</div>
+					<div class="stat-value text-warning">bus@waglo.com</div>
+				</div>
 			</div>
+		</a>
+
+		<div class="md:flex gap-4 my-4">
+			<div class="flex-1">
+					<h2 class="text-xl font-bold"><a class="link" href="https://www.facebook.com/marketplace/item/279860211183185">Marketplace</a> ad</h2>
+
+				</div>
 			<div class="flex-1">
 				<h2 class="text-xl font-bold"><a class="link" href="https://www.kijiji.ca/v-vr-motorise/longueuil-rive-sud/skoolie-autobus-vr/1663218685">Kijiji</a> ad</h2>
-				<Image class="my-4 rounded-lg" src={bus1} width={bus1.width/4} height={bus1.height/4} alt="Bus - interior" />
-				<a class="link" href="mailto:bus@waglo.com">bus@waglo.com</a>
 			</div>
 		</div>
 
-		{/*
-		<p>Contactez nous:</p>
-		<ul class="list-disc">
-			<li>514-394-7877</li>
-			<li>bus@waglo.com</li>
-		</ul>
-		*/}
+		<div class="mx-auto prose my-4 text-left">
 
-		{/*
-		<img src={imgFr.src} width={imgFr.width} height={imgFr.height} alt="À vendre" />
-		<img src={imgEn.src} width={imgEn.width} height={imgEn.height} alt="À vendre" />
-		*/}
+			<p>School bus (Skoolie), 38 feet, heavy vehicle (class 3 license required), but modified to become an RV (will allow driving with class 5 license). 8900 kg, 154,000 km, Cummings diesel engine and Allison automatic transmission. Oil Treated 06-2023; mechanical inspection A1 07-2022. Stored all winter.</p>
+			<p>2 drinking water tanks and 2 waste water tanks. Floating floor, new mini washer and large folding table, air conditioner on wheels, a 15 amp input (with 30 amp adapter).</p>
+			<p>All hoses and fittings come from a Suburban motorhome, so can be hooked up to campground facilities. 2 benches with 2 places with belts.</p>
+			
+			<p>Includes: 2 bunk beds, 2 floating floor boxes and wood to finish the partitions, if necessary.</p>
+			
+			<p>Official Carfax report and mechanical inspection available.</p>
+			
+			<p>Reason for sale: our plans have been disrupted. We are now looking for a smaller vehicule.</p>
+			
+			<p>Open for trade.</p>
+
+			<blockquote>
+				For more, see SAAQ: <a href="https://saaq.gouv.qc.ca/en/transportation-passengers/heavy-vehicles-motor-homes/personal-use">Heavy Vehicles Converted Into Motor Homes for Personal Use</a>.
+			</blockquote>
+		</div>
+
 	</main>
 </Layout>

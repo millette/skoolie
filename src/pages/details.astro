@@ -5,48 +5,79 @@ import { Image } from 'astro:assets'
 // self
 import Layout from '@layouts/layout.astro'
 import imgFr from '@assets/a-vendre-crop.webp'
-import imgEn from '@assets/for-sale-crop.webp'
 import bus0 from '@assets/20230614_115044-90_IMGP.jpg'
 import bus1 from '@assets/20230614_120718-90_IMGP.jpg'
 
-const description = "À vendre dans Otterburn Park: autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5."
+const description = "À vendre dans Otterburn Park (près de Mont-Saint-Hilaire & Beloeil): skoolie/autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5."
 
 ---
 
 <Layout description = description url="/details/" title="Skoolie - Bus - VR - à vendre">
-	<main class="text-center">
+	<main class="text-center mx-auto lg:w-[820px]">
 		<a class="float-right italic link" href="/en/details/" hreflang="en-ca">English</a>
 		<h1 class="text-4xl font-bold">Skoolie <small>Bus/VR</small></h1>
+
+		<Image src={imgFr} alt="À vendre" />
+
 		<div class="my-4 alert alert-info">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 			<span class="text-lg">{description}</span>
 			<a href="/" class="btn btn-lg btn-secondary">Accueil</a>
 		</div>
+		
+		<div class="my-4 mx-auto w-full stats stats-vertical shadow">  
+			<a href="tel:5143947877">
+				<div class="stat place-items-center">
+					<div class="stat-title">✆ Appel ou SMS</div>
+					<div class="stat-value">514-394-7877</div>
+				</div>
+			</a>
 
-		<div class="lg:flex gap-4">
-			<div class="flex-1">
-				<h2 class="text-xl font-bold">Annonce sur <a class="link" href="https://www.facebook.com/marketplace/item/279860211183185">Marketplace</a></h2>
-				<Image class="my-4 rounded-lg" src={bus0} width={bus0.width/4} height={bus0.height/4} alt="Bus - devant" />
-				<a class="link" href="tel:5143947877">514-394-7877</a>
+			<a href="mailto:bus@waglo.com">
+				<div class="stat place-items-center">
+					<div class="stat-title">📧 courriel</div>
+					<div class="stat-value text-warning">bus@waglo.com</div>
+				</div>
 			</div>
+		</a>
+
+		<div class="md:flex gap-4 my-4">
 			<div class="flex-1">
-				<h2 class="text-xl font-bold">Annonce sur <a class="link" href="https://www.kijiji.ca/v-vr-motorise/longueuil-rive-sud/skoolie-autobus-vr/1663218685">Kijiji</a></h2>
-				<Image class="my-4 rounded-lg" src={bus1} width={bus1.width/4} height={bus1.height/4} alt="Bus - intérieur" />
-				<a class="link" href="mailto:bus@waglo.com">bus@waglo.com</a>
-			</div>
+					<h2 class="text-xl font-bold">Annonce sur <a class="link" href="https://www.facebook.com/marketplace/item/279860211183185">Marketplace</a></h2>
+
+
+				</div>
+			<div class="flex-1">
+					<h2 class="text-xl font-bold">Annonce sur <a class="link" href="https://www.kijiji.ca/v-vr-motorise/longueuil-rive-sud/skoolie-autobus-vr/1663218685">Kijiji</a></h2>
+				</div>
 		</div>
 
-		{/*
-		<p>Contactez nous:</p>
-		<ul class="list-disc">
-			<li>514-394-7877</li>
-			<li>bus@waglo.com</li>
-		</ul>
-		*/}
 
-		{/*
-		<img src={imgFr.src} width={imgFr.width} height={imgFr.height} alt="À vendre" />
-		<img src={imgEn.src} width={imgEn.width} height={imgEn.height} alt="À vendre" />
-		*/}
-	</main>
+		<div class="grid grid-cols-2 grid sm:grid-cols-1 sm:float-right sm:ml-4">
+		<Image class="rounded-lg mb-4" src={bus0} width={bus0.width/12} height={bus0.height/12} alt="Bus - devant" />
+		<Image class="rounded-lg" src={bus1} width={bus0.width/12} height={bus0.height/12} alt="Bus - devant" />
+		</div>
+
+
+		<div class="mx-auto prose my-4 text-left">
+
+			<p>Autobus scolaire (Skoolie), 38 pieds, plaqué véhicule lourd (permis classe 3 requis), mais modifié dans le but d'être un VR (permettra conduite avec classe 5). 8900 kg, 154,000km, moteur diesel Cummings et transmission automatique Allison. Traité à l'huile 06-2023; inspection mécanique A1 07-2022. Entreposé tout l'hiver.</p>
+			<p>2 réservoirs d'eau potable et 2 d'eaux usées. Plancher flottant, mini laveuse et grande table pliante neuves, climatiseur sur roue, une entrée de 15 ampères (avec adaptateur 30 ampères).</p>					
+				<p>Tous les tuyaux et raccords viennent d'un motorisé Suburban, peuvent donc se raccorder aux installations d'un terrain de camping.  2 banquettes de 2 places avec ceintures.</p>
+		
+					<p>Inclus: 2 lits superposés, 2 boites de plancher flottant et bois pour terminer les cloisons, au besoin.</p>
+		
+						<p>Rapport officiel Carfax et inspection mécanique disponibles.</p>
+		
+							<p>Raison de la vente: nos plans ont été bouleversés. Nous cherchons maintenant plus petit.</p>
+		
+								<p>Ouvert aux échanges.</p>
+
+								<blockquote>
+									Pour plus d'info, voir SAAQ: <a href="https://saaq.gouv.qc.ca/transport-personnes/vehicule-lourd-habitation-motorisee/usage-personnel">Véhicule lourd transformé en habitation motorisée à des fins personnelles</a>.
+								</blockquote>
+							</div>
+					
+		</div>
+		</main>
 </Layout>
