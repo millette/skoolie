@@ -22,13 +22,16 @@ export default defineMarkdocConfig({
 
 /*
 
-import { defineMarkdocConfig } from '@astrojs/markdoc/config';
-import Aside from './src/components/Aside.astro';
+// FIXED FOR 0.4.0 <https://github.com/withastro/astro/releases/tag/%40astrojs%2Fmarkdoc%400.4.0>
+import { defineMarkdocConfig, component } from '@astrojs/markdoc/config';
+// import Aside from './src/components/Aside.astro';
 
 export default defineMarkdocConfig({
   tags: {
     aside: {
-      render: Aside,
+      // FIXED FOR 0.4.0 <https://github.com/withastro/astro/releases/tag/%40astrojs%2Fmarkdoc%400.4.0>
+      // render: Aside,
+      render: component('./src/components/Aside.astro'),
       attributes: {
       // Markdoc requires type defs for each attribute.
       // These should mirror the `Props` type of the component
