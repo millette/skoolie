@@ -1,0 +1,81 @@
+---
+// node
+import { parse } from 'node:path'
+
+// astro
+import { Image } from 'astro:assets'
+
+interface CustomDataFile {
+  default: Record<string, any>
+}
+
+const galleries = {
+  inside: {
+    single: {
+      fr: "Photo intérieure",
+      en: "",
+    },
+    plural: {
+      fr: "Galerie de photos intérieures",
+      en: "",
+    },
+  },
+  outside: {
+    single: {
+      fr: "Photo extérieure",
+      en: "",
+    },
+    plural: {
+      fr: "Galerie de photos extérieures",
+      en: "",
+    },
+  },
+  details: {
+    single: {
+      fr: "Photo détaillée",
+      en: "",
+    },
+    plural: {
+      fr: "Galerie de photos détaillées",
+      en: "",
+    },
+  },
+}
+
+export function getStaticPaths() {
+  return Object.keys(galleries).map(
+    (album) => ({
+      params: { album }
+    })
+  )
+}
+
+const gallery = galleries[Astro.params]
+
+export {
+  galleries,
+  gallery,
+}
+
+const data = await Astro.glob<CustomDataFile>(`../../assets/photos/*/*.jpg`)
+
+---
+
+<div class="mx-auto md:container text-center my-5">
+  <h1 class="my-5 text-2xl font-bold">{gallery?.plural?.fr}</h1>
+
+  <div class="place-items-center grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-7 2xl:grid-cols-5 2xl:gap-10">
+  {data.map(({ default: img }) => (
+    <a href={img.src}>
+      <Image
+        class="rounded-md"
+        src={img}
+        title={gallery?.single?.fr}
+        alt={gallery?.single?.fr || "Aucun alt."}
+        width={Math.floor(img.width / 10)}
+        height={Math.floor(img.height / 10)}
+      />
+    </a>
+  ))}
+  </div>
+</div>
