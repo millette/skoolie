@@ -1,0 +1,32 @@
+{
+  "inside": {
+    "single": {
+      "fr": "Photo intérieure",
+      "en": "Inside photo"
+    },
+    "plural": {
+      "fr": "Galerie de photos intérieures",
+      "en": "Inside photos gallery"
+    }
+  },
+  "outside": {
+    "single": {
+      "fr": "Photo extérieure",
+      "en": "Outside photo"
+    },
+    "plural": {
+      "fr": "Galerie de photos extérieures",
+      "en": "Outside photos gallery"
+    }
+  },
+  "details": {
+    "single": {
+      "fr": "Photo détaillée",
+      "en": "Details photo"
+    },
+    "plural": {
+      "fr": "Galerie de photos détaillées",
+      "en": "Detail photos gallery"
+    }
+  }
+}
