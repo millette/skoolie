@@ -1,6 +1,9 @@
 ---
+// self
+import galleries from './translations.json'
+
 // node
-import { parse } from 'node:path'
+import { dirname, basename } from 'node:path'
 
 // astro
 import { Image } from 'astro:assets'
@@ -9,69 +12,47 @@ interface CustomDataFile {
   default: Record<string, any>
 }
 
-const galleries = {
-  inside: {
-    single: {
-      fr: "Photo intérieure",
-      en: "",
-    },
-    plural: {
-      fr: "Galerie de photos intérieures",
-      en: "",
-    },
-  },
-  outside: {
-    single: {
-      fr: "Photo extérieure",
-      en: "",
-    },
-    plural: {
-      fr: "Galerie de photos extérieures",
-      en: "",
-    },
-  },
-  details: {
-    single: {
-      fr: "Photo détaillée",
-      en: "",
-    },
-    plural: {
-      fr: "Galerie de photos détaillées",
-      en: "",
-    },
-  },
+const gallery = galleries[Astro.params.album]
+
+export async function getStaticPaths() {
+  return Object.keys(galleries).map((album) => ({ params: { album } }))
 }
 
-export function getStaticPaths() {
-  return Object.keys(galleries).map(
-    (album) => ({
-      params: { album }
-    })
-  )
-}
+const dataImp = await Astro.glob<CustomDataFile>(`../../assets/photos/*/*.jpg`)
 
-const gallery = galleries[Astro.params]
+const dataAll = dataImp.map((x) => ({
+  ...x.default,
+  type: dirname(x.default.src).split("/").slice(-1)[0],
+  basename: basename(x.default.src).split("/").slice(-1)[0].split("?")[0],
+}))
 
-export {
-  galleries,
-  gallery,
-}
+const data = dataAll.filter(({ type }) => type === Astro.params.album)
 
-const data = await Astro.glob<CustomDataFile>(`../../assets/photos/*/*.jpg`)
+/*
+<li><a class="link" href="/album/inside/">inside</a></li>
+<li><a class="link" href="/album/outside/">outside</a></li>
+*/
 
 ---
 
 <div class="mx-auto md:container text-center my-5">
-  <h1 class="my-5 text-2xl font-bold">{gallery?.plural?.fr}</h1>
+  <h1 class="mb-5 text-2xl font-bold">{gallery.plural.fr}</h1>
+
+  <ul class="mb-5 menu sm:menu-horizontal">
+    {Object.keys(galleries).map((type) => (
+    <li><a class={(type === Astro.params.album) ? 'active' : ''} href={`/album/${type}/`}>{galleries[type].plural.fr}</a></li>
+
+    ))}
+  </ul>
 
   <div class="place-items-center grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-7 2xl:grid-cols-5 2xl:gap-10">
-  {data.map(({ default: img }) => (
+  {data.map((img) => (
     <a href={img.src}>
       <Image
         class="rounded-md"
         src={img}
-        title={gallery?.single?.fr}
-        alt={gallery?.single?.fr || "Aucun alt."}
+        title={`${gallery.single.fr}: ${img.basename}`}
+        alt={gallery.single.fr}
         width={Math.floor(img.width / 10)}
         height={Math.floor(img.height / 10)}
       />
