@@ -1,9 +1,10 @@
 ---
 // self
-import galleries from './translations.json'
+import galleries from '@translations/albums.json'
+import Layout from '@layouts/layout.astro'
 
 // node
-import { dirname, basename } from 'node:path'
+import { basename } from 'node:path'
 
 // astro
 import { Image } from 'astro:assets'
@@ -12,51 +13,56 @@ interface CustomDataFile {
   default: Record<string, any>
 }
 
-const gallery = galleries[Astro.params.album]
+export const getStaticPaths = async () => Object.keys(galleries).map((album) => ({ params: { album } }))
 
-export async function getStaticPaths() {
-  return Object.keys(galleries).map((album) => ({ params: { album } }))
+const gallery = galleries[Astro.params.album]
+let data
+
+switch (Astro.params.album) {
+  case 'details':
+    data = await Astro.glob<CustomDataFile>(`../../assets/photos/details/*.jpg`)
+    break
+
+    case 'inside':
+    data = await Astro.glob<CustomDataFile>(`../../assets/photos/inside/*.jpg`)
+    break
+
+    case 'outside':
+    data = await Astro.glob<CustomDataFile>(`../../assets/photos/outside/*.jpg`)
+    break
 }
 
-const dataImp = await Astro.glob<CustomDataFile>(`../../assets/photos/*/*.jpg`)
-
-const dataAll = dataImp.map((x) => ({
-  ...x.default,
-  type: dirname(x.default.src).split("/").slice(-1)[0],
-  basename: basename(x.default.src).split("/").slice(-1)[0].split("?")[0],
+data = data.map(({ default: x }) => ({
+  ...x,
+  basename: basename(x.src).split("/").slice(-1)[0].split("?")[0],
 }))
-
-const data = dataAll.filter(({ type }) => type === Astro.params.album)
-
-/*
-<li><a class="link" href="/album/inside/">inside</a></li>
-<li><a class="link" href="/album/outside/">outside</a></li>
-*/
 
 ---
 
-<div class="mx-auto md:container text-center my-5">
-  <h1 class="mb-5 text-2xl font-bold">{gallery.plural.fr}</h1>
+<Layout lang="fr" url={`/album/${Astro.params.album}`} title={gallery.plural.fr}>
+  <div class="mx-auto md:container text-center my-5">
+    <h1 class="mb-5 text-2xl font-bold">{gallery.plural.fr}</h1>
 
-  <ul class="mb-5 menu sm:menu-horizontal">
-    {Object.keys(galleries).map((type) => (
-    <li><a class={(type === Astro.params.album) ? 'active' : ''} href={`/album/${type}/`}>{galleries[type].plural.fr}</a></li>
+    <ul class="mb-5 menu sm:menu-horizontal">
+      {Object.keys(galleries).map((type) => (
+      <li><a class={(type === Astro.params.album) ? 'active' : ''} href={`/album/${type}/`}>{galleries[type].plural.fr}</a></li>
 
+      ))}
+    </ul>
+
+    <div class="place-items-center grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-7 2xl:grid-cols-5 2xl:gap-10">
+    {data.map((img) => (
+      <a href={img.src}>
+        <Image
+          class="rounded-md"
+          src={img}
+          title={`${gallery.single.fr}: ${img.basename}`}
+          alt={gallery.single.fr}
+          width={Math.floor(img.width / 10)}
+          height={Math.floor(img.height / 10)}
+        />
+      </a>
     ))}
-  </ul>
-
-  <div class="place-items-center grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-7 2xl:grid-cols-5 2xl:gap-10">
-  {data.map((img) => (
-    <a href={img.src}>
-      <Image
-        class="rounded-md"
-        src={img}
-        title={`${gallery.single.fr}: ${img.basename}`}
-        alt={gallery.single.fr}
-        width={Math.floor(img.width / 10)}
-        height={Math.floor(img.height / 10)}
-      />
-    </a>
-  ))}
+    </div>
   </div>
-</div>
+</Layout>
