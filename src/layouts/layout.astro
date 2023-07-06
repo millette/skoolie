@@ -1,4 +1,6 @@
 ---
+import Footer from "@components/footer.astro"
+
 export interface Props {
 	title: string
 }
@@ -27,8 +29,10 @@ switch (url) {
 	alternateUrl = "/details/"
 	break
 
+	/*
 	default:
 		throw new Error(`Missing url translation for "${url}"`)
+	*/
 }
 
 alternateUrl = origin + alternateUrl
@@ -60,5 +64,6 @@ const description = (lang === "fr")
 		<div class="container mx-auto p-4">
 		  <slot />
 		</div>
+		<Footer />
 	</body>
 </html>
