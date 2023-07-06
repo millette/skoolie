@@ -9,4 +9,9 @@ module.exports = {
     typography,
     daisyui,
   ],
+  daisyui: {
+    themes: ['retro', 'luxury'],
+    darkTheme: 'luxury',
+    logs: false,
+  }
 }
