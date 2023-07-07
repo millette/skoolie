@@ -1,5 +1,6 @@
 // npm
 import { defineConfig, sharpImageService } from 'astro/config'
+import markdoc from '@astrojs/markdoc'
 import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 import prefetch from '@astrojs/prefetch'
@@ -15,6 +16,7 @@ export default defineConfig({
     service: sharpImageService(),
   },  
   integrations: [
+    markdoc(),
     prefetch({ selector: "a" }),
     sitemap(),
     tailwind(),
