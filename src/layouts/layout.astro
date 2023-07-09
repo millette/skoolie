@@ -1,4 +1,8 @@
 ---
+// npm
+import { SEO } from "astro-seo"
+
+// self
 import Footer from "@components/footer.astro"
 
 export interface Props {
@@ -7,8 +11,9 @@ export interface Props {
 
 const { url, title } = Astro.props
 const { origin } = Astro.site
+const image = origin + '/20230628_164933-crop.webp'
 const lang = Astro.url.pathname.startsWith("/en/") ? "en" : "fr"
-const alternateLang = (Astro.url.pathname.startsWith("/en/") ? "fr" : "en") + "-ca"
+const hreflang = (Astro.url.pathname.startsWith("/en/") ? "fr" : "en") + "-ca"
 const canonical = origin + url
 let alternateUrl
 
@@ -35,30 +40,52 @@ switch (url) {
 	*/
 }
 
-alternateUrl = origin + alternateUrl
+if (alternateUrl) alternateUrl = origin + alternateUrl
 const description = (lang === "fr")
 	? "À vendre: autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5."
 	: "For sale: 38' bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive."
+
+const link = [
+	{ rel: "icon", href: "/favicon.ico" },
+	{ rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+	{ rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+	{ rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
+	{ rel: "manifest", href: "/site.webmanifest" },
+	{ rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" },
+	{ rel: "sitemap", href: "/sitemap-index.xml" },
+	{ rel: "canonical", href: canonical },
+]
+
+if (alternateUrl && hreflang)
+  link.push({ rel: "alternate", hreflang, href: alternateUrl })
+
 ---
 
 <!DOCTYPE html>
 <html lang={lang}>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description}>
-		<meta name="viewport" content="width=device-width" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-		<link rel="sitemap" href="/sitemap-index.xml">
-		<link rel="canonical" href={canonical}>
-		<link rel="alternate" hreflang={alternateLang} href={alternateUrl}>
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#ffffff">			
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+
+    <SEO
+		charset="UTF-8"
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title,
+          type: "website",
+          image,
+        }
+      }}
+      extend={{
+        link,
+        meta: [
+					{ name: "viewport", content: "width=device-width" },
+					{ name: "msapplication-TileColor", content: "#da532c" },
+					{ name: "theme-color", content: "#ffffff" },
+					{ name: "generator", content: Astro.generator },
+        ],
+      }}
+    />		
 	</head>
 	<body>
 		<div class="container mx-auto p-4">
