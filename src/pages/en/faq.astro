@@ -5,7 +5,7 @@ import { getEntry } from 'astro:content'
 // self
 import Layout from "@layouts/layout.astro"
 
-const entry = await getEntry('pages', 'faq-fr')
+const entry = await getEntry('pages', 'faq-en')
 
 export async function getStaticPaths() {
   return [
@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 const { Content, headings } = await entry.render()
 ---
 
-<Layout url="/faq/" title={`Skoolie à vendre - ${headings[0].text}`}>
+<Layout url="/en/faq/" title={`Skoolie for sale - ${headings[0].text}`}>
 
 <div class="prose">
 <Content />
