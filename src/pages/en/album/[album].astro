@@ -19,6 +19,10 @@ const gallery = galleries[Astro.params.album]
 let data
 
 switch (Astro.params.album) {
+  case 'under':
+    data = await Astro.glob<CustomDataFile>(`../../../assets/photos/under/*.jpg`)
+    break
+
   case 'details':
     data = await Astro.glob<CustomDataFile>(`../../../assets/photos/details/*.jpg`)
     break
@@ -44,9 +48,8 @@ data = data.map(({ default: x }) => ({
     <h1 class="mb-5 text-2xl font-bold">{gallery.plural.en}</h1>
     <h2 class="mb-5 text-xl font-bold"><i><a class="link" href={`/album/${Astro.params.album}/`}>(voir en français)</a></i></h2>
     <ul class="mb-5 menu sm:menu-horizontal">
-      {Object.keys(galleries).map((type) => (
+      {Object.keys(galleries).filter((type) => type !== "under").map((type) => (
       <li><a class={(type === Astro.params.album) ? 'active' : ''} href={`/en/album/${type}/`}>{galleries[type].plural.en}</a></li>
-
       ))}
     </ul>
 
