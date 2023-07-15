@@ -28,5 +28,15 @@
       "fr": "Galerie de photos détaillées",
       "en": "Detail photos gallery"
     }
+  },
+  "under": {
+    "single": {
+      "fr": "Photo en dessous",
+      "en": "Under photo"
+    },
+    "plural": {
+      "fr": "Galerie de photos du dessous",
+      "en": "Under photos gallery"
+    }
   }
 }
