@@ -5,18 +5,13 @@ import { SEO } from "astro-seo"
 // self
 import Footer from "@components/footer.astro"
 import FooterEn from "@components/footer-en.astro"
-// import price from "@assets/bus-price-19500-500x385.png"
-
-// astro
-// import { Image } from 'astro:assets'
 
 export interface Props {
 	title: string
 }
 
-// <Image class="absolute right-0" src={price} alt="19500$" />
-
 const { url, title } = Astro.props
+let { description } = Astro.props
 const { origin } = Astro.site
 const image = origin + '/20230628_164933-crop.webp'
 const lang = Astro.url.pathname.startsWith("/en/") ? "en" : "fr"
@@ -73,12 +68,21 @@ switch (url) {
 	alternateUrl = "/album/details/"
 	break
 
+	case "/guides/":
+	alternateUrl = "/en/guides/"
+	break
+
+	case "/en/guides/":
+	alternateUrl = "/guides/"
+	break
+
 	default:
 		throw new Error(`Missing url translation for "${url}"`)
 }
 
 if (alternateUrl) alternateUrl = origin + alternateUrl
-const description = (lang === "fr")
+
+if (!description) description = (lang === "fr")
 	? "À vendre 19,500$: autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5."
 	: "For sale 19,500$: 38' bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive."
 
