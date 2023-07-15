@@ -4,8 +4,6 @@ import { Image } from 'astro:assets'
 
 // self
 import Layout from '@layouts/layout.astro'
-import imgFr from '@assets/a-vendre-crop.webp'
-import imgEn from '@assets/for-sale-crop.webp'
 import bus0 from '@assets/20230614_115044-90_IMGP.jpg'
 import bus1 from '@assets/20230614_120718-90_IMGP.jpg'
 
@@ -13,7 +11,7 @@ const description = "Skoolie for sale 19,500$ in Otterburn Park: 38' bus (immatr
 
 ---
 
-<Layout description = description url="/en/" title="Skoolie - Bus - RV - for sale">
+<Layout description={description} url="/en/" title="Skoolie - Bus - RV - for sale">
 	<main class="text-center">
 		<a class="float-right italic link" href="/" hreflang="fr-ca">Français</a>
 		<h1 class="text-4xl font-bold">Skoolie <small>Bus/RV</small></h1>
