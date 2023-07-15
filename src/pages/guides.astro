@@ -1,0 +1,30 @@
+---
+// npm
+import { Image } from 'astro:assets'
+
+// self
+import Layout from '@layouts/layout.astro'
+import bus0 from '@assets/20230614_115044-90_IMGP.jpg'
+import bus1 from '@assets/20230614_120718-90_IMGP.jpg'
+
+const description = "Skoolie à vendre 19,500$ dans Otterburn Park: autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5."
+
+---
+
+<Layout description={description} url="/guides/" title="Skoolie - Guides pour compléter le projet">
+	<main class="prose mx-auto">
+		<a class="float-right italic" href="/en/guides/" hreflang="en-ca">English</a>
+		<h1>Skoolie <small>Guides pour compléter le projet</small></h1>
+		<div class="my-4 alert alert-info">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+			<span class="text-xl">{description}</span>
+			<a href="/details/" class="btn btn-lg btn-primary">Détails</a>
+		</div>
+
+		<ol>
+			<li><a href="https://quebecskoolie.com/">quebec skoolie</a></li>
+			<li><a href="https://campeurs-skoolie.com/">campeurs-skoolie</a></li>
+			<li><a href="https://skooliecanada.ca/">skoolie canada</a></li>
+		</ol>
+	</main>
+</Layout>
