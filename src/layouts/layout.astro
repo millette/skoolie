@@ -5,6 +5,7 @@ import { SEO } from "astro-seo"
 // self
 import Footer from "@components/footer.astro"
 import FooterEn from "@components/footer-en.astro"
+import { price } from "@libs/constants.ts"
 
 export interface Props {
 	title: string
@@ -91,8 +92,8 @@ switch (url) {
 if (alternateUrl) alternateUrl = origin + alternateUrl
 
 if (!description) description = (lang === "fr")
-	? "À vendre 19,500$: autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5."
-	: "For sale 19,500$: 38' bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive."
+	? `À vendre ${price}$ CAD: autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5.`
+	: `For sale ${price}$ CAD: 38' bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive.`
 
 const link = [
 	{ rel: "icon", href: "/favicon.ico" },
