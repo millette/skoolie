@@ -2,6 +2,9 @@
 // npm
 import { SEO } from "astro-seo"
 
+// astro
+import { ViewTransitions, morph } from 'astro:transitions'
+
 // self
 import Footer from "@components/footer.astro"
 import FooterEn from "@components/footer-en.astro"
@@ -113,7 +116,6 @@ if (alternateUrl && hreflang)
 <!DOCTYPE html>
 <html lang={lang}>
 	<head>
-
     <SEO
 		charset="UTF-8"
       title={title}
@@ -140,10 +142,12 @@ if (alternateUrl && hreflang)
 					{ name: "generator", content: Astro.generator },
         ],
       }}
-    />		
+    />
+    <ViewTransitions />
+
 	</head>
 	<body>
-		<div class="container mx-auto p-4">
+		<div transition:animate class="container mx-auto p-4">
 		  <slot />
 		</div>
 		{lang === 'fr' ? <Footer /> : <FooterEn />}

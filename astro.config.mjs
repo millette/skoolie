@@ -12,7 +12,8 @@ export default defineConfig({
   compressHTML: true,
   trailingSlash: 'always',
   experimental: {
-    assets: true
+    assets: true,
+    viewTransitions: true,
   },
   image: {
     service: sharpImageService(),
