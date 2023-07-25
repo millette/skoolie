@@ -32,9 +32,6 @@ dependencies:
   daisyui:
     specifier: ^3.4.0
     version: 3.4.0
-  markdoc@^0.4.3:
-    specifier: link:astrojs/markdoc@^0.4.3
-    version: link:astrojs/markdoc@^0.4.3
   sharp:
     specifier: ^0.32.4
     version: 0.32.4
