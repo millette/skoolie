@@ -3,12 +3,12 @@
 import { SEO } from "astro-seo"
 
 // astro
-import { ViewTransitions, morph } from 'astro:transitions'
+import { ViewTransitions } from 'astro:transitions'
 
 // self
 import Footer from "@components/footer.astro"
 import FooterEn from "@components/footer-en.astro"
-import { price } from "@libs/constants.ts"
+import { price } from "@libs/constants.js"
 
 export interface Props {
 	title: string
@@ -22,6 +22,7 @@ const lang = Astro.url.pathname.startsWith("/en/") ? "en" : "fr"
 const hreflang = (Astro.url.pathname.startsWith("/en/") ? "fr" : "en") + "-ca"
 const canonical = origin + url
 let alternateUrl
+let withTransition = true
 
 switch (url) {
 	case "/":
@@ -42,10 +43,12 @@ switch (url) {
 
 	case "/faq/":
 	alternateUrl = "/en/faq/"
+	withTransition = false
 	break
 
 	case "/en/faq/":
 	alternateUrl = "/faq/"
+	withTransition = false
 	break
 
 	case "/album/under/":
@@ -143,8 +146,7 @@ if (alternateUrl && hreflang)
         ],
       }}
     />
-    <ViewTransitions />
-
+		{withTransition && <ViewTransitions />}
 	</head>
 	<body>
 		<div transition:animate class="container mx-auto p-4">

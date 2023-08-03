@@ -23,4 +23,17 @@ pnpm-debug.log*
 # misc
 src/assets/unused/
 20230628_164933-crop.xcf
+as-search-index.json
+search-index-en.json
+search-index-fr.json
+src/assets/bus-price-19500-500x383.png
+src/assets/bus-price-19500-500x385.png
 
+# unused code
+src/components/search.js
+src/components/search-orig.js
+src/components/tinysearch_engine.js
+src/pages/search-orig.astro
+src/pages/search.astro
+public/tinysearch_engine_en.wasm
+public/tinysearch_engine_fr.wasm
