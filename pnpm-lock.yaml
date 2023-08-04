@@ -19,7 +19,7 @@ dependencies:
     version: 2.0.1
   '@astrojs/solid-js':
     specifier: ^2.2.0
-    version: 2.2.0(@babel/core@7.22.9)(solid-js@1.7.8)
+    version: 2.2.0(@babel/core@7.22.9)(solid-js@1.7.9)
   '@astrojs/tailwind':
     specifier: ^4.0.0
     version: 4.0.0(astro@2.10.1)(tailwindcss@3.3.3)
@@ -48,8 +48,8 @@ dependencies:
     specifier: ^0.32.4
     version: 0.32.4
   solid-js:
-    specifier: ^1.7.8
-    version: 1.7.8
+    specifier: ^1.7.9
+    version: 1.7.9
   string-strip-html:
     specifier: ^13.4.2
     version: 13.4.2
@@ -171,14 +171,14 @@ packages:
       zod: 3.21.4
     dev: false
 
-  /@astrojs/solid-js@2.2.0(@babel/core@7.22.9)(solid-js@1.7.8):
+  /@astrojs/solid-js@2.2.0(@babel/core@7.22.9)(solid-js@1.7.9):
     resolution: {integrity: sha512-yZcpwGnPnFsF74+9ppXBy/h3rAbrhNuRCz/pTck2KWufwsmn5SwUWTBWLGgSqK3dhaw56Mp2MMJQuLY3Nc5VMw==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
       solid-js: ^1.4.3
     dependencies:
       babel-preset-solid: 1.7.7(@babel/core@7.22.9)
-      solid-js: 1.7.8
+      solid-js: 1.7.9
       vitefu: 0.2.4(vite@4.4.8)
     transitivePeerDependencies:
       - '@babel/core'
@@ -3675,8 +3675,8 @@ packages:
       sax: 1.2.4
     dev: false
 
-  /solid-js@1.7.8:
-    resolution: {integrity: sha512-XHBWk1FvFd0JMKljko7FfhefJMTSgYEuVKcQ2a8hzRXfiuSJAGsrPPafqEo+f6l+e8Oe3cROSpIL6kbzjC1fjQ==}
+  /solid-js@1.7.9:
+    resolution: {integrity: sha512-p1orXnauMQmwYULZtuPAXyKNRGEN2qh60kLX4YURa3jvulxAqjlh2kWEljXCtAVR6UZPC16NXdj9ASHcH383Fg==}
     dependencies:
       csstype: 3.1.2
       seroval: 0.5.1
