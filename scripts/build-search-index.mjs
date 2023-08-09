@@ -13,11 +13,25 @@ import { price } from "../src/libs/constants.js"
 const source1 = await fs.readFile("src/content/pages/faq-fr.mdoc", "utf-8")
 const source2 = await fs.readFile("src/content/pages/faq-en.mdoc", "utf-8")
 
+function fixBody(str) {
+  const ret = []
+  str.split(" ").forEach((s) => {
+    if (s.length <= 1) return
+    if (s.length <= 3 || !s.endsWith("s")) {
+      ret.push(s)
+      return
+    }
+    ret.push(s)
+    ret.push(s.slice(0, s.length - 1))
+  })
+  
+  return ret.filter(Boolean).join(" ")
+}
 
 function toJson(source) {
   const { children: c2 } = Markdoc.transform(Markdoc.parse(source), { variables: { price } })
   const slugger = new GithubSlugger()
-  const re = /[’'/:-]/g
+  const re = /[’'/:?.\(\)-]/g
   const items = []
   let obj
 
@@ -42,7 +56,10 @@ function toJson(source) {
     }
   })
 
-  return items
+
+  return items.map(({ title, url, body }) => {
+    return { title, url, body: fixBody(body) }
+  })
 }
 
 const items1 = toJson(source1)
