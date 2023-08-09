@@ -33,12 +33,17 @@ export default function (props) {
   onMount(() => {
     demo.addEventListener("keyup", doSearch)
   })
-    
+
+
   return <div>
-    <label for="demo" class="text-xl font-bold">{props.lang === "fr" ? "Chercher" : "Search"}?{" "}</label>
-    <input type="text" id="demo" ref={demo} />
+    <div class="form-control w-full max-w-xs">
+      <label class="label">
+        <span class="label-text text-xl font-bold">{props.lang === "fr" ? "Chercher" : "Search"}?</span>
+      </label>
+      <input type="text" id="demo" autofocus ref={demo} class="input input-bordered input-accent w-full max-w-xs" />
+    </div>  
     {nResults() && <h3>{props.lang === "fr" ? "Résultats" : "Results"}:</h3>}
     <ul ref={ul}>
     </ul>
-  </div>
+  </div>  
 }
