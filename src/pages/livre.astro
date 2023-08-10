@@ -1,0 +1,16 @@
+---
+
+// self
+import Layout from '@layouts/layout.astro'
+import { price } from "@libs/constants.js"
+
+const description = `Skoolie à vendre ${price}$ CAD dans Otterburn Park (près de Mont-Saint-Hilaire & Beloeil): skoolie/autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5.`
+
+---
+
+<Layout description={description} url="/details/" title="Skoolie - Le Livre">
+	<main class="text-center mx-auto lg:w-[820px]">
+		<a class="float-right italic link" href="/en/book/" hreflang="en-ca">English</a>
+		<h1 class="text-4xl font-bold">Skoolie <small>le Livre</small></h1>
+  </main>
+</Layout>
