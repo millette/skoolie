@@ -7,9 +7,9 @@ import { search, default as init } from '@components/tinysearch_engine.js'
 
 const [nResults, setNResults] = createSignal(0)
 
-export default function (props) {
-  let demo: HTMLElement
-  let ul: HTMLElement
+export default function (props: any) {
+  let demo: HTMLInputElement
+  let ul: HTMLUListElement
 
   init(`/tinysearch_engine_${props.lang}.wasm`)
 
@@ -40,10 +40,10 @@ export default function (props) {
       <label class="label">
         <span class="label-text text-xl font-bold">{props.lang === "fr" ? "Chercher" : "Search"}?</span>
       </label>
-      <input type="text" id="demo" autofocus ref={demo} class="input input-bordered input-accent w-full max-w-xs" />
+      <input type="text" id="demo" autofocus ref={demo!} class="input input-bordered input-accent w-full max-w-xs" />
     </div>  
     {nResults() && <h3>{props.lang === "fr" ? "Résultats" : "Results"}:</h3>}
-    <ul ref={ul}>
+    <ul ref={ul!}>
     </ul>
   </div>  
 }
