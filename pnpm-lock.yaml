@@ -112,7 +112,7 @@ packages:
       htmlparser2: 9.0.0
       kleur: 4.1.5
       shiki: 0.14.3
-      zod: 3.21.4
+      zod: 3.22.0
     transitivePeerDependencies:
       - '@types/react'
       - react
@@ -158,7 +158,7 @@ packages:
     resolution: {integrity: sha512-unoaSEyHuR8IApsPN467SD5FMm4PBnaQSHbtvt4dVS3PMDObZV5/lKIbjlfSad7ENzuvpBSLCGyLDOykXUNu6w==}
     dependencies:
       sitemap: 7.1.1
-      zod: 3.21.4
+      zod: 3.22.0
     dev: false
 
   /@astrojs/solid-js@2.2.0(@babel/core@7.22.10)(solid-js@1.7.11):
@@ -1238,7 +1238,7 @@ packages:
       vitefu: 0.2.4(vite@4.4.9)
       which-pm: 2.0.0
       yargs-parser: 21.1.1
-      zod: 3.21.4
+      zod: 3.22.0
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4316,8 +4316,8 @@ packages:
     engines: {node: '>=12.20'}
     dev: false
 
-  /zod@3.21.4:
-    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
+  /zod@3.22.0:
+    resolution: {integrity: sha512-y5KZY/ssf5n7hCGDGGtcJO/EBJEm5Pa+QQvFBeyMOtnFYOSflalxIFFvdaYevPhePcmcKC4aTbFkCcXN7D0O8Q==}
     dev: false
 
   /zwitch@2.0.4:
