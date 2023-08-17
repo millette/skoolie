@@ -31,7 +31,8 @@ src/assets/bus-price-19500-500x385.png
 
 # unused code
 src/components/search.js
-src/components/search-orig.js
+
+# built
 src/components/tinysearch_engine.js
 src/pages/search-orig.astro
 src/pages/search.astro
