@@ -21,7 +21,7 @@
     "@sindresorhus/transliterate": "^1.6.0",
     "@tailwindcss/typography": "^0.5.9",
     "astro": "^2.10.12",
-    "astro-seo": "^0.7.5",
+    "astro-seo": "^0.7.6",
     "daisyui": "^3.5.1",
     "github-slugger": "^2.0.0",
     "sharp": "^0.32.5",
