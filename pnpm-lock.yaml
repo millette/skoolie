@@ -21,8 +21,8 @@ dependencies:
     specifier: ^4.0.0
     version: 4.0.0(astro@2.10.14)(tailwindcss@3.3.3)
   '@markdoc/markdoc':
-    specifier: ^0.3.1
-    version: 0.3.1
+    specifier: ^0.3.2
+    version: 0.3.2
   '@sindresorhus/transliterate':
     specifier: ^1.6.0
     version: 1.6.0
@@ -36,8 +36,8 @@ dependencies:
     specifier: ^0.7.6
     version: 0.7.6
   daisyui:
-    specifier: ^3.6.1
-    version: 3.6.1
+    specifier: ^3.6.3
+    version: 3.6.3
   github-slugger:
     specifier: ^2.0.0
     version: 2.0.0
@@ -104,7 +104,7 @@ packages:
     dependencies:
       '@astrojs/internal-helpers': 0.1.2
       '@astrojs/prism': 2.1.2
-      '@markdoc/markdoc': 0.3.1
+      '@markdoc/markdoc': 0.3.2
       astro: 2.10.14(sharp@0.32.5)
       esbuild: 0.17.19
       github-slugger: 2.0.0
@@ -888,8 +888,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: false
 
-  /@markdoc/markdoc@0.3.1:
-    resolution: {integrity: sha512-QW4PrhsiGrNiisWcrwGomMLqftQIINBN3aSXW4IuzaA+1GZ7DvtPQ+yopqIJgFnCOqBnVEs2c1+m5VTF9N8fiQ==}
+  /@markdoc/markdoc@0.3.2:
+    resolution: {integrity: sha512-D0SaanaSkTIARvQu+zQqPEpKcvYUBR/mfac9e8JzS89P7eXhiNWPonUN7avRS1saZHpIQWIRote97qT+jGk5Gw==}
     engines: {node: '>=14.7.0'}
     peerDependencies:
       '@types/react': '*'
@@ -1601,8 +1601,8 @@ packages:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
     dev: false
 
-  /daisyui@3.6.1:
-    resolution: {integrity: sha512-H330IdmNoQy0i6ImktBIvIVsyYujl1N2R73rDiWFjgIGPzXIFRMFh2PcmErcSzpLJmZ28jPMEwQJEJaNp6uN5g==}
+  /daisyui@3.6.3:
+    resolution: {integrity: sha512-VNWogAjx37H8kNYd2E/+r1OXc6dOvJTKlKltqIKAlNMFVfx2BIKPcmnVxaHQLfj2vhv1mYDBjgWj+1enQ+4yZA==}
     engines: {node: '>=16.9.0'}
     dependencies:
       colord: 2.9.3
