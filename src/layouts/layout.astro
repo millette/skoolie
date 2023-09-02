@@ -1,6 +1,7 @@
 ---
 // npm
 import { SEO } from "astro-seo"
+// import type { Link } from "astro-seo"
 
 // astro
 import { ViewTransitions } from 'astro:transitions'
@@ -12,15 +13,16 @@ import { price } from "@libs/constants.js"
 
 export interface Props {
 	title: string
+	url: string
+	description?: string
 }
 
 const { url, title } = Astro.props
 let { description } = Astro.props
-const { origin } = Astro.site
+const { origin } = Astro.site as URL
 const image = origin + '/20230628_164933-crop.webp'
 const lang = Astro.url.pathname.startsWith("/en/") ? "en" : "fr"
 const hreflang = (Astro.url.pathname.startsWith("/en/") ? "fr" : "en") + "-ca"
-const canonical = origin + url
 let alternateUrl
 let withTransition = true
 
@@ -101,7 +103,9 @@ if (!description) description = (lang === "fr")
 	? `À vendre ${price}$ CAD: autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5.`
 	: `For sale ${price}$ CAD: 38' bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive.`
 
-const link = [
+// const link: { rel: string, sizes?: string | DOMTokenList | undefined, href: string, hreflang?: string, color?: string, type?: string }[] = [
+// const link: Partial<Link>[] = [
+const link: any = [
 	{ rel: "icon", href: "/favicon.ico" },
 	{ rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
 	{ rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
@@ -149,7 +153,7 @@ if (alternateUrl && hreflang)
 		{withTransition && <ViewTransitions />}
 	</head>
 	<body>
-		<div transition:animate class="container mx-auto p-4">
+		<div transition:animate="morph" class="container mx-auto p-4">
 		  <slot />
 		</div>
 		{lang === 'fr' ? <Footer /> : <FooterEn />}
