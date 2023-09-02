@@ -38,3 +38,6 @@ src/pages/search-orig.astro
 src/pages/search.astro
 public/tinysearch_engine_en.wasm
 public/tinysearch_engine_fr.wasm
+
+ignore-search/
+
