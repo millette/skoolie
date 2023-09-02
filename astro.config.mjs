@@ -1,5 +1,6 @@
 // npm
-import { defineConfig, sharpImageService } from 'astro/config'
+// import { defineConfig, sharpImageService } from 'astro/config'
+import { defineConfig } from 'astro/config'
 import markdoc from '@astrojs/markdoc'
 import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
@@ -12,13 +13,11 @@ export default defineConfig({
   site,
   compressHTML: true,
   trailingSlash: 'always',
-  experimental: {
-    assets: true,
-    viewTransitions: true,
-  },
+  /*
   image: {
     service: sharpImageService(),
-  },  
+  },
+  */  
   integrations: [
     markdoc(),
     solid(),
