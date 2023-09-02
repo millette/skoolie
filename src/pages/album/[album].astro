@@ -1,7 +1,7 @@
 ---
 // npm
-import type { InferGetStaticParamsType, GetStaticPaths } from 'astro'
-
+// import type { InferGetStaticParamsType, GetStaticPaths } from 'astro'
+import type { InferGetStaticParamsType } from 'astro'
 
 // self
 import galleries from '@translations/albums.json'
@@ -17,7 +17,7 @@ interface CustomDataFile {
   default: Record<string, any>
 }
 
-export const getStaticPaths = async () => Object.keys(galleries).map((album) => ({ params: { album } })) satisfies GetStaticPaths
+export const getStaticPaths = async () => Object.keys(galleries).map((album) => ({ params: { album } })) // satisfies GetStaticPaths
 
 type Params = InferGetStaticParamsType<typeof getStaticPaths>
 
@@ -44,7 +44,7 @@ switch (album) {
     break
 }
 
-data = data.map(({ default: x }) => ({
+data = data?.map(({ default: x }) => ({
   ...x,
   basename: basename(x.src).split("/").slice(-1)[0].split("?")[0],
 }))
@@ -63,7 +63,7 @@ data = data.map(({ default: x }) => ({
     </ul>
 
     <div class="place-items-center grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-7 2xl:grid-cols-5 2xl:gap-10">
-    {data.map((img) => (
+    {data?.map((img) => (
       <a href={img.src}>
         <Image
           class="rounded-md"
