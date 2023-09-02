@@ -5,7 +5,7 @@ import { Image } from 'astro:assets'
 // self
 import Layout from '@layouts/layout.astro'
 import halfSpace from '@libs/half-space.ts'
-import { price } from "@libs/constants.js"
+import { price, marketplace } from "@libs/constants.js"
 import imgFr from '@assets/a-vendre-crop.webp'
 import bus0 from '@assets/20230614_115044-90_IMGP.jpg'
 import bus1 from '@assets/20230614_120718.jpg'
@@ -45,7 +45,7 @@ const description = `Skoolie à vendre ${price}$ CAD dans Otterburn Park (près 
 
 		<div class="md:flex gap-4 my-4">
 			<div class="flex-1">
-					<h2 class="text-xl font-bold">Annonce sur <a class="link" href="https://www.facebook.com/marketplace/item/279860211183185">Marketplace</a></h2>
+					<h2 class="text-xl font-bold">Annonce sur <a class="link" href={marketplace}>Marketplace</a></h2>
 
 
 				</div>
