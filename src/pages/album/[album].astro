@@ -1,4 +1,8 @@
 ---
+// npm
+import type { InferGetStaticParamsType, GetStaticPaths } from 'astro'
+
+
 // self
 import galleries from '@translations/albums.json'
 import Layout from '@layouts/layout.astro'
@@ -13,12 +17,16 @@ interface CustomDataFile {
   default: Record<string, any>
 }
 
-export const getStaticPaths = async () => Object.keys(galleries).map((album) => ({ params: { album } }))
+export const getStaticPaths = async () => Object.keys(galleries).map((album) => ({ params: { album } })) satisfies GetStaticPaths
 
-const gallery = galleries[Astro.params.album]
+type Params = InferGetStaticParamsType<typeof getStaticPaths>
+
+const { album } = Astro.params as Params
+
+const gallery = galleries[album]
 let data
 
-switch (Astro.params.album) {
+switch (album) {
   case 'under':
     data = await Astro.glob<CustomDataFile>(`../../assets/photos/under/*.jpg`)
     break
@@ -43,14 +51,14 @@ data = data.map(({ default: x }) => ({
 
 ---
 
-<Layout lang="fr" url={`/album/${Astro.params.album}/`} title={gallery.plural.fr}>
+<Layout lang="fr" url={`/album/${album}/`} title={gallery.plural.fr}>
   <div class="mx-auto md:container text-center my-5">
     <h1 class="mb-5 text-2xl font-bold">{gallery.plural.fr}</h1>
-    <h2 class="mb-5 text-xl font-bold"><i><a class="link" href={`/en/album/${Astro.params.album}/`}>(see in English)</a></i></h2>
+    <h2 class="mb-5 text-xl font-bold"><i><a class="link" href={`/en/album/${album}/`}>(see in English)</a></i></h2>
 
     <ul class="mb-5 menu sm:menu-horizontal">
       {Object.keys(galleries).filter((type) => type !== "under").map((type) => (
-      <li><a class={(type === Astro.params.album) ? 'active' : ''} href={`/album/${type}/`}>{galleries[type].plural.fr}</a></li>
+      <li><a class={(type === album) ? 'active' : ''} href={`/album/${type}/`}>{galleries[type].plural.fr}</a></li>
       ))}
     </ul>
 
