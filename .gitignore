@@ -40,3 +40,5 @@ public/tinysearch_engine_fr.wasm
 
 ignore-search/
 
+src/markdoc/
+
