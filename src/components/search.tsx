@@ -37,7 +37,7 @@ export default function (props: any) {
 
   return <div>
     <div class="form-control w-full max-w-xs">
-      <label class="label">
+      <label class="label" for="demo">
         <span class="label-text text-xl font-bold">{props.lang === "fr" ? "Chercher" : "Search"}?</span>
       </label>
       <input type="text" id="demo" autofocus ref={demo!} class="input input-bordered input-accent w-full max-w-xs" />
