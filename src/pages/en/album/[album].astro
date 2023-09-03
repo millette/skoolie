@@ -1,65 +1,61 @@
 ---
+// npm
+import type { ImageMetadata, InferGetStaticParamsType } from 'astro'
+
 // self
 import galleries from '@translations/albums.json'
 import Layout from '@layouts/layout.astro'
 
-// node
-import { basename } from 'node:path'
-
 // astro
 import { Image } from 'astro:assets'
 
-interface CustomDataFile {
-  default: Record<string, any>
-}
-
 export const getStaticPaths = async () => Object.keys(galleries).map((album) => ({ params: { album } }))
 
-const gallery = galleries[Astro.params.album]
-let data
+type Params = InferGetStaticParamsType<typeof getStaticPaths>
 
-switch (Astro.params.album) {
+const { album } = Astro.params as Params
+
+const gallery = galleries[album as keyof typeof galleries]
+let data // : ImageMetadata[] = []
+
+switch (album) {
   case 'under':
-    data = await Astro.glob<CustomDataFile>(`../../../assets/photos/under/*.jpg`)
+    data = await Astro.glob<Record<string, ImageMetadata>>(`../../../assets/photos/under/*.jpg`)
     break
 
   case 'details':
-    data = await Astro.glob<CustomDataFile>(`../../../assets/photos/details/*.jpg`)
+    data = await Astro.glob<Record<string, ImageMetadata>>(`../../../assets/photos/details/*.jpg`)
     break
 
     case 'inside':
-    data = await Astro.glob<CustomDataFile>(`../../../assets/photos/inside/*.jpg`)
+    data = await Astro.glob<Record<string, ImageMetadata>>(`../../../assets/photos/inside/*.jpg`)
     break
 
     case 'outside':
-    data = await Astro.glob<CustomDataFile>(`../../../assets/photos/outside/*.jpg`)
+    data = await Astro.glob<Record<string, ImageMetadata>>(`../../../assets/photos/outside/*.jpg`)
     break
 }
 
-data = data.map(({ default: x }) => ({
-  ...x,
-  basename: basename(x.src).split("/").slice(-1)[0].split("?")[0],
-}))
-
 ---
 
-<Layout lang="en" url={`/en/album/${Astro.params.album}/`} title={gallery.plural.en}>
+<Layout lang="en" url={`/album/${album}/`} title={gallery.plural.en}>
   <div class="mx-auto md:container text-center my-5">
     <h1 class="mb-5 text-2xl font-bold">{gallery.plural.en}</h1>
-    <h2 class="mb-5 text-xl font-bold"><i><a class="link" href={`/album/${Astro.params.album}/`}>(voir en français)</a></i></h2>
+    <h2 class="mb-5 text-xl font-bold"><i><a class="link" href={`/album/${album}/`}>(voir en Français)</a></i></h2>
+
     <ul class="mb-5 menu sm:menu-horizontal">
       {Object.keys(galleries).filter((type) => type !== "under").map((type) => (
-      <li><a class={(type === Astro.params.album) ? 'active' : ''} href={`/en/album/${type}/`}>{galleries[type].plural.en}</a></li>
+      <li><a class={(type === album) ? 'active' : ''} href={`/en/album/${type}/`}>{galleries[type as keyof typeof galleries].plural.en}</a></li>
       ))}
     </ul>
 
     <div class="place-items-center grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-7 2xl:grid-cols-5 2xl:gap-10">
-    {data.map((img) => (
+    {data?.map(({default: img}) => (
       <a href={img.src}>
         <Image
           class="rounded-md"
           src={img}
-          title={`${gallery.single.en}: ${img.basename}`}
+          title={`${gallery.single.en}`}
           alt={gallery.single.en}
           width={Math.floor(img.width / 10)}
           height={Math.floor(img.height / 10)}

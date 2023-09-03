@@ -1,53 +1,40 @@
 ---
 // npm
-// import type { InferGetStaticParamsType, GetStaticPaths } from 'astro'
-import type { InferGetStaticParamsType } from 'astro'
+import type { ImageMetadata, InferGetStaticParamsType } from 'astro'
 
 // self
 import galleries from '@translations/albums.json'
 import Layout from '@layouts/layout.astro'
 
-// node
-import { basename } from 'node:path'
-
 // astro
 import { Image } from 'astro:assets'
 
-interface CustomDataFile {
-  default: Record<string, any>
-}
-
-export const getStaticPaths = async () => Object.keys(galleries).map((album) => ({ params: { album } })) // satisfies GetStaticPaths
+export const getStaticPaths = async () => Object.keys(galleries).map((album) => ({ params: { album } }))
 
 type Params = InferGetStaticParamsType<typeof getStaticPaths>
 
 const { album } = Astro.params as Params
 
-const gallery = galleries[album]
-let data
+const gallery = galleries[album as keyof typeof galleries]
+let data // : ImageMetadata[] = []
 
 switch (album) {
   case 'under':
-    data = await Astro.glob<CustomDataFile>(`../../assets/photos/under/*.jpg`)
+    data = await Astro.glob<Record<string, ImageMetadata>>(`../../assets/photos/under/*.jpg`)
     break
 
   case 'details':
-    data = await Astro.glob<CustomDataFile>(`../../assets/photos/details/*.jpg`)
+    data = await Astro.glob<Record<string, ImageMetadata>>(`../../assets/photos/details/*.jpg`)
     break
 
     case 'inside':
-    data = await Astro.glob<CustomDataFile>(`../../assets/photos/inside/*.jpg`)
+    data = await Astro.glob<Record<string, ImageMetadata>>(`../../assets/photos/inside/*.jpg`)
     break
 
     case 'outside':
-    data = await Astro.glob<CustomDataFile>(`../../assets/photos/outside/*.jpg`)
+    data = await Astro.glob<Record<string, ImageMetadata>>(`../../assets/photos/outside/*.jpg`)
     break
 }
-
-data = data?.map(({ default: x }) => ({
-  ...x,
-  basename: basename(x.src).split("/").slice(-1)[0].split("?")[0],
-}))
 
 ---
 
@@ -58,17 +45,17 @@ data = data?.map(({ default: x }) => ({
 
     <ul class="mb-5 menu sm:menu-horizontal">
       {Object.keys(galleries).filter((type) => type !== "under").map((type) => (
-      <li><a class={(type === album) ? 'active' : ''} href={`/album/${type}/`}>{galleries[type].plural.fr}</a></li>
+      <li><a class={(type === album) ? 'active' : ''} href={`/album/${type}/`}>{galleries[type as keyof typeof galleries].plural.fr}</a></li>
       ))}
     </ul>
 
     <div class="place-items-center grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-7 2xl:grid-cols-5 2xl:gap-10">
-    {data?.map((img) => (
+    {data?.map(({default: img}) => (
       <a href={img.src}>
         <Image
           class="rounded-md"
           src={img}
-          title={`${gallery.single.fr}: ${img.basename}`}
+          title={`${gallery.single.fr}`}
           alt={gallery.single.fr}
           width={Math.floor(img.width / 10)}
           height={Math.floor(img.height / 10)}
