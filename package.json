@@ -21,7 +21,7 @@
     "@markdoc/markdoc": "^0.3.2",
     "@sindresorhus/transliterate": "^1.6.0",
     "@tailwindcss/typography": "^0.5.9",
-    "astro": "^3.0.7",
+    "astro": "^3.0.8",
     "astro-seo": "^0.8.0",
     "daisyui": "^3.6.4",
     "github-slugger": "^2.0.0",
