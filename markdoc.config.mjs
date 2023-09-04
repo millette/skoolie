@@ -3,6 +3,12 @@ import { defineMarkdocConfig, nodes } from '@astrojs/markdoc/config';
 
 // console.log("NODES", JSON.stringify(nodes, null, 2))
 
+// TODO: define link tag to pass marketplace var in FAQ
+// see https://markdoc.dev/docs/tags
+// https://markdoc.dev/docs/variables#caveats
+// https://github.com/withastro/astro/issues/6738#issuecomment-1494572618
+// {% link href=$marketplace %}Marketplace{% /link %}
+
 export default defineMarkdocConfig({
   nodes
 })
