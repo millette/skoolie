@@ -8,6 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "check": "astro check",
+    "check:tsc": "tsc --noEmit",
+    "check:all": "astro check && tsc --noEmit",
     "preview": "astro preview",
     "go": "astro build && astro preview",
     "astro": "astro"
@@ -21,7 +23,7 @@
     "@markdoc/markdoc": "^0.3.2",
     "@sindresorhus/transliterate": "^1.6.0",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^3.0.8",
+    "astro": "^3.0.10",
     "astro-seo": "^0.8.0",
     "daisyui": "^3.7.3",
     "github-slugger": "^2.0.0",
