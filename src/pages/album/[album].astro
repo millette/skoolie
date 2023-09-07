@@ -51,7 +51,7 @@ switch (album) {
 
     <div class="place-items-center grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-7 2xl:grid-cols-5 2xl:gap-10">
     {data?.map(({default: img}) => (
-      <a href={img.src}>
+      <a data-astro-reload href={img.src}>
         <Image
           class="rounded-md"
           src={img}
