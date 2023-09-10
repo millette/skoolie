@@ -4,7 +4,7 @@
 
 // self
 import Layout from '@layouts/layout.astro'
-import halfSpace from '@libs/half-space.ts'
+// import halfSpace from '@libs/half-space.ts'
 import { price } from "@libs/constants.js"
 // import bus0 from '@assets/20230614_115044-90_IMGP.jpg'
 // import bus1 from '@assets/20230614_120718-90_IMGP.jpg'
@@ -20,7 +20,7 @@ const description = `Skoolie for sale ${price} in Otterburn Park: 38' bus (immat
 
 		<div class="my-4 alert alert-info">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-			<span class="text-xl">{halfSpace(description)}</span>
+			<span class="text-xl">{description}</span>
 			<a href="/en/details/" class="btn btn-lg btn-primary">Details</a>
 		</div>
 
