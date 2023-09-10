@@ -9,7 +9,7 @@ import { ViewTransitions } from 'astro:transitions'
 // self
 import Footer from "@components/footer.astro"
 import FooterEn from "@components/footer-en.astro"
-import { price } from "@libs/constants.js"
+import { price, prix } from "@libs/constants.js"
 
 export interface Props {
 	title: string
@@ -101,7 +101,7 @@ switch (url) {
 if (alternateUrl) alternateUrl = origin + alternateUrl
 
 if (!description) description = (lang === "fr")
-	? `À vendre ${price}: autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5.`
+	? `À vendre ${prix}: autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5.`
 	: `For sale ${price}: 38' bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive.`
 
 // const link: { rel: string, sizes?: string | DOMTokenList | undefined, href: string, hreflang?: string, color?: string, type?: string }[] = [
