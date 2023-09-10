@@ -5,8 +5,7 @@ import { getEntry } from 'astro:content'
 // self
 import Search from "@components/search.tsx"
 import Layout from "@layouts/layout.astro"
-import { price } from "@libs/constants.js"
-import halfSpace from '@libs/half-space.ts'
+import { marketplace } from "@libs/constants.js"
 
 const entry = await getEntry('pages', 'faq-en')
 
@@ -31,6 +30,6 @@ const { Content, headings } = await entry.render()
 
 <div class="prose mx-auto">
   <Search client:only="solid-js" lang="en" />
-  <Content price={halfSpace(price)} />
+  <Content marketplace={marketplace} />
 </div>
 </Layout>
