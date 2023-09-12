@@ -1,3 +1,10 @@
+---
+
+// self
+import Search from "@components/search.tsx"
+
+---
+
 <div class="navbar">
   <div class="navbar-start">
     <div class="dropdown">
@@ -28,7 +35,10 @@
   </div>
   <div class="navbar-end hidden md:flex">
     <div class="form-control">
+      <Search client:only="solid-js" lang="fr" nav />
+{/*
       <input type="text" placeholder="Chercher" class="input input-bordered" />
+*/}      
     </div>
   </div>
 </div>

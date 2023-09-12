@@ -14,14 +14,19 @@ export default function (props: any) {
   init(`/tinysearch_engine_${props.lang}.wasm`)
 
   function doSearch() {
+    if (demo.value.length < 2) {
+      setNResults(0)
+      return
+    }
     const results = search(transliterate(demo.value), 5)
     setNResults(results.length)
-    ul.innerHTML = ""
+    if (ul) ul.innerHTML = ""
   
     let i
     for (i = 0; i < results.length; i++) {
       var li = document.createElement("li")
       let [title, url] = results[i]
+      url = (props.lang === "fr" ? "/faq/" : "/en/faq/") + url
       let elemlink = document.createElement('a')
       elemlink.innerHTML = title
       elemlink.setAttribute('href', url)
@@ -31,19 +36,27 @@ export default function (props: any) {
   }
 
   onMount(() => {
-    demo.addEventListener("keyup", doSearch)
+    demo?.addEventListener("keyup", doSearch)
   })
 
-
-  return <div>
+  return (!props.nav || !window.location.pathname.endsWith("/faq/")) && <div>
     <div class="form-control w-full max-w-xs">
+      {!props.nav &&
       <label class="label" for="demo">
         <span class="label-text text-xl font-bold">{props.lang === "fr" ? "Chercher" : "Search"}?</span>
       </label>
-      <input type="text" id="demo" autofocus ref={demo!} class="input input-bordered input-accent w-full max-w-xs" />
-    </div>  
-    {nResults() && <h3>{props.lang === "fr" ? "Résultats" : "Results"}:</h3>}
-    <ul ref={ul!}>
-    </ul>
+      }
+      <input type="text" id="demo" placeholder={props.nav ? (props.lang === "fr" ? "Chercher" : "Search") : ""} autofocus={!props.nav} ref={demo!} class="input input-bordered input-accent w-full max-w-xs" />
+    </div>
+
+    {nResults() && 
+      <div class="card shadow-xl">
+        <div class="card-body prose">
+          <h2 class="card-title">{props.lang === "fr" ? "Résultats" : "Results"}:</h2>
+          <ul ref={ul!}>
+          </ul>
+        </div>
+      </div>
+    }
   </div>  
 }
