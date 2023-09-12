@@ -9,6 +9,10 @@ import { ViewTransitions } from 'astro:transitions'
 // self
 import Footer from "@components/footer.astro"
 import FooterEn from "@components/footer-en.astro"
+
+import Header from "@components/header.astro"
+import HeaderEn from "@components/header-en.astro"
+
 import { price, prix } from "@libs/constants.js"
 
 export interface Props {
@@ -163,6 +167,8 @@ if (alternateUrl && hreflang)
 	</head>
 	<body>
 		<div class="container mx-auto p-4">
+			{lang === 'fr' ? <Header /> : <HeaderEn />}
+
 		  <slot />
 		</div>
 		{lang === 'fr' ? <Footer /> : <FooterEn />}
