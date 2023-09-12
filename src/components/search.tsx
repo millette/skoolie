@@ -39,8 +39,8 @@ export default function (props: any) {
     demo?.addEventListener("keyup", doSearch)
   })
 
-  return (!props.nav || !window.location.pathname.endsWith("/faq/")) && <div>
-    <div class="form-control w-full max-w-xs">
+  return (!props.nav || !window.location.pathname.endsWith("/faq/")) && <>
+    <div class="form-control">
       {!props.nav &&
       <label class="label" for="demo">
         <span class="label-text text-xl font-bold">{props.lang === "fr" ? "Chercher" : "Search"}?</span>
@@ -50,7 +50,7 @@ export default function (props: any) {
     </div>
 
     {nResults() && 
-      <div class="card shadow-xl">
+      <div classList={{absolute: props.nav, "top-20": props.nav, "my-2": true, card: true, "bg-accent": true, "text-accent-content": true, "shadow-xl": true}}>
         <div class="card-body prose">
           <h2 class="card-title">{props.lang === "fr" ? "Résultats" : "Results"}:</h2>
           <ul ref={ul!}>
@@ -58,5 +58,5 @@ export default function (props: any) {
         </div>
       </div>
     }
-  </div>  
+  </>
 }
