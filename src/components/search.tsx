@@ -51,7 +51,7 @@ export default function (props: any) {
   }
 
   return (!props.nav || !window.location.pathname.endsWith("/faq/")) && <>
-    <div class="form-control">
+    <div classList={{ "form-control": true, "mb-5": !props.nav }}>
       {!props.nav &&
       <label class="label" for="demo">
         <span class="label-text text-xl font-bold">{props.lang === "fr" ? "Chercher" : "Search"}?</span>
@@ -61,7 +61,7 @@ export default function (props: any) {
     </div>
 
     {nResults() && 
-      <div classList={{absolute: props.nav, "top-20": props.nav, card: true, "bg-accent": true, "text-accent-content": true, "shadow-xl": true}}>
+      <div classList={{ absolute: props.nav, "top-20": props.nav, card: true, "bg-accent": true, "text-accent-content": true, "shadow-xl": true }}>
         <div class="card-body prose">
           <button onClick={clearSearch} class="btn btn-sm btn-circle btn-ghost absolute right-2">✕</button>
           <h2 class="card-title">{props.lang === "fr" ? "Résultats" : "Results"}:</h2>
