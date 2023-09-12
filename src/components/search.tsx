@@ -35,9 +35,20 @@ export default function (props: any) {
     }
   }
 
+  function closeSearch(ev) {
+    if (ev.code === "Escape") setNResults(0)
+  }
+
   onMount(() => {
     demo?.addEventListener("keyup", doSearch)
+    window.addEventListener("keyup", closeSearch)
   })
+
+  function clearSearch() {
+    console.log("CLEAR")
+    // demo.value = ""
+    setNResults(0)
+  }
 
   return (!props.nav || !window.location.pathname.endsWith("/faq/")) && <>
     <div class="form-control">
@@ -50,8 +61,9 @@ export default function (props: any) {
     </div>
 
     {nResults() && 
-      <div classList={{absolute: props.nav, "top-20": props.nav, "my-2": true, card: true, "bg-accent": true, "text-accent-content": true, "shadow-xl": true}}>
+      <div classList={{absolute: props.nav, "top-20": props.nav, card: true, "bg-accent": true, "text-accent-content": true, "shadow-xl": true}}>
         <div class="card-body prose">
+          <button onClick={clearSearch} class="btn btn-sm btn-circle btn-ghost absolute right-2">✕</button>
           <h2 class="card-title">{props.lang === "fr" ? "Résultats" : "Results"}:</h2>
           <ul ref={ul!}>
           </ul>
