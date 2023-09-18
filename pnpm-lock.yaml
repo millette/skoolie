@@ -1437,7 +1437,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.10
-      caniuse-lite: 1.0.30001534
+      caniuse-lite: 1.0.30001535
       fraction.js: 4.3.6
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -1449,8 +1449,8 @@ packages:
     resolution: {integrity: sha512-fpWrvyVHEKyeEvbKZTVOeZF3VSKKWtJxFIxX/jaVPf+cLbGUSitjb49pHLqPV2BUNNZ0LcoeEGfE/YCpyDYHIw==}
     dev: false
 
-  /babel-plugin-jsx-dom-expressions@0.36.10(@babel/core@7.22.20):
-    resolution: {integrity: sha512-QA2k/14WGw+RgcGGnEuLWwnu4em6CGhjeXtjvgOYyFHYS2a+CzPeaVQHDOlfuiBcjq/3hWMspHMIMnPEOIzdBg==}
+  /babel-plugin-jsx-dom-expressions@0.36.18(@babel/core@7.22.20):
+    resolution: {integrity: sha512-8K0CHgzNMB0+1OC+GQf1O49Nc6DfHAoWDjY4YTW3W/3il5KrDKAj65723oPmya68kKKOkqDKuz+Zh1u7VFHthw==}
     peerDependencies:
       '@babel/core': ^7.20.12
     dependencies:
@@ -1462,13 +1462,13 @@ packages:
       validate-html-nesting: 1.2.2
     dev: false
 
-  /babel-preset-solid@1.7.7(@babel/core@7.22.20):
-    resolution: {integrity: sha512-tdxVzx3kgcIjNXAOmGRbzIhFBPeJjSakiN9yM+IYdL/+LtXNnbGqb0Va5tJb8Sjbk+QVEriovCyuzB5T7jeTvg==}
+  /babel-preset-solid@1.7.12(@babel/core@7.22.20):
+    resolution: {integrity: sha512-vNZn34Dv6IsWK/F59HhZlN8gP0ihZfkhPp8Lx/nxlY+rKtSZEAmmYlXWtds6EDKSiXoj2TEHuCcuqp6cO7oLSg==}
     peerDependencies:
       '@babel/core': ^7.0.0
     dependencies:
       '@babel/core': 7.22.20
-      babel-plugin-jsx-dom-expressions: 0.36.10(@babel/core@7.22.20)
+      babel-plugin-jsx-dom-expressions: 0.36.18(@babel/core@7.22.20)
     dev: false
 
   /bail@2.0.2:
@@ -1535,7 +1535,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001534
+      caniuse-lite: 1.0.30001535
       electron-to-chromium: 1.4.523
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
@@ -1572,8 +1572,8 @@ packages:
     engines: {node: '>=14.16'}
     dev: false
 
-  /caniuse-lite@1.0.30001534:
-    resolution: {integrity: sha512-vlPVrhsCS7XaSh2VvWluIQEzVhefrUQcEsQWSS5A5V+dM07uv1qHeQzAOTGIMy9i3e9bH15+muvI/UHojVgS/Q==}
+  /caniuse-lite@1.0.30001535:
+    resolution: {integrity: sha512-48jLyUkiWFfhm/afF7cQPqPjaUmSraEhK4j+FCTJpgnGGEZHqyLe3hmWH7lIooZdSzXL0ReMvHz0vKDoTBsrwg==}
     dev: false
 
   /ccount@2.0.1:
@@ -4239,7 +4239,7 @@ packages:
       '@babel/core': 7.22.20
       '@babel/preset-typescript': 7.22.15(@babel/core@7.22.20)
       '@types/babel__core': 7.20.2
-      babel-preset-solid: 1.7.7(@babel/core@7.22.20)
+      babel-preset-solid: 1.7.12(@babel/core@7.22.20)
       merge-anything: 5.1.7
       solid-js: 1.7.12
       solid-refresh: 0.5.3(solid-js@1.7.12)
