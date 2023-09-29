@@ -45,8 +45,6 @@ export default function (props: any) {
   })
 
   function clearSearch() {
-    console.log("CLEAR")
-    // demo.value = ""
     setNResults(0)
   }
 
