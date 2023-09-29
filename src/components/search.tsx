@@ -35,7 +35,7 @@ export default function (props: any) {
     }
   }
 
-  function closeSearch(ev) {
+  function closeSearch(ev: KeyboardEvent) {
     if (ev.code === "Escape") setNResults(0)
   }
 
