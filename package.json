@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build:astro": "astro build",
-    "build": "scripts/build-index.sh && astro build",
+    "build": "astro build",
+    "build:all": "scripts/build-index.sh && astro build",
     "check": "astro check",
     "check:tsc": "tsc --noEmit",
     "check:all": "astro check && tsc --noEmit",
