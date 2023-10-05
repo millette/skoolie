@@ -1,5 +1,6 @@
 # Todo
 
+* attention au prefetch des images full-size
 * ajouter description aux images
 * ajuster contraste footer
 * nouvelle page: conversion
