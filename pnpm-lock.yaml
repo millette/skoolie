@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astrojs/markdoc':
-    specifier: ^0.5.1
-    version: 0.5.1(astro@3.2.2)
+    specifier: ^0.5.2
+    version: 0.5.2(astro@3.2.2)
   '@astrojs/prefetch':
     specifier: ^0.4.1
     version: 0.4.1
@@ -106,6 +106,10 @@ packages:
     resolution: {integrity: sha512-NQ4ppp1CM0HNkKbJNM4saVSfmUYzGlRalF6wx7F6T/MYHYSWGuojY89/oFTy4t8VlOGUCUijlsVNNeziWaUo5g==}
     dev: false
 
+  /@astrojs/internal-helpers@0.2.1:
+    resolution: {integrity: sha512-06DD2ZnItMwUnH81LBLco3tWjcZ1lGU9rLCCBaeUCGYe9cI0wKyY2W3kDyoW1I6GmcWgt1fu+D1CTvz+FIKf8A==}
+    dev: false
+
   /@astrojs/language-server@2.3.3(typescript@5.2.2):
     resolution: {integrity: sha512-ObIjAdjKJFHsKCmaFHc6tbpomMkX1580UbxbgnCr6zEpIZuQobH/zlKwIaSDcmQOQtt8ICs921AYTM+kOg8p6w==}
     hasBin: true
@@ -140,13 +144,13 @@ packages:
       - typescript
     dev: true
 
-  /@astrojs/markdoc@0.5.1(astro@3.2.2):
-    resolution: {integrity: sha512-22S8YysqA6ZoyQPMbBI75dKU1OsEOz1hQTt300ZRa9GE7y1h8KlTx3OVUk1tAQM8V6juexcRoISyWGf6olzfaQ==}
+  /@astrojs/markdoc@0.5.2(astro@3.2.2):
+    resolution: {integrity: sha512-8zVsC0oauNTfZBww+GZDTP2HD0vJqlu+D734oEnqVySOnbKHVIWAoCqxUzEph8Af6rxWzakBNxj09zCIZlHPuQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
-      astro: ^3.2.2
+      astro: ^3.2.3
     dependencies:
-      '@astrojs/internal-helpers': 0.2.0
+      '@astrojs/internal-helpers': 0.2.1
       '@astrojs/prism': 3.0.0
       '@markdoc/markdoc': 0.3.2
       astro: 3.2.2
