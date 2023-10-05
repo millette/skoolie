@@ -19,7 +19,7 @@
     "@astrojs/markdoc": "^0.5.2",
     "@astrojs/prefetch": "^0.4.1",
     "@astrojs/sitemap": "^3.0.1",
-    "@astrojs/solid-js": "^3.0.1",
+    "@astrojs/solid-js": "^3.0.2",
     "@astrojs/tailwind": "^5.0.0",
     "@markdoc/markdoc": "^0.3.2",
     "@sindresorhus/transliterate": "^1.6.0",
