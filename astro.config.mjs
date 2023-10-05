@@ -13,15 +13,13 @@ export default defineConfig({
   site,
   compressHTML: true,
   trailingSlash: 'always',
-  /*
-  image: {
-    service: sharpImageService(),
-  },
-  */  
   integrations: [
     markdoc(),
     solid(),
-    prefetch({ selector: "a" }),
+    prefetch({
+      selector: "a[href$='/']", // only prefetch href ending with /
+      throttle: 4,
+    }),
     sitemap({
       filter: (page) => !page.startsWith(`${site}/en/album/under/`) && !page.startsWith(`${site}/album/under/`)
     }),
