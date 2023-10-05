@@ -16,11 +16,8 @@ export default defineConfig({
   integrations: [
     markdoc(),
     solid(),
-    // attention au prefetch des images full-size
-    // FIXME: ignore /_astro/...
-    //        prefetch everything else
     prefetch({
-      selector: "a[href$=/]",
+      selector: "a[href$='/']", // only prefetch href ending with /
       throttle: 4,
     }),
     sitemap({
