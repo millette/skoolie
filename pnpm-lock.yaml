@@ -1431,7 +1431,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.22.1
-      caniuse-lite: 1.0.30001546
+      caniuse-lite: 1.0.30001547
       fraction.js: 4.3.6
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -1443,8 +1443,8 @@ packages:
     resolution: {integrity: sha512-fpWrvyVHEKyeEvbKZTVOeZF3VSKKWtJxFIxX/jaVPf+cLbGUSitjb49pHLqPV2BUNNZ0LcoeEGfE/YCpyDYHIw==}
     dev: false
 
-  /babel-plugin-jsx-dom-expressions@0.36.18(@babel/core@7.23.0):
-    resolution: {integrity: sha512-8K0CHgzNMB0+1OC+GQf1O49Nc6DfHAoWDjY4YTW3W/3il5KrDKAj65723oPmya68kKKOkqDKuz+Zh1u7VFHthw==}
+  /babel-plugin-jsx-dom-expressions@0.37.0(@babel/core@7.23.0):
+    resolution: {integrity: sha512-WLUY+Eaeej9fmRMRD2YSTskmdfBxmVdgeSRHHiZyWcHe+SQY0xqKTdX4Ilbmf/MxKcDPJhwkuq41OBe42P3EVg==}
     peerDependencies:
       '@babel/core': ^7.20.12
     dependencies:
@@ -1456,13 +1456,13 @@ packages:
       validate-html-nesting: 1.2.2
     dev: false
 
-  /babel-preset-solid@1.7.12(@babel/core@7.23.0):
-    resolution: {integrity: sha512-vNZn34Dv6IsWK/F59HhZlN8gP0ihZfkhPp8Lx/nxlY+rKtSZEAmmYlXWtds6EDKSiXoj2TEHuCcuqp6cO7oLSg==}
+  /babel-preset-solid@1.8.0(@babel/core@7.23.0):
+    resolution: {integrity: sha512-TCsC3kTNYRi+0/mHYFvC2VsSq++GZPFyHF3QTP7L37TXaVFD0HZQPyLQnf+waOGPHQuAhKXo0GEQziquSwBAVw==}
     peerDependencies:
       '@babel/core': ^7.0.0
     dependencies:
       '@babel/core': 7.23.0
-      babel-plugin-jsx-dom-expressions: 0.36.18(@babel/core@7.23.0)
+      babel-plugin-jsx-dom-expressions: 0.37.0(@babel/core@7.23.0)
     dev: false
 
   /bail@2.0.2:
@@ -1529,8 +1529,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001546
-      electron-to-chromium: 1.4.544
+      caniuse-lite: 1.0.30001547
+      electron-to-chromium: 1.4.548
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
     dev: false
@@ -1559,8 +1559,8 @@ packages:
     engines: {node: '>=14.16'}
     dev: false
 
-  /caniuse-lite@1.0.30001546:
-    resolution: {integrity: sha512-zvtSJwuQFpewSyRrI3AsftF6rM0X80mZkChIt1spBGEvRglCrjTniXvinc8JKRoqTwXAgvqTImaN9igfSMtUBw==}
+  /caniuse-lite@1.0.30001547:
+    resolution: {integrity: sha512-W7CrtIModMAxobGhz8iXmDfuJiiKg1WADMO/9x7/CLNin5cpSbuBjooyoIUVB5eyCc36QuTVlkVa1iB2S5+/eA==}
     dev: false
 
   /ccount@2.0.1:
@@ -1872,8 +1872,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: false
 
-  /electron-to-chromium@1.4.544:
-    resolution: {integrity: sha512-54z7squS1FyFRSUqq/knOFSptjjogLZXbKcYk3B0qkE1KZzvqASwRZnY2KzZQJqIYLVD38XZeoiMRflYSwyO4w==}
+  /electron-to-chromium@1.4.548:
+    resolution: {integrity: sha512-R77KD6mXv37DOyKLN/eW1rGS61N6yHOfapNSX9w+y9DdPG83l9Gkuv7qkCFZ4Ta4JPhrjgQfYbv4Y3TnM1Hi2Q==}
     dev: false
 
   /emmet@2.4.6:
@@ -3048,8 +3048,8 @@ packages:
       '@types/nlcst': 1.0.2
     dev: false
 
-  /node-abi@3.47.0:
-    resolution: {integrity: sha512-2s6B2CWZM//kPgwnuI0KrYwNjfdByE25zvAaEpq9IH4zcNsarH8Ihu/UuX6XMPEogDAxkuUFeZn60pXNHAqn3A==}
+  /node-abi@3.48.0:
+    resolution: {integrity: sha512-uWR/uwQyVV2iN5+Wkf1/oQxOR9YjU7gBclJLg2qK7GDvVohcnY6LaBXKV89N79EQFyN4/e43O32yQYE5QdFYTA==}
     engines: {node: '>=10'}
     dependencies:
       semver: 7.5.4
@@ -3323,7 +3323,7 @@ packages:
       minimist: 1.2.8
       mkdirp-classic: 0.5.3
       napi-build-utils: 1.0.2
-      node-abi: 3.47.0
+      node-abi: 3.48.0
       pump: 3.0.0
       rc: 1.2.8
       simple-get: 4.0.1
@@ -4216,7 +4216,7 @@ packages:
       '@babel/core': 7.23.0
       '@babel/preset-typescript': 7.23.0(@babel/core@7.23.0)
       '@types/babel__core': 7.20.2
-      babel-preset-solid: 1.7.12(@babel/core@7.23.0)
+      babel-preset-solid: 1.8.0(@babel/core@7.23.0)
       merge-anything: 5.1.7
       solid-js: 1.8.0
       solid-refresh: 0.5.3(solid-js@1.8.0)
@@ -4281,7 +4281,7 @@ packages:
         optional: true
     dependencies:
       '@volar/language-service': 1.10.3
-      vscode-css-languageservice: 6.2.9
+      vscode-css-languageservice: 6.2.10
       vscode-uri: 3.0.8
     dev: true
 
@@ -4354,12 +4354,12 @@ packages:
       vscode-uri: 3.0.8
     dev: true
 
-  /vscode-css-languageservice@6.2.9:
-    resolution: {integrity: sha512-9MsOvAi+VycKomQ7KEq4o/hLtjHHrtRLLl8lM9nMcH8cxfNI7/6jVXmsV/7pdbDWu9L3DZhsspN1eMXZwiOymw==}
+  /vscode-css-languageservice@6.2.10:
+    resolution: {integrity: sha512-sYUZPku4mQ06AWGCbMyjv2tdR6juBW6hTbVPFwbJvNVzdtEfBioQOgkdXg7yMJNWnXkvWSU1FL2kb4Vxu5Cdyw==}
     dependencies:
       '@vscode/l10n': 0.0.16
       vscode-languageserver-textdocument: 1.0.11
-      vscode-languageserver-types: 3.17.3
+      vscode-languageserver-types: 3.17.5
       vscode-uri: 3.0.8
     dev: true
 
@@ -4386,10 +4386,6 @@ packages:
 
   /vscode-languageserver-textdocument@1.0.11:
     resolution: {integrity: sha512-X+8T3GoiwTVlJbicx/sIAF+yuJAqz8VvwJyoMVhwEMoEKE/fkDmrqUgDMyBECcM2A2frVZIUj5HI/ErRXCfOeA==}
-    dev: true
-
-  /vscode-languageserver-types@3.17.3:
-    resolution: {integrity: sha512-SYU4z1dL0PyIMd4Vj8YOqFvHu7Hz/enbWtpfnVbJHU4Nd1YNYx8u0ennumc6h48GQNeOLxmwySmnADouT/AuZA==}
     dev: true
 
   /vscode-languageserver-types@3.17.5:
