@@ -1,11 +1,12 @@
 # Todo
 
 * attention au prefetch des images full-size
+* ajuster contraste
 * ajouter description aux images
-* ajuster contraste footer
 * nouvelle page: conversion
 * nouvelle page: livre
 * Open external links in other window
+* Use markdoc variable in links
 * Add date/revision to footer
 * Search script should copy assets to public
 * Refactor album pages (bilingual)
