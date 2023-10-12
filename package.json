@@ -2,7 +2,7 @@
   "name": "skoolie-bus-rv",
   "private": true,
   "type": "module",
-  "version": "2.11.2",
+  "version": "2.12.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -21,10 +21,10 @@
     "@astrojs/sitemap": "^3.0.1",
     "@astrojs/solid-js": "^3.0.2",
     "@astrojs/tailwind": "^5.0.2",
-    "@markdoc/markdoc": "^0.3.2",
+    "@markdoc/markdoc": "^0.3.3",
     "@sindresorhus/transliterate": "^1.6.0",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^3.2.4",
+    "astro": "^3.3.0",
     "astro-seo": "^0.8.0",
     "daisyui": "^3.9.2",
     "github-slugger": "^2.0.0",
@@ -34,7 +34,7 @@
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.2.0",
+    "@astrojs/check": "^0.2.1",
     "typescript": "^5.2.2"
   }
 }
