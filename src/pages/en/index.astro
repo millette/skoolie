@@ -4,7 +4,6 @@ import { Image } from 'astro:assets'
 
 // self
 import Layout from '@layouts/layout.astro'
-// import halfSpace from '@libs/half-space.ts'
 import { price, marketplace } from "@libs/constants.js"
 import bus0 from '@assets/20230614_115044-90_IMGP.jpg'
 import bus1 from '@assets/20230614_120718.jpg'
@@ -27,12 +26,12 @@ const description = `Skoolie for sale ${price} in Otterburn Park: 38' 2009 Blue 
 		<div class="lg:flex gap-4">
 			<div class="flex-1">
 				<h2 class="text-xl font-bold"><a class="link" href={marketplace}>Marketplace</a> ad</h2>
-				<a href="/album/outside/"><Image class="my-4 rounded-lg" src={bus0} width={bus0.width/4} height={bus0.height/4} alt="Bus - front" /></a>
+				<a href="/album/outside/"><Image loading="eager" class="my-4 rounded-lg" src={bus0} width={bus0.width/4} height={bus0.height/4} alt="Bus - front" /></a>
 				<a class="link" href="tel:5143947877">514-394-7877</a>
 			</div>
 			<div class="flex-1">
 				<h2 class="text-xl font-bold"><a class="link" href="https://www.kijiji.ca/v-vr-motorise/longueuil-rive-sud/skoolie-autobus-vr/1663218685">Kijiji</a> ad</h2>
-				<a href="/album/inside/"><Image class="my-4 rounded-lg" src={bus1} width={bus1.width/4} height={bus1.height/4} alt="Bus - interior" /></a>
+				<a href="/album/inside/"><Image loading="eager" class="my-4 rounded-lg" src={bus1} width={bus1.width/4} height={bus1.height/4} alt="Bus - interior" /></a>
 				<a class="link" href="mailto:bus@waglo.com">bus@waglo.com</a>
 			</div>
 		</div>
