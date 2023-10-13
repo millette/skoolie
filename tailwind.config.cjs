@@ -10,7 +10,15 @@ module.exports = {
     daisyui,
   ],
   daisyui: {
-    themes: ['retro', 'luxury'],
+    themes: [
+      {
+        retro: {
+          ...require('daisyui/src/theming/themes')['[data-theme=retro]'],
+          "info-content": "hsl(235 98% 98%)",
+        }
+      },
+      'luxury',
+    ],
     darkTheme: 'luxury',
     logs: false,
   }

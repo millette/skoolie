@@ -4,7 +4,6 @@ import { Image } from 'astro:assets'
 
 // self
 import Layout from '@layouts/layout.astro'
-// import halfSpace from '@libs/half-space.ts'
 import { price, marketplace } from "@libs/constants.js"
 import imgEn from '@assets/for-sale-crop.webp'
 import bus0 from '@assets/20230614_115044-90_IMGP.jpg'
@@ -19,7 +18,7 @@ const description = `Skoolie for sale ${price} in Otterburn Park (near Mont-Sain
 		<a class="float-right italic link" href="/details/" hreflang="fr-ca">Français</a>
 		<h1 class="text-4xl font-bold">Skoolie <small>Bus/RV</small></h1>
 
-		<Image src={imgEn} alt="For Sale" />
+		<Image loading="eager" src={imgEn} alt="For Sale" />
 
 		<div class="my-4 alert alert-info">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -40,14 +39,13 @@ const description = `Skoolie for sale ${price} in Otterburn Park (near Mont-Sain
 					<div class="stat-title">📧 email</div>
 					<div class="stat-value text-warning">bus@waglo.com</div>
 				</div>
-			</div>
-		</a>
+			</a>
+		</div>
 
 		<div class="md:flex gap-4 my-4">
 			<div class="flex-1">
-					<h2 class="text-xl font-bold"><a class="link" href={marketplace}>Marketplace</a> ad</h2>
-
-				</div>
+				<h2 class="text-xl font-bold"><a class="link" href={marketplace}>Marketplace</a> ad</h2>
+			</div>
 			<div class="flex-1">
 				<h2 class="text-xl font-bold"><a class="link" href="https://www.kijiji.ca/v-vr-motorise/longueuil-rive-sud/skoolie-autobus-vr/1663218685">Kijiji</a> ad</h2>
 			</div>
@@ -55,7 +53,7 @@ const description = `Skoolie for sale ${price} in Otterburn Park (near Mont-Sain
 
 		<div class="grid grid-cols-2 grid sm:grid-cols-1 sm:float-right sm:ml-4">
   		<a href="/album/outside/"><Image class="rounded-lg mb-4" src={bus0} width={bus0.width/12} height={bus0.height/12} alt="Bus - devant" /></a>
-				<a href="/album/inside/"><Image class="rounded-lg" src={bus1} width={bus0.width/12} height={bus0.height/12} alt="Bus - devant" /></a>
+			<a href="/album/inside/"><Image class="rounded-lg" src={bus1} width={bus0.width/12} height={bus0.height/12} alt="Bus - devant" /></a>
 		</div>
 
 		<div class="mx-auto prose my-4 text-left">
