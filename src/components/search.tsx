@@ -11,7 +11,7 @@ export default function (props: any) {
   let demo: HTMLInputElement
   let ul: HTMLUListElement
 
-  init(`/tinysearch_engine_${props.lang}.wasm`)
+  if (typeof window !== 'undefined') init(`/tinysearch_engine_${props.lang}.wasm`)
 
   function doSearch() {
     if (demo.value.length < 2) {
@@ -58,7 +58,7 @@ export default function (props: any) {
       <input type="text" id="demo" placeholder={props.nav ? (props.lang === "fr" ? "Chercher" : "Search") : ""} autofocus={!props.nav} ref={demo!} class="input input-bordered input-accent w-full max-w-xs" />
     </div>
 
-    {nResults() && 
+    {(nResults() > 0) && 
       <div classList={{ absolute: props.nav, "top-20": props.nav, card: true, "bg-accent": true, "text-accent-content": true, "shadow-xl": true }}>
         <div class="card-body prose">
           <button onClick={clearSearch} class="btn btn-sm btn-circle btn-ghost absolute right-2">✕</button>
