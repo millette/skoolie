@@ -2,7 +2,7 @@
   "name": "skoolie-bus-rv",
   "private": true,
   "type": "module",
-  "version": "2.13.2",
+  "version": "2.13.3",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
