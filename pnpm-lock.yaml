@@ -21,8 +21,8 @@ dependencies:
     specifier: ^5.0.2
     version: 5.0.2(astro@3.3.2)(tailwindcss@3.3.3)
   '@markdoc/markdoc':
-    specifier: ^0.3.3
-    version: 0.3.3
+    specifier: ^0.3.4
+    version: 0.3.4
   '@sindresorhus/transliterate':
     specifier: ^1.6.0
     version: 1.6.0
@@ -148,7 +148,7 @@ packages:
     dependencies:
       '@astrojs/internal-helpers': 0.2.1
       '@astrojs/prism': 3.0.0
-      '@markdoc/markdoc': 0.3.3
+      '@markdoc/markdoc': 0.3.4
       astro: 3.3.2(typescript@5.2.2)
       esbuild: 0.19.5
       github-slugger: 2.0.0
@@ -1024,8 +1024,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: false
 
-  /@markdoc/markdoc@0.3.3:
-    resolution: {integrity: sha512-z9vd8KO914o7vd+ojxnOHxvDXDE2nPNexyLFCl5wxKmqbg9SE6JyrtnFs0rOdliOgXqWctev0eg60qQsi2vdGA==}
+  /@markdoc/markdoc@0.3.4:
+    resolution: {integrity: sha512-cTyucw4YcQL3JfKMjjjszuTuR97nELN0mvPQhYLvVR/flvYaZUZUNBs8O3lv0vf7g0bfM2ZTUezBq0u8+1hTdg==}
     engines: {node: '>=14.7.0'}
     peerDependencies:
       '@types/react': '*'
