@@ -4,13 +4,88 @@
 import Layout from '@layouts/layout.astro'
 import { price } from "@libs/constants.js"
 
+export const prerender = false
+
 const description = `Skoolie à vendre ${price}$ CAD dans Otterburn Park (près de Mont-Saint-Hilaire & Beloeil): skoolie/autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5.`
+
+let subscribed
+
+console.log("METHOD", Astro.request.method)
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData()
+    const email = data.get("email")
+		console.log("EMAIL", email)
+		subscribed = Boolean(email)
+    // Do something with the data
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
 
 ---
 
 <Layout description={description} url="/details/" title="Skoolie - Le Livre">
-	<main class="text-center mx-auto lg:w-[820px]">
+	<main class="mx-auto lg:w-[820px]">
 		<a class="float-right italic link" href="/en/book/" hreflang="en-ca">English</a>
-		<h1 class="text-4xl font-bold">Skoolie <small>le Livre</small></h1>
-  </main>
+		<h1 class="text-4xl font-bold">Skoolie <small>Le Livre</small></h1>
+
+		<div class={`my-4 alert ${subscribed ? 'alert-success shadow-md' : 'alert-accent shadow-lg'}`}>
+			<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+			{subscribed ?
+			<div>
+				<p>
+					Merci! Nous conserverons précieusement votre email et
+					nous vous contacterons dès que le livre sera disponible.
+				</p>
+				<p>
+					Vérifiez votre boite de courriel pour confirmer votre email.
+				</p>
+			</div>
+			:
+			<form class="grid text-xl justify-items-center content-center" method="post">
+				<p>
+					Voulez-vous être averti quand les pré-commandes seront disponibles?
+				</p>
+				
+				<div class="flex my-2">
+					<label class="hidden md:inline-flex label">Email?</label>
+					<div class="join my-3 md:my-0 md:mx-6">
+						<input required name="email" type="email" placeholder="morgan@example.com" class="input input-secondary join-item placeholder:text-slate-500 text-black">
+						<button type="submit" class="btn btn-secondary join-item">M'inscrire</button>
+					</div>
+				</div>
+
+				<p class="italic text-sm">
+					Vous serez contacté uniquement à propos du livre sur les skoolies.
+				</p>
+			</form>
+			}
+		</div>
+
+		<div class="my-4 md:flex">
+			<img alt="Illustration d'une amatrice de livres" class="md:order-last" src="/undraw_book_lover_re_rwjy.svg" width=446 height=341>
+
+			<div class="mt-6">
+				<h2 class="md:mb-4 text-2xl font-bold">Table des matières</h2>
+
+				<ol class="ml-6 list-disc flex-1">
+					<li>Préambule</li>
+					<li>Choisir son autobus</li>
+					<li>Avant d'acheter</li>
+					<li>Une maison sur roues</li>
+					<li>Les règles à suivre</li>
+					<li>Processus de conversion</li>
+					<li>Équipement nécessaire</li>
+					<li>Entretien</li>
+					<li>Classe 3 ou classe 5?</li>
+					<li>Ailleurs dans le monde (règlementation)</li>
+					<li>Épilogue</li>
+				</ol>			
+			</div>
+		</div>
+		<p class="italic">La table des matières et le contenu pourraient changer d'ici la publication.</p>
+	</main>
 </Layout>
