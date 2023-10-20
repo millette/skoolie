@@ -9,8 +9,42 @@ const description = `Skoolie for sale ${price}$ CAD in Otterburn Park (near Mont
 ---
 
 <Layout description={description} url="/details/" title="Skoolie - The Book">
-	<main class="text-center mx-auto lg:w-[820px]">
+	<main class="mx-auto lg:w-[820px]">
 		<a class="float-right italic link" href="/livre/" hreflang="fr-ca">Français</a>
 		<h1 class="text-4xl font-bold">Skoolie <small>the Book</small></h1>
-  </main>
+
+		<div class="my-4 alert alert-success">
+			<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+			<span class="text-xl">
+				Do you want to be notified when pre-orders are available?
+			</span>
+
+			<button class="btn btn-lg btn-secondary" onclick="my_modal_5.showModal()">
+				YES!
+			</button>			
+		</div>
+
+		<div class="my-4 md:flex">
+			<img alt="Book lover illustration" class="md:order-last" src="/undraw_book_lover_re_rwjy.svg" width=446 height=341>
+
+			<div class="mt-6">
+				<h2 class="md:mb-4 text-2xl font-bold">Table of content</h2>
+	
+				<ol class="ml-6 list-disc flex-1">
+					<li>Preamble</li>
+					<li>Choose your bus</li>
+					<li>Before buying</li>
+					<li>A house on wheels</li>
+					<li>The rules to follow</li>
+					<li>Processus de conversion</li>
+					<li>Necessary equipment</li>
+					<li>Maintenance</li>
+					<li>Class 3 or class 5?</li>
+					<li>Elsewhere in the world (regulations)</li>
+					<li>Epilogue</li>
+				</ol>
+			</div>
+		</div>
+		<p class="italic">Table of contents and content may change between now and publication.</p>
+	</main>
 </Layout>
