@@ -1,13 +1,7 @@
 ---
-// npm
-// import { Image } from 'astro:assets'
-
 // self
 import Layout from '@layouts/layout.astro'
-// import halfSpace from '@libs/half-space.ts'
 import { price } from "@libs/constants.js"
-// import bus0 from '@assets/20230614_115044-90_IMGP.jpg'
-// import bus1 from '@assets/20230614_120718-90_IMGP.jpg'
 
 const description = `Skoolie for sale ${price} in Otterburn Park: 38' bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive.`
 
@@ -18,20 +12,21 @@ const description = `Skoolie for sale ${price} in Otterburn Park: 38' bus (immat
 		<a class="float-right italic" href="/guides/" hreflang="fr-ca">Français</a>
 		<h1>Skoolie <small>Guides to complete the project</small></h1>
 
-		<div class="my-4 alert alert-info">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-			<span class="text-xl">{description}</span>
-			<a href="/en/details/" class="btn btn-lg btn-primary">Details</a>
+		<h2>New!</h2>
+		<div class="my-4 alert alert-success">
+			<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+			<span class="text-xl">You will soon be able to pre-order the book on Amazon.</span>
+			<a href="/en/book/" class="btn btn-lg btn-secondary">The Book</a>
 		</div>
 
+		<h2>Resources</h2>
 		<p>Need help completing your Skoolie project? Consult the following resources:</p>
 
 		<ul>
-                        <li><a hreflang="en-ca" href="https://saaq.gouv.qc.ca/en/transportation-passengers/heavy-vehicles-motor-homes/personal-use"><b>SAAQ</b>: Heavy Vehicles Converted Into Motor Homes for Personal Use</a> [en]</li>
+			<li><a hreflang="en-ca" href="https://saaq.gouv.qc.ca/en/transportation-passengers/heavy-vehicles-motor-homes/personal-use"><b>SAAQ</b>: Heavy Vehicles Converted Into Motor Homes for Personal Use</a> [en]</li>
 			<li><a hreflang="fr-ca" href="https://quebecskoolie.com/">Québec Skoolie</a> [fr]</li>
 			<li><a hreflang="fr-ca" href="https://campeurs-skoolie.com/">Skoolie au Québec</a> [fr]</li>
 			<li><a hreflang="en-ca" href="https://skooliecanada.ca/">Skoolie & Bus conversion Canada</a> [en]</li>
 		</ul>
-
 	</main>
 </Layout>
