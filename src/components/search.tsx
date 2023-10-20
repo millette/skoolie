@@ -59,7 +59,7 @@ export default function (props: any) {
     </div>
 
     {(nResults() > 0) && 
-      <div classList={{ absolute: props.nav, "top-20": props.nav, card: true, "bg-accent": true, "text-accent-content": true, "shadow-xl": true }}>
+      <div classList={{ "z-50": true, absolute: props.nav, "top-20": props.nav, card: true, "bg-accent": true, "text-accent-content": true, "shadow-xl": true }}>
         <div class="card-body prose">
           <button onClick={clearSearch} class="btn btn-sm btn-circle btn-ghost absolute right-2">✕</button>
           <h2 class="card-title">{props.lang === "fr" ? "Résultats" : "Results"}:</h2>
