@@ -50,9 +50,10 @@ switch (album) {
     </ul>
 
     <div class="place-items-center grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-5 xl:grid-cols-4 xl:gap-7 2xl:grid-cols-5 2xl:gap-10">
-    {data?.map(({default: img}) => (
+    {data?.map(({default: img}, n) => (
       <a data-astro-reload href={img.src}>
         <Image
+          loading={n < 10 ? "eager" : "lazy"}
           class="rounded-md"
           src={img}
           title={`${gallery.single.fr}`}
