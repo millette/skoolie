@@ -25,13 +25,16 @@
     "@markdoc/markdoc": "^0.3.4",
     "@sindresorhus/transliterate": "^1.6.0",
     "@tailwindcss/typography": "^0.5.10",
+    "@types/better-sqlite3": "^7.6.6",
     "astro": "^3.3.2",
     "astro-seo": "^0.8.0",
+    "better-sqlite3": "^9.0.0",
     "daisyui": "^3.9.3",
     "github-slugger": "^2.0.0",
+    "nodemailer": "^6.9.6",
     "sharp": "^0.32.6",
     "solid-js": "^1.8.3",
-    "string-strip-html": "^13.4.3",
+    "string-strip-html": "^13.4.4",
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
