@@ -3,6 +3,10 @@
 // self
 import Search from "@components/search.tsx"
 
+// console.log("HEADER-method", Astro.request.method)
+// console.log("HEADER-url", Astro.url.pathname)
+
+// {Astro.request.method === 'POST' ? '' : ''}
 ---
 
 <div class="navbar">
@@ -15,7 +19,7 @@ import Search from "@components/search.tsx"
         <li><a href="/details/">Détails</a></li>
         <li><a href="/faq/">FAQ</a></li>
         <li><a href="/guides/">Guides</a></li>
-        <li><a href="/livre/">Livre</a></li>
+        <li><a href="/livre/" data-astro-reload={Astro.request.method === 'POST'}>Livre</a></li>
         <li><a href="/album/inside/">Photos</a></li>
       </ul>
     </div>
@@ -26,7 +30,7 @@ import Search from "@components/search.tsx"
       <li><a href="/details/">Détails</a></li>
       <li><a href="/faq/">FAQ</a></li>
       <li><a href="/guides/">Guides</a></li>
-      <li><a href="/livre/">Livre</a></li>
+      <li><a href="/livre/" data-astro-reload={Astro.request.method === 'POST'}>Livre</a></li>
       <li><a href="/album/inside/">Photos</a></li>
   </ul>
   </div>

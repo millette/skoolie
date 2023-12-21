@@ -15,7 +15,7 @@ import Search from "@components/search.tsx"
         <li><a href="/en/details/">Details</a></li>
         <li><a href="/en/faq/">FAQ</a></li>
         <li><a href="/en/guides/">Guides</a></li>
-        <li><a href="/en/book/">Book</a></li>
+        <li><a href="/en/book/" data-astro-reload={Astro.request.method === 'POST'}>Book</a></li>
         <li><a href="/en/album/inside/">Photos</a></li>
       </ul>
     </div>
@@ -26,7 +26,7 @@ import Search from "@components/search.tsx"
       <li><a href="/en/details/">Details</a></li>
       <li><a href="/en/faq/">FAQ</a></li>
       <li><a href="/en/guides/">Guides</a></li>
-      <li><a href="/en/book/">Book</a></li>
+      <li><a href="/en/book/" data-astro-reload={Astro.request.method === 'POST'}>Book</a></li>
       <li><a href="/en/album/inside/">Photos</a></li>
   </ul>
   </div>
