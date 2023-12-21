@@ -32,9 +32,6 @@ dependencies:
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.4.0)
-  '@types/better-sqlite3':
-    specifier: ^7.6.8
-    version: 7.6.8
   astro:
     specifier: ^3.3.2
     version: 3.3.2(typescript@5.3.3)
@@ -70,6 +67,9 @@ devDependencies:
   '@astrojs/check':
     specifier: ^0.2.1
     version: 0.2.1(typescript@5.3.3)
+  '@types/better-sqlite3':
+    specifier: ^7.6.8
+    version: 7.6.8
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -1133,7 +1133,7 @@ packages:
     resolution: {integrity: sha512-ASndM4rdGrzk7iXXqyNC4fbwt4UEjpK0i3j4q4FyeQrLAthfB6s7EF135ZJE0qQxtKIMFwmyT6x0switET7uIw==}
     dependencies:
       '@types/node': 17.0.45
-    dev: false
+    dev: true
 
   /@types/debug@4.1.10:
     resolution: {integrity: sha512-tOSCru6s732pofZ+sMv9o4o3Zc+Sa8l3bxd/tweTQudFn06vAzb13ZX46Zi6m6EJ+RUbRTHvgQJ1gBtSgkaUYA==}
@@ -1212,7 +1212,6 @@ packages:
 
   /@types/node@17.0.45:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
-    dev: false
 
   /@types/parse5@6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}

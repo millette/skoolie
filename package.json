@@ -25,7 +25,6 @@
     "@markdoc/markdoc": "^0.3.4",
     "@sindresorhus/transliterate": "^1.6.0",
     "@tailwindcss/typography": "^0.5.10",
-    "@types/better-sqlite3": "^7.6.8",
     "astro": "^3.3.2",
     "astro-seo": "^0.8.0",
     "better-sqlite3": "^9.2.2",
@@ -39,6 +38,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.2.1",
+    "@types/better-sqlite3": "^7.6.8",
     "typescript": "^5.3.3"
   }
 }
