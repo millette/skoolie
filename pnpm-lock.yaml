@@ -33,8 +33,8 @@ dependencies:
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.3.3)
   '@types/better-sqlite3':
-    specifier: ^7.6.6
-    version: 7.6.6
+    specifier: ^7.6.8
+    version: 7.6.8
   astro:
     specifier: ^3.3.2
     version: 3.3.2(typescript@5.2.2)
@@ -1129,8 +1129,8 @@ packages:
       '@babel/types': 7.23.0
     dev: false
 
-  /@types/better-sqlite3@7.6.6:
-    resolution: {integrity: sha512-nuFAptzt0hZYBvyLzKQCbuCCK+RN9PHH4ezar5EJLIg2qpVhwQ/uLvLO/K8A9O7N8DafawgFupiyXQSs0U48Ng==}
+  /@types/better-sqlite3@7.6.8:
+    resolution: {integrity: sha512-ASndM4rdGrzk7iXXqyNC4fbwt4UEjpK0i3j4q4FyeQrLAthfB6s7EF135ZJE0qQxtKIMFwmyT6x0switET7uIw==}
     dependencies:
       '@types/node': 17.0.45
     dev: false
