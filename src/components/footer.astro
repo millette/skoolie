@@ -4,7 +4,7 @@
     <a href="/details/" class="link link-hover">Détails</a>
     <a href="/faq/" class="link link-hover">FAQ</a>
     <a href="/guides/" class="link link-hover">Guides</a>
-    <a href="/livre/" class="link link-hover">Livre</a>
+    <a href="/livre/" class="link link-hover" data-astro-reload={Astro.request.method === 'POST'}>Livre</a>
     <a href="/album/inside/" class="link link-hover">Photos</a>
   </div> 
 </footer>
