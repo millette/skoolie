@@ -22,7 +22,7 @@ dependencies:
     version: 3.0.2(solid-js@1.8.7)(vite@4.5.1)
   '@astrojs/tailwind':
     specifier: ^5.0.4
-    version: 5.0.4(astro@3.3.2)(tailwindcss@3.3.3)
+    version: 5.0.4(astro@3.3.2)(tailwindcss@3.4.0)
   '@markdoc/markdoc':
     specifier: ^0.3.4
     version: 0.3.4
@@ -31,7 +31,7 @@ dependencies:
     version: 1.6.0
   '@tailwindcss/typography':
     specifier: ^0.5.10
-    version: 0.5.10(tailwindcss@3.3.3)
+    version: 0.5.10(tailwindcss@3.4.0)
   '@types/better-sqlite3':
     specifier: ^7.6.8
     version: 7.6.8
@@ -63,8 +63,8 @@ dependencies:
     specifier: ^13.4.4
     version: 13.4.4
   tailwindcss:
-    specifier: ^3.3.3
-    version: 3.3.3
+    specifier: ^3.4.0
+    version: 3.4.0
 
 devDependencies:
   '@astrojs/check':
@@ -243,7 +243,7 @@ packages:
       - vite
     dev: false
 
-  /@astrojs/tailwind@5.0.4(astro@3.3.2)(tailwindcss@3.3.3):
+  /@astrojs/tailwind@5.0.4(astro@3.3.2)(tailwindcss@3.4.0):
     resolution: {integrity: sha512-50ImfEFRBjndtWus6xJOWQ4EVpZWB4d+hieosMPm1Tca68mNTX+Yi1/PhTMk9q/w7iZPIUK/KGBoovo15O10eQ==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
@@ -253,7 +253,7 @@ packages:
       autoprefixer: 10.4.16(postcss@8.4.31)
       postcss: 8.4.31
       postcss-load-config: 4.0.2(postcss@8.4.31)
-      tailwindcss: 3.3.3
+      tailwindcss: 3.4.0
     transitivePeerDependencies:
       - ts-node
     dev: false
@@ -1088,7 +1088,7 @@ packages:
       escape-string-regexp: 5.0.0
     dev: false
 
-  /@tailwindcss/typography@0.5.10(tailwindcss@3.3.3):
+  /@tailwindcss/typography@0.5.10(tailwindcss@3.4.0):
     resolution: {integrity: sha512-Pe8BuPJQJd3FfRnm6H0ulKIGoMEQS+Vq01R6M5aCrFB/ccR/shT+0kXLjouGC1gFLm9hopTFN+DMP0pfwRWzPw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -1097,7 +1097,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.3.3
+      tailwindcss: 3.4.0
     dev: false
 
   /@types/babel__core@7.20.3:
@@ -1796,7 +1796,7 @@ packages:
       css-selector-tokenizer: 0.8.0
       postcss: 8.4.31
       postcss-js: 4.0.1(postcss@8.4.31)
-      tailwindcss: 3.3.3
+      tailwindcss: 3.4.0
     transitivePeerDependencies:
       - ts-node
     dev: false
@@ -4224,8 +4224,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /tailwindcss@3.3.3:
-    resolution: {integrity: sha512-A0KgSkef7eE4Mf+nKJ83i75TMyq8HqY3qmFIJSWy8bNt0v1lG7jUcpGpoTFxAwYcWOphcTBLPPJg+bDfhDf52w==}
+  /tailwindcss@3.4.0:
+    resolution: {integrity: sha512-VigzymniH77knD1dryXbyxR+ePHihHociZbXnLZHUyzf2MMs2ZVqlUrZ3FvpXP8pno9JzmILt1sZPD19M3IxtA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
