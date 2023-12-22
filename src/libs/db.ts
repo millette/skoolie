@@ -34,7 +34,7 @@ function initDb() {
     date timestamp default current_timestamp,
     language text not null,
     browser text phone null,
-    check ((email <> null) or (phone <> null)), 
+    check ((email <> null) or (phone <> null)),
     check (email <> ''),
     check (phone <> ''),
     check (referer <> '')
@@ -69,7 +69,7 @@ function initDb() {
       if (phone.length !== 10) throw new Error(`Expected phone number to have "10" digits, got "${phone.length}" instead.`)
     }
     o.phone = phone || undefined
-    
+
     if (email) {
       let emailParts = email.split('@')
       emailParts[0] = emailParts[0].replaceAll(/\./g, '')
