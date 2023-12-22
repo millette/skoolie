@@ -24,8 +24,8 @@ dependencies:
     specifier: ^5.0.4
     version: 5.0.4(astro@4.0.7)(tailwindcss@3.4.0)
   '@markdoc/markdoc':
-    specifier: ^0.3.5
-    version: 0.3.5
+    specifier: ^0.4.0
+    version: 0.4.0
   '@sindresorhus/transliterate':
     specifier: ^1.6.0
     version: 1.6.0
@@ -1413,6 +1413,21 @@ packages:
       '@types/markdown-it': 12.2.3
     dev: false
 
+  /@markdoc/markdoc@0.4.0:
+    resolution: {integrity: sha512-fSh4P3Y4E7oaKYc2oNzSIJVPDto7SMzAuQN1Iyx53UxzleA6QzRdNWRxmiPqtVDaDi5dELd2yICoG91csrGrAw==}
+    engines: {node: '>=14.7.0'}
+    peerDependencies:
+      '@types/react': '*'
+      react: '*'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react:
+        optional: true
+    optionalDependencies:
+      '@types/markdown-it': 12.2.3
+    dev: false
+
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -1640,8 +1655,8 @@ packages:
       '@types/unist': 3.0.2
     dev: false
 
-  /@types/linkify-it@3.0.4:
-    resolution: {integrity: sha512-hPpIeeHb/2UuCw06kSNAOVWgehBLXEo0/fUs0mw3W2qhqX89PI2yvok83MnuctYGCPrabGIoi0fFso4DQ+sNUQ==}
+  /@types/linkify-it@3.0.5:
+    resolution: {integrity: sha512-yg6E+u0/+Zjva+buc3EIb+29XEg4wltq7cSmd4Uc2EE/1nUVmxyzpX6gUXD0V8jIrG0r7YeOGVIbYRkxeooCtw==}
     requiresBuild: true
     dev: false
     optional: true
@@ -1660,8 +1675,8 @@ packages:
     resolution: {integrity: sha512-GKMHFfv3458yYy+v/N8gjufHO6MSZKCOXpZc5GXIWWy8uldwfmPn98vp81gZ5f9SVw8YYBctgfJ22a2d7AOMeQ==}
     requiresBuild: true
     dependencies:
-      '@types/linkify-it': 3.0.4
-      '@types/mdurl': 1.0.4
+      '@types/linkify-it': 3.0.5
+      '@types/mdurl': 1.0.5
     dev: false
     optional: true
 
@@ -1677,8 +1692,8 @@ packages:
       '@types/unist': 3.0.2
     dev: false
 
-  /@types/mdurl@1.0.4:
-    resolution: {integrity: sha512-ARVxjAEX5TARFRzpDRVC6cEk0hUIXCCwaMhz8y7S1/PxU6zZS1UMjyobz7q4w/D/R552r4++EhwmXK1N2rAy0A==}
+  /@types/mdurl@1.0.5:
+    resolution: {integrity: sha512-6L6VymKTzYSrEf4Nev4Xa1LCHKrlTlYCBMTlQKFuddo1CvQcE52I0mwfOJayueUC7MJuXOeHTcIU683lzd0cUA==}
     requiresBuild: true
     dev: false
     optional: true
