@@ -10,12 +10,13 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
+      "@solid/*": ["src/components/solid/*"],
       "@layouts/*": ["src/layouts/*"],
       "@assets/*": ["src/assets/*"],
       "@libs/*": ["src/libs/*"],
       "@translations/*": ["translations/*"],
       "@root/*": ["./*"]
     }
-  }  
+  }
 }
 
