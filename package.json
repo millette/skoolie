@@ -25,7 +25,7 @@
     "@markdoc/markdoc": "^0.3.4",
     "@sindresorhus/transliterate": "^1.6.0",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^3.3.2",
+    "astro": "^4.0.7",
     "astro-seo": "^0.8.0",
     "better-sqlite3": "^9.2.2",
     "daisyui": "^3.9.3",
