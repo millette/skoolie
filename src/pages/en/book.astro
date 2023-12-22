@@ -3,33 +3,171 @@
 // self
 import Layout from '@layouts/layout.astro'
 import { price } from "@libs/constants.js"
+import { initDb, SqliteError } from "@libs/db.ts"
+// import { initDb } from "@libs/db.ts"
 
+export const prerender = false
+
+// const { db, insert } = initDb()
+const { insert } = initDb()
+
+// const description = `Skoolie à vendre ${price}$ CAD dans Otterburn Park (près de Mont-Saint-Hilaire & Beloeil): skoolie/autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5.`
 const description = `Skoolie for sale ${price}$ CAD in Otterburn Park (near Mont-Saint-Hilaire & Beloeil): 38' skoolie/bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive.`
+
+// type InitialFormType = "subscribed" | "missingField" | "initialForm" | "error"
+enum InitialFormType {
+	subscribed = "subscribed",
+	missingField = "missingField",
+	initialForm = "initialForm",
+	error = "error",
+}
+
+let state: InitialFormType = InitialFormType.initialForm
+let email: string | undefined
+let phone: string | undefined
+let dbError: string = ''
+
+// InitialFormType = "initialForm"
+
+/*
+console.log("clientAddress", Astro.clientAddress)
+console.log("accept-language", Astro.request.headers.get('accept-language'))
+console.log("user-agent", Astro.request.headers.get('user-agent'))
+*/
+
+/*
+console.log("clientAddress", Astro.clientAddress)
+console.log("accept-language", Astro.request.headers.get('accept-language'))
+console.log("referer", Astro.request.headers.get('referer'))
+console.log("user-agent", Astro.request.headers.get('user-agent'))
+*/
+
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData()
+    email = data.get("email") as any
+    phone = data.get("phone") as any
+		phone = phone?.replaceAll(/[^\d]/g, '').replace(/^1/, '')
+		state = ((email || phone) ? (InitialFormType.subscribed as InitialFormType) : (InitialFormType.missingField as InitialFormType))
+		if (state === InitialFormType.subscribed) {
+			const lastInsertRowid = insert({
+				email,
+				phone,
+				referer: Astro.request.headers.get('referer') || undefined,
+				ip: Astro.clientAddress,
+				language: Astro.request.headers.get('accept-language'),
+				browser: Astro.request.headers.get('user-agent'),
+			})
+			console.log("lastInsertRowid", lastInsertRowid)
+		}
+  } catch (error: any) {
+		state = InitialFormType.error as InitialFormType
+		dbError = error.message
+		console.log("DB-ERROR", dbError)
+
+		console.log("STATE", state)
+		console.log("DB-ERROR", dbError)
+		if (error instanceof SqliteError) {
+			if (error.code === 'SQLITE_CONSTRAINT_UNIQUE') {
+				console.log("SqliteError-CONSTRAINT", dbError)
+			} else {
+				console.log("SqliteError-EEE", Object.keys(error), error)
+			}
+		} else if (error instanceof Error) {
+			console.error(dbError)
+		} else {
+			console.log("EEE", error)
+		}
+  }
+}
+
+// console.log("STATE", state)
+// console.log("DB-ERROR", dbError)
 
 ---
 
-<Layout description={description} url="/details/" title="Skoolie - The Book">
+<Layout description={description} url="/en/book/" title="Skoolie - The Book">
 	<main class="mx-auto lg:w-[820px]">
+		{state === InitialFormType.error &&
+			<div class="toast toast-top toast-center">
+				<div role="alert" class="alert alert-error">
+					<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+					<div>
+						<h3 class="font-bold">Error!</h3>
+						<div class="text-xs">
+							{dbError}.
+						</div>
+					<div>
+				</div>
+			</div>
+		}
+
+		{(state === (InitialFormType.missingField as InitialFormType)) &&
+			<div class="toast toast-top toast-center">
+				<div role="alert" class="alert alert-warning">
+					<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+					<div>
+						<h3 class="font-bold">Warning!</h3>
+						<div class="text-xs">
+							You must provide your email or phone number to register.
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+
 		<a class="float-right italic link" href="/livre/" hreflang="fr-ca">Français</a>
-		<h1 class="text-4xl font-bold">Skoolie <small>the Book</small></h1>
+		<h1 class="text-4xl font-bold">Skoolie <small>The Book</small></h1>
+		<form method="post">
+			<div class={`my-4 alert ${(state === InitialFormType.subscribed as InitialFormType) ? 'alert-success shadow-md' : (state === (InitialFormType.initialForm as InitialFormType) ? 'alert-accent shadow-lg' : 'alert-warning shadow-lg')}`}>
+				<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
 
-		<div class="my-4 alert alert-success">
-			<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-			<span class="text-xl">
-				Do you want to be notified when pre-orders are available?
-			</span>
+				{state === (InitialFormType.subscribed as InitialFormType) ?
+				<div>
+					<p class="mb-2">
+						Thanks! We will keep your contact details carefully and
+						contact you as soon as the book is available.
+						</p>
+					<p>
+						Check {email ? 'your email box': 'your text messages'} to confirm your {email? 'email': 'phone number'}.
+					</p>
+				</div>
+				:
+				<div class="grid text-xl justify-items-center content-center">
+					<div>
+						<p class="my-2">
+							Do you want to be notified when pre-orders are available?
+						</p>
+						<div class="flex">
+							<label class="w-1/3 label" for="email">Email</label>
+							<div class="w-2/3 my-3 md:my-0 md:mx-6">
+								<input autofocus={(state === (InitialFormType.missingField as InitialFormType)) || (state === (InitialFormType.error as InitialFormType))} id="email" name="email" type="email" placeholder="morgan@example.com" class="input input-secondary placeholder:text-slate-500 text-black">
+							</div>
+						</div>
+						<div class="text-sm ml-1 text-left">or</div>
+						<div class="flex">
+							<label class="w-1/3 label" for="phone">Phone <small class="text-sm">(SMS)</small></label>
+							<div class="w-2/3 my-3 md:my-0 md:mx-6">
+								<input id="phone" name="phone" type="tel" placeholder="555-834-1212" class="input input-secondary placeholder:text-slate-500 text-black">
+							</div>
+						</div>
 
-			<button class="btn btn-lg btn-secondary" onclick="my_modal_5.showModal()">
-				YES!
-			</button>			
-		</div>
+						<p class="italic text-sm mt-2">
+							You will only be contacted regarding the skoolie Book.
+						</p>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-secondary">Register</button>
+				}
+			</div>
+		</form>
 
 		<div class="my-4 md:flex">
-			<img alt="Book lover illustration" class="md:order-last" src="/undraw_book_lover_re_rwjy.svg" width=446 height=341>
+			<img alt="Book lover illustration" class="md:order-last" src="/undraw_book_lover_re_rwjy.svg" width={446} height={341}>
 
 			<div class="mt-6">
 				<h2 class="md:mb-4 text-2xl font-bold">Table of content</h2>
-	
 				<ol class="ml-6 list-disc flex-1">
 					<li>Preamble</li>
 					<li>Choose your bus</li>
