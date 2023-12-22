@@ -11,15 +11,7 @@ module.exports = {
   ],
   daisyui: {
     themes: [
-      {
-        retro: {
-          ...require('daisyui/src/theming/themes')['[data-theme=retro]'],
-          "info-content": "hsl(235 98% 98%)",
-          "success-content": "hsl(235 100% 100%)",
-          "--su": "120 75% 27%",
-          "--bc": "",
-        }
-      },
+      'retro',
       'luxury',
     ],
     darkTheme: 'luxury',
