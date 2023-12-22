@@ -21,7 +21,7 @@ export default function (props: any) {
     const results = search(transliterate(demo.value), 5)
     setNResults(results.length)
     if (ul) ul.innerHTML = ""
-  
+
     let i
     for (i = 0; i < results.length; i++) {
       var li = document.createElement("li")
@@ -58,10 +58,10 @@ export default function (props: any) {
       <input type="text" id="demo" placeholder={props.nav ? (props.lang === "fr" ? "Chercher" : "Search") : ""} autofocus={!props.nav} ref={demo!} class="input input-bordered input-accent w-full max-w-xs" />
     </div>
 
-    {(nResults() > 0) && 
+    {(nResults() > 0) &&
       <div classList={{ "z-50": true, absolute: props.nav, "top-20": props.nav, card: true, "bg-accent": true, "text-accent-content": true, "shadow-xl": true }}>
         <div class="card-body prose">
-          <button onClick={clearSearch} class="btn btn-sm btn-circle btn-ghost absolute right-2">✕</button>
+          <button onClick={clearSearch} class="uppercase btn btn-sm btn-circle btn-ghost absolute right-2">✕</button>
           <h2 class="card-title">{props.lang === "fr" ? "Résultats" : "Results"}:</h2>
           <ul ref={ul!}>
           </ul>
