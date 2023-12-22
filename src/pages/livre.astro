@@ -3,8 +3,8 @@
 // self
 import Layout from '@layouts/layout.astro'
 import { price } from "@libs/constants.js"
-// import { initDb, SqliteError } from "@libs/db.ts"
-import { initDb } from "@libs/db.ts"
+import { initDb, SqliteError } from "@libs/db.ts"
+// import { initDb } from "@libs/db.ts"
 
 export const prerender = false
 
@@ -63,8 +63,8 @@ if (Astro.request.method === "POST") {
   } catch (error: any) {
 		state = InitialFormType.error as InitialFormType
 		dbError = error.message
-		console.log("DB-ERROR", dbError)
-		/*
+		// console.log("DB-ERROR", dbError)
+
 		console.log("STATE", state)
 		console.log("DB-ERROR", dbError)
 		if (error instanceof SqliteError) {
@@ -78,7 +78,6 @@ if (Astro.request.method === "POST") {
 		} else {
 			console.log("EEE", error)
 		}
-		*/
   }
 }
 
@@ -87,25 +86,45 @@ if (Astro.request.method === "POST") {
 
 ---
 
-<Layout description={description} url="/details/" title="Skoolie - Le Livre">
+<Layout description={description} url="/livre/" title="Skoolie - Le Livre">
 	<main class="mx-auto lg:w-[820px]">
-		{state === InitialFormType.error &&
+		{(state === (InitialFormType.error as InitialFormType)) &&
 			<div class="toast toast-top toast-center">
-				<div class="alert alert-error">
-					<span>{dbError}.<span>
+
+				<div role="alert" class="alert alert-error">
+					<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+					
+					<div>
+						<h3 class="font-bold">Erreur!</h3>
+						<div class="text-xs">
+							{dbError}.
+						</div>
+					<div>
+
 				</div>
+
 			</div>
 		}
-
 
 		{(state === (InitialFormType.missingField as InitialFormType)) &&
 			<div class="toast toast-top toast-center">
-				<div class="alert alert-warning">
-					<span>Vous devez fournir votre email ou numéro de téléphone pour vous inscrire.</span>
+
+				<div role="alert" class="alert alert-warning">
+					<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+					
+					<div>
+						<h3 class="font-bold">Avertissement!</h3>
+						
+						<div class="text-xs">
+							Vous devez fournir votre email ou numéro de téléphone pour vous inscrire.
+						</div>
+
+					</div>
+
 				</div>
+
 			</div>
 		}
-
 
 		<a class="float-right italic link" href="/en/book/" hreflang="en-ca">English</a>
 		<h1 class="text-4xl font-bold">Skoolie <small>Le Livre</small></h1>
@@ -113,7 +132,7 @@ if (Astro.request.method === "POST") {
 			<div class={`my-4 alert ${(state === InitialFormType.subscribed as InitialFormType) ? 'alert-success shadow-md' : (state === (InitialFormType.initialForm as InitialFormType) ? 'alert-accent shadow-lg' : 'alert-warning shadow-lg')}`}>
 				<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
 
-				{state === (InitialFormType.subscribed as InitialFormType) ?
+				{(state === (InitialFormType.subscribed as InitialFormType)) ?
 				<div>
 					<p class="mb-2">
 						Merci! Nous conserverons précieusement vos coordonnées et
@@ -145,7 +164,7 @@ if (Astro.request.method === "POST") {
 						</div>
 
 						<p class="italic text-sm mt-2">
-							Vous serez contacté uniquement à propos du livre sur les skoolies.
+							Vous serez contacté uniquement à propos du Livre sur les skoolies.
 						</p>
 					</div>
 				</div>
