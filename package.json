@@ -22,7 +22,7 @@
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/solid-js": "^3.0.2",
     "@astrojs/tailwind": "^5.0.4",
-    "@markdoc/markdoc": "^0.3.4",
+    "@markdoc/markdoc": "^0.3.5",
     "@sindresorhus/transliterate": "^1.6.0",
     "@tailwindcss/typography": "^0.5.10",
     "astro": "^4.0.7",
