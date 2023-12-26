@@ -27,7 +27,7 @@
     "astro": "^4.0.7",
     "astro-seo": "^0.8.0",
     "better-sqlite3": "^9.2.2",
-    "daisyui": "^4.4.23",
+    "daisyui": "^4.4.24",
     "github-slugger": "^2.0.0",
     "nodemailer": "^6.9.7",
     "sharp": "^0.33.1",
