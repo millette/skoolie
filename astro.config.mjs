@@ -7,6 +7,8 @@ import solid from '@astrojs/solid-js'
 import node from '@astrojs/node'
 
 const site = 'https://bus.waglo.com'
+const defaultLocale = "fr"
+const albumUnder = 'album/under/'
 
 export default defineConfig({
   site,
@@ -15,9 +17,9 @@ export default defineConfig({
   compressHTML: true,
   trailingSlash: 'always',
   i18n: {
-    defaultLocale: "fr",
-    locales: ["fr", "en"],
-    routing: {
+    defaultLocale,
+    locales: [defaultLocale, "en"],
+      routing: {
       prefixDefaultLocale: false,
     },
   },
@@ -25,7 +27,17 @@ export default defineConfig({
     markdoc(),
     solid({ include: ['**/solid/*'] }),
     sitemap({
-      filter: (page) => !page.startsWith(`${site}/en/album/under/`) && !page.startsWith(`${site}/album/under/`)
+      i18n: {
+        defaultLocale,
+        locales: {
+          fr: 'fr-CA', // The `defaultLocale` value must present in `locales` keys
+          en: 'en-CA',
+        },
+      },
+      filter: (page) => !(
+        page.startsWith(`${site}/en/${albumUnder}`) ||
+        page.startsWith(`${site}/${albumUnder}`)
+      ),
     }),
     tailwind(),
   ],
