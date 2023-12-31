@@ -12,17 +12,18 @@ import bus1 from '!assets/20230614_120718.jpg'
 const description = `Skoolie for sale ${price} in Otterburn Park (near Mont-Saint-Hilaire & Beloeil): 38' skoolie/bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive.`
 ---
 
-<Layout description={description} url="/en/details/" title="Skoolie - Bus - RV - for sale">
+<Layout description={description} url="/en/details/" title="Skoolie - Bus - RV - Details">
 	<main class="text-center mx-auto lg:w-[820px]">
 		<a class="float-right italic link" href="/details/" hreflang="fr-ca">Français</a>
-		<h1 class="text-4xl font-bold">Skoolie <small>Bus/RV</small></h1>
+		<h1 class="text-4xl font-bold">Skoolie details <small>Bus/RV</small></h1>
 
 		<Image loading="eager" src={imgEn} alt="For Sale" />
 
 		<div class="my-4 alert alert-info">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 			<span class="text-lg">{description}</span>
-			<a href="/en/" class="uppercase btn btn-lg btn-secondary">Home</a>
+			<a href="/en/" class="uppercase btn btn-lg btn-primary">Home</a>
+			<a href="/en/rsvp/" class="uppercase btn btn-lg btn-secondary">RSVP</a>
 		</div>
 
 		<div class="my-4 mx-auto w-full stats stats-vertical shadow">
