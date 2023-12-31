@@ -9,6 +9,10 @@ import node from '@astrojs/node'
 const site = 'https://bus.waglo.com'
 const defaultLocale = "fr"
 const albumUnder = 'album/under/'
+const locales = {
+  fr: 'fr-CA',
+  en: 'en-CA',
+}
 
 export default defineConfig({
   site,
@@ -18,7 +22,7 @@ export default defineConfig({
   trailingSlash: 'always',
   i18n: {
     defaultLocale,
-    locales: [defaultLocale, "en"],
+    locales: Object.keys(locales),
       routing: {
       prefixDefaultLocale: false,
     },
@@ -29,10 +33,7 @@ export default defineConfig({
     sitemap({
       i18n: {
         defaultLocale,
-        locales: {
-          fr: 'fr-CA', // The `defaultLocale` value must present in `locales` keys
-          en: 'en-CA',
-        },
+        locales,
       },
       filter: (page) => !(
         page.startsWith(`${site}/en/${albumUnder}`) ||
