@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.8.2
     version: 0.8.2(astro@4.0.7)
   '@astrojs/node':
-    specifier: ^7.0.2
-    version: 7.0.2(astro@4.0.7)
+    specifier: ^7.0.3
+    version: 7.0.3(astro@4.0.7)
   '@astrojs/sitemap':
     specifier: ^3.0.4
     version: 3.0.4
@@ -187,8 +187,8 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/node@7.0.2(astro@4.0.7):
-    resolution: {integrity: sha512-g07KV9JBbUubfzLyu2ql+zu09dW3a7zVX1fDr6UriQdz6BvPh0Y0Qn+DqA5P8JwSKAw93mJDuChDW7JrI7CBJg==}
+  /@astrojs/node@7.0.3(astro@4.0.7):
+    resolution: {integrity: sha512-+fqwk73nOQ/ejodMSPdOW0U1FcVHL7+fNFnqRs6MXumdfxWfu5hDGnqGM/QuIf1icXILAF+QoQcpMxRGLn7PfA==}
     peerDependencies:
       astro: ^4.0.0
     dependencies:
