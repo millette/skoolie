@@ -2,12 +2,12 @@
 // npm
 import type { ImageMetadata, InferGetStaticParamsType } from 'astro'
 
-// self
-import galleries from '@translations/albums.json'
-import Layout from '@layouts/layout.astro'
-
 // astro
 import { Image } from 'astro:assets'
+
+// self
+import galleries from '!translations/albums.json'
+import Layout from '!layouts/layout.astro'
 
 export const getStaticPaths = async () => Object.keys(galleries).map((album) => ({ params: { album } }))
 
@@ -16,7 +16,7 @@ type Params = InferGetStaticParamsType<typeof getStaticPaths>
 const { album } = Astro.params as Params
 
 const gallery = galleries[album as keyof typeof galleries]
-let data // : ImageMetadata[] = []
+let data
 
 switch (album) {
   case 'under':

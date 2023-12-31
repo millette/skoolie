@@ -3,7 +3,7 @@ import transliterate from '@sindresorhus/transliterate'
 import { onMount, createSignal } from "solid-js"
 
 // self
-import { search, default as init } from '@libs/tinysearch_engine.js'
+import { search, default as init } from '!libs/tinysearch_engine.js'
 
 const [nResults, setNResults] = createSignal(0)
 

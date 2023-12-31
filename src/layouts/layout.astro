@@ -7,13 +7,11 @@ import { SEO } from "astro-seo"
 import { ViewTransitions } from 'astro:transitions'
 
 // self
-import Footer from "@components/footer.astro"
-import FooterEn from "@components/footer-en.astro"
-
-import Header from "@components/header.astro"
-import HeaderEn from "@components/header-en.astro"
-
-import { price, prix } from "@libs/constants.js"
+import Footer from "!components/footer.astro"
+import FooterEn from "!components/footer-en.astro"
+import Header from "!components/header.astro"
+import HeaderEn from "!components/header-en.astro"
+import { price, prix } from "!libs/constants.js"
 
 export interface Props {
 	title: string

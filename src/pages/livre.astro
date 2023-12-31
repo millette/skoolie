@@ -1,19 +1,15 @@
 ---
-
 // self
-import Layout from '@layouts/layout.astro'
-import { price } from "@libs/constants.js"
-import { initDb, SqliteError } from "@libs/db.ts"
-// import { initDb } from "@libs/db.ts"
+import Layout from '!layouts/layout.astro'
+import { price } from "!libs/constants.js"
+import { initDb, SqliteError } from "!libs/db.ts"
 
 export const prerender = false
 
-// const { db, insert } = initDb()
 const { insert } = initDb()
 
 const description = `Skoolie à vendre ${price}$ CAD dans Otterburn Park (près de Mont-Saint-Hilaire & Beloeil): skoolie/autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5.`
 
-// type InitialFormType = "subscribed" | "missingField" | "initialForm" | "error"
 enum InitialFormType {
 	subscribed = "subscribed",
 	missingField = "missingField",
@@ -25,22 +21,6 @@ let state: InitialFormType = InitialFormType.initialForm
 let email: string | undefined
 let phone: string | undefined
 let dbError: string = ''
-
-// InitialFormType = "initialForm"
-
-/*
-console.log("clientAddress", Astro.clientAddress)
-console.log("accept-language", Astro.request.headers.get('accept-language'))
-console.log("user-agent", Astro.request.headers.get('user-agent'))
-*/
-
-/*
-console.log("clientAddress", Astro.clientAddress)
-console.log("accept-language", Astro.request.headers.get('accept-language'))
-console.log("referer", Astro.request.headers.get('referer'))
-console.log("user-agent", Astro.request.headers.get('user-agent'))
-*/
-
 
 if (Astro.request.method === "POST") {
   try {
@@ -63,8 +43,6 @@ if (Astro.request.method === "POST") {
   } catch (error: any) {
 		state = InitialFormType.error as InitialFormType
 		dbError = error.message
-		// console.log("DB-ERROR", dbError)
-
 		console.log("STATE", state)
 		console.log("DB-ERROR", dbError)
 		if (error instanceof SqliteError) {
@@ -80,7 +58,6 @@ if (Astro.request.method === "POST") {
 		}
   }
 }
-
 ---
 
 <Layout description={description} url="/livre/" title="Skoolie - Le Livre">
