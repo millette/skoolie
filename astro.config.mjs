@@ -14,6 +14,13 @@ export default defineConfig({
   adapter: node({ mode: 'standalone' }),
   compressHTML: true,
   trailingSlash: 'always',
+  i18n: {
+    defaultLocale: "fr",
+    locales: ["fr", "en"],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   integrations: [
     markdoc(),
     solid({ include: ['**/solid/*'] }),
