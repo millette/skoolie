@@ -1,3 +1,6 @@
+---
+import { phoneLink, emailLink } from "!libs/constants.js"
+---
 <footer class="mt-4 footer footer-center p-10 bg-base-200 text-base-content rounded" style="box-shadow: 0 50vh 0 50vh  oklch(var(--b2))">
   <div class="grid grid-flow-col gap-4">
     <a href="/en/" class="link link-hover">Home</a>
@@ -7,5 +10,9 @@
     <a href="/en/guides/" class="link link-hover">Guides</a>
     <a href="/en/book/" class="link link-hover" data-astro-reload={Astro.request.method === 'POST'}>Book</a>
     <a href="/en/album/inside/" class="link link-hover">Photos</a>
+  </div>
+  <div class="grid grid-cols-2">
+    <div set:html={phoneLink("en")} />
+    <div set:html={emailLink("en")} />
   </div>
 </footer>
