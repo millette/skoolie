@@ -11,10 +11,23 @@ module.exports = {
   ],
   daisyui: {
     themes: [
-      'retro',
+
+      {
+        retro: {
+          ...require("daisyui/src/theming/themes")["retro"],
+          "info-content": "#EBF2FF",
+        },
+      },
+
+      // 'retro',
       'luxury',
     ],
     darkTheme: 'luxury',
     logs: false,
   }
 }
+
+/*
+fg: #EBF2FF (change this!)
+bg: #2563EB
+*/
