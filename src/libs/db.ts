@@ -1,6 +1,9 @@
 // npm
 import Database from 'better-sqlite3'
 
+// self
+import { phoneHref } from "!libs/constants.js"
+
 interface InterestsType {
   email?: string
   phone?: string
@@ -60,13 +63,13 @@ function initDb() {
     )
   `)
 
-  // returns lastInsertRowid
   function insert(o: InterestsType): number | bigint {
     let { email, phone } = o
     if (!email && !phone) throw new Error("Required: email OR phone number.")
     if (phone) {
-      phone = phone.replaceAll(/[^\d]/g, '').replace(/^1/, '')
-      if (phone.length !== 10) throw new Error(`Expected phone number to have "10" digits, got "${phone.length}" instead.`)
+      // phone = phone.replaceAll(/[^\d]/g, '').replace(/^1/, '')
+      phone = phoneHref(phone)
+      if (phone?.length !== 10) throw new Error(`Expected phone number to have "10" digits, got "${phone?.length}" instead.`)
     }
     o.phone = phone || undefined
 
@@ -85,7 +88,6 @@ function initDb() {
   return {
     db,
     insert,
-    // insert: inserter.run.bind(inserter),
   }
 }
 
