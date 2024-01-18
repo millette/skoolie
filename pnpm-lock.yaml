@@ -7,10 +7,10 @@ settings:
 dependencies:
   '@astrojs/markdoc':
     specifier: ^0.8.2
-    version: 0.8.2(astro@4.1.2)
+    version: 0.8.2(astro@4.1.3)
   '@astrojs/node':
     specifier: ^7.0.4
-    version: 7.0.4(astro@4.1.2)
+    version: 7.0.4(astro@4.1.3)
   '@astrojs/sitemap':
     specifier: ^3.0.4
     version: 3.0.4
@@ -19,7 +19,7 @@ dependencies:
     version: 4.0.1(solid-js@1.8.11)(vite@5.0.11)
   '@astrojs/tailwind':
     specifier: ^5.1.0
-    version: 5.1.0(astro@4.1.2)(tailwindcss@3.4.1)
+    version: 5.1.0(astro@4.1.3)(tailwindcss@3.4.1)
   '@markdoc/markdoc':
     specifier: ^0.4.0
     version: 0.4.0
@@ -30,8 +30,8 @@ dependencies:
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.4.1)
   astro:
-    specifier: ^4.1.2
-    version: 4.1.2(typescript@5.3.3)
+    specifier: ^4.1.3
+    version: 4.1.3(typescript@5.3.3)
   astro-seo:
     specifier: ^0.8.0
     version: 0.8.0
@@ -144,7 +144,7 @@ packages:
       - typescript
     dev: true
 
-  /@astrojs/markdoc@0.8.2(astro@4.1.2):
+  /@astrojs/markdoc@0.8.2(astro@4.1.3):
     resolution: {integrity: sha512-HN4N0fcWNTuQk2XN1VaShbjq+osNtsA5ML4VdBMlHF0SafgFigpao5P+tG8Xq2EEYhXynZDHHWS+F4/HODyfwQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
@@ -153,7 +153,7 @@ packages:
       '@astrojs/internal-helpers': 0.2.1
       '@astrojs/prism': 3.0.0
       '@markdoc/markdoc': 0.3.5
-      astro: 4.1.2(typescript@5.3.3)
+      astro: 4.1.3(typescript@5.3.3)
       esbuild: 0.19.11
       github-slugger: 2.0.0
       gray-matter: 4.0.3
@@ -187,12 +187,12 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/node@7.0.4(astro@4.1.2):
+  /@astrojs/node@7.0.4(astro@4.1.3):
     resolution: {integrity: sha512-og36WkHZ+v32filXWx2Iu9iwj6v9QUQaBl5GcTHVGmw1lrGdztl0MtbqbY56az4ew/HkWq3GPSSQ70aZd0u86Q==}
     peerDependencies:
       astro: ^4.0.0
     dependencies:
-      astro: 4.1.2(typescript@5.3.3)
+      astro: 4.1.3(typescript@5.3.3)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -226,13 +226,13 @@ packages:
       - vite
     dev: false
 
-  /@astrojs/tailwind@5.1.0(astro@4.1.2)(tailwindcss@3.4.1):
+  /@astrojs/tailwind@5.1.0(astro@4.1.3)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.1.2(typescript@5.3.3)
+      astro: 4.1.3(typescript@5.3.3)
       autoprefixer: 10.4.16(postcss@8.4.33)
       postcss: 8.4.33
       postcss-load-config: 4.0.2(postcss@8.4.33)
@@ -1502,8 +1502,8 @@ packages:
     resolution: {integrity: sha512-7gq6lhibCM8FuzZIJlbLLWP5EJ9KL2/4XqeFrAg9O6ZK2xMFxJ5ubKf+a0VJwwTu8W8Xr421CmpiXu6Hq7n/7Q==}
     dev: false
 
-  /astro@4.1.2(typescript@5.3.3):
-    resolution: {integrity: sha512-C/CrsIjRnRZYsLIBquAoTKj3ZPyGPVRByEcPMs6CrJLiHmcYnjpRMVd7oBFepU6772U1ZcXLy0zdxoRYjHFf5w==}
+  /astro@4.1.3(typescript@5.3.3):
+    resolution: {integrity: sha512-9i8l0mEnpAOAi9F3DMkHGaZ4q56TGtt71XaAxhPXAlhZrVR/6ruobCyYdYwL1Fo0ATpuGXdaod1I7FFxFMcQbw==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
