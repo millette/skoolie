@@ -7,8 +7,8 @@ import solid from '@astrojs/solid-js'
 import node from '@astrojs/node'
 
 const site = 'https://bus.waglo.com'
-const defaultLocale = "fr"
 const albumUnder = 'album/under/'
+const defaultLocale = "fr"
 const locales = {
   fr: 'fr-CA',
   en: 'en-CA',
