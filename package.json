@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@astrojs/markdoc": "^0.8.3",
-    "@astrojs/node": "^8.0.0",
+    "@astrojs/node": "^8.1.0",
     "@astrojs/sitemap": "^3.0.5",
     "@astrojs/solid-js": "^4.0.1",
     "@astrojs/tailwind": "^5.1.0",
