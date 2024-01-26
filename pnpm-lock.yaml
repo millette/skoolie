@@ -65,8 +65,8 @@ devDependencies:
     specifier: ^0.4.1
     version: 0.4.1(typescript@5.3.3)
   '@types/better-sqlite3':
-    specifier: ^7.6.8
-    version: 7.6.8
+    specifier: ^7.6.9
+    version: 7.6.9
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -1157,8 +1157,8 @@ packages:
       '@babel/types': 7.23.9
     dev: false
 
-  /@types/better-sqlite3@7.6.8:
-    resolution: {integrity: sha512-ASndM4rdGrzk7iXXqyNC4fbwt4UEjpK0i3j4q4FyeQrLAthfB6s7EF135ZJE0qQxtKIMFwmyT6x0switET7uIw==}
+  /@types/better-sqlite3@7.6.9:
+    resolution: {integrity: sha512-FvktcujPDj9XKMJQWFcl2vVl7OdRIqsSRX9b0acWwTmwLK9CF2eqo/FRcmMLNpugKoX/avA6pb7TorDLmpgTnQ==}
     dependencies:
       '@types/node': 20.11.6
     dev: true
