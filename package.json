@@ -11,8 +11,12 @@
     "check": "astro check",
     "check:tsc": "tsc --noEmit",
     "check:all": "astro check && tsc --noEmit",
-    "preview": "astro preview",
-    "go": "astro build && astro preview",
+    "preview0": "astro preview",
+    "preview": "node dist/server/entry.mjs",
+    "preview-fastify": "node run-server",
+    "go0": "astro build && astro preview",
+    "go": "astro build && node dist/server/entry.mjs",
+    "go-fastify": "astro build && node run-server",
     "astro": "astro"
   },
   "dependencies": {
@@ -26,7 +30,7 @@
     "@markdoc/markdoc": "^0.4.0",
     "@sindresorhus/transliterate": "^1.6.0",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^4.3.3",
+    "astro": "^4.3.4",
     "astro-seo": "^0.8.0",
     "better-sqlite3": "^9.4.0",
     "daisyui": "^4.6.1",
