@@ -14,14 +14,13 @@ const locales = {
   en: 'en-CA',
 }
 
-// const mode = 'standalone'
-const mode = 'middleware'
+const mode = 'standalone' // 'middleware'
 
 export default defineConfig({
   site,
   output: 'hybrid',
   adapter: node({ mode }),
-  // trailingSlash: 'always',
+  // trailingSlash: 'always', // fails if "always"
   i18n: {
     defaultLocale,
     locales: Object.keys(locales),
