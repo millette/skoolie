@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "sync": "astro sync",
     "build": "astro build",
     "build:all": "scripts/build-index.sh && astro build",
     "check": "astro check",
