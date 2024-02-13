@@ -1689,14 +1689,14 @@ packages:
     requiresBuild: true
     dependencies:
       bare-events: 2.2.0
-      bare-os: 2.1.2
+      bare-os: 2.1.3
       bare-path: 2.1.0
       streamx: 2.15.8
     dev: false
     optional: true
 
-  /bare-os@2.1.2:
-    resolution: {integrity: sha512-slQjOn78Q8itnzomNAamiKo5MDpEpV3JnoNZ93lyynaFh6paWcU+5c0GVcZ7EYIJC2unN2JGdF1qupdscYl0Yg==}
+  /bare-os@2.1.3:
+    resolution: {integrity: sha512-YMKOQzoMouGCrYgJ0rassKvmbTz+TYDOKKmu4JkfNXS/qKn+If1ODCMEXnmknQXfnB1PS8bR+uHu6xBgwAQXew==}
     requiresBuild: true
     dev: false
     optional: true
@@ -1705,7 +1705,7 @@ packages:
     resolution: {integrity: sha512-DIIg7ts8bdRKwJRJrUMy/PICEaQZaPGZ26lsSx9MJSwIhSrcdHn7/C8W+XmnG/rKi6BaRcz+JO00CjZteybDtw==}
     requiresBuild: true
     dependencies:
-      bare-os: 2.1.2
+      bare-os: 2.1.3
     dev: false
     optional: true
 
