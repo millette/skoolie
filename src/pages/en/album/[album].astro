@@ -53,7 +53,7 @@ switch (album) {
     {data?.map(({default: img}) => (
       <a href={img.src}>
         <Image
-          class="rounded-md"
+        class="rounded-md hover:animate-jump animate-once animate-duration-[1500ms] animate-delay-300 animate-ease-in-out"
           src={img}
           title={`${gallery.single.en}`}
           alt={gallery.single.en}

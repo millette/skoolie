@@ -10,7 +10,6 @@ import bus0 from '@assets/20230614_115044-90_IMGP.jpg'
 import bus1 from '@assets/20230614_120718.jpg'
 
 const description = `Skoolie à vendre ${prix} dans Otterburn Park (près de Mont-Saint-Hilaire & Beloeil): skoolie/autobus 38' (plaqué véhicule lourd, classe 3) en conversion vers un VR pour le plaquer classe 5.`
-
 ---
 
 <Layout description={description} url="/details/" title="Skoolie - Bus - VR - à vendre">
@@ -25,8 +24,8 @@ const description = `Skoolie à vendre ${prix} dans Otterburn Park (près de Mon
 			<span class="text-lg">{description}</span>
 			<a href="/" class="btn btn-lg btn-secondary">Accueil</a>
 		</div>
-		
-		<div class="my-4 mx-auto w-full stats stats-vertical shadow">  
+
+		<div class="my-4 mx-auto w-full stats stats-vertical shadow">
 			<a href="tel:5143947877">
 				<div class="stat place-items-center">
 					<div class="stat-title">✆ Appel ou SMS</div>
@@ -53,8 +52,8 @@ const description = `Skoolie à vendre ${prix} dans Otterburn Park (près de Mon
 		</div>
 
 		<div class="grid grid-cols-2 grid sm:grid-cols-1 sm:float-right sm:ml-4">
-  		<a href="/album/outside/"><Image class="rounded-lg mb-4" src={bus0} width={bus0.width/12} height={bus0.height/12} alt="Bus - devant" /></a>
-	  	<a href="/album/inside/"><Image class="rounded-lg" src={bus1} width={bus0.width/12} height={bus0.height/12} alt="Bus - devant" /></a>
+  		<a href="/album/outside/"><Image class="border-8 border-yellow-500 border-double rounded-lg mb-4 hover:animate-jump animate-once animate-duration-[1500ms] animate-delay-300 animate-ease-in-out" src={bus0} width={bus0.width/12} height={bus0.height/12} alt="Bus - devant" /></a>
+	  	<a href="/album/inside/"><Image class="border-8 border-yellow-500 border-double rounded-lg hover:animate-jump animate-once animate-duration-[1500ms] animate-delay-300 animate-ease-in-out" src={bus1} width={bus0.width/12} height={bus0.height/12} alt="Bus - devant" /></a>
 		</div>
 
 		<div class="mx-auto prose my-4 text-left">
@@ -67,9 +66,12 @@ const description = `Skoolie à vendre ${prix} dans Otterburn Park (près de Mon
 			<p>Raison de la vente: nos plans ont été bouleversés par des problèmes de santé. Nous cherchons maintenant plus petit et nous sommes ouverts aux échanges.</p>
 			<p>Plus de questions? Consulter notre <a href="/faq/">FAQ à propos de la vente du skoolie</a> pour des informations complémentaires.</p>
 			<blockquote>
+				Ne manquez pas <a href="/guides/">nos guides pour compléter votre projet de skoolie</a>.<br>
+			</blockquote>
+			<blockquote>
 				Pour plus d'info, voir SAAQ: <a href="https://saaq.gouv.qc.ca/transport-personnes/vehicule-lourd-habitation-motorisee/usage-personnel">Véhicule lourd transformé en habitation motorisée à des fins personnelles</a>.
 			</blockquote>
-		</div>					
+		</div>
 		</div>
 		</main>
 </Layout>
