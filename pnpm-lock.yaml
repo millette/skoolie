@@ -1235,7 +1235,7 @@ packages:
   /@types/better-sqlite3@7.6.9:
     resolution: {integrity: sha512-FvktcujPDj9XKMJQWFcl2vVl7OdRIqsSRX9b0acWwTmwLK9CF2eqo/FRcmMLNpugKoX/avA6pb7TorDLmpgTnQ==}
     dependencies:
-      '@types/node': 20.11.17
+      '@types/node': 20.11.19
     dev: true
 
   /@types/debug@4.1.12:
@@ -1305,8 +1305,8 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: false
 
-  /@types/node@20.11.17:
-    resolution: {integrity: sha512-QmgQZGWu1Yw9TDyAP9ZzpFJKynYNeOvwMJmaxABfieQoVoiVOS6MN1WSpqpRcbeA5+RW82kraAVxCCJg+780Qw==}
+  /@types/node@20.11.19:
+    resolution: {integrity: sha512-7xMnVEcZFu0DikYjWOlRq7NTPETrm7teqUT2WkQjrTIkEgUyyGdWsj/Zg8bEJt5TNklzbPD1X3fqfsHw3SpapQ==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -1652,8 +1652,8 @@ packages:
     dev: false
     optional: true
 
-  /babel-plugin-jsx-dom-expressions@0.37.16(@babel/core@7.23.9):
-    resolution: {integrity: sha512-ItMD16axbk+FqVb9vIbc7AOpNowy46VaSUHaMYPn+erPGpMCxsahQ1Iv+qhPMthjxtn5ROVMZ5AJtQvzjxjiNA==}
+  /babel-plugin-jsx-dom-expressions@0.37.17(@babel/core@7.23.9):
+    resolution: {integrity: sha512-1bv8rOTzs6TR3DVyVZ7ElxyPEhnS556FMWRIsB3gBPfkn/cSKaLvXLGk+X1lvI+SzcUo4G+UcmJrn3vr1ig8mQ==}
     peerDependencies:
       '@babel/core': ^7.20.12
     dependencies:
@@ -1665,13 +1665,13 @@ packages:
       validate-html-nesting: 1.2.2
     dev: false
 
-  /babel-preset-solid@1.8.12(@babel/core@7.23.9):
-    resolution: {integrity: sha512-Fx1dYokeRwouWqjLkdobA6qvTAPxFSEU2c5PlkfJjlNyONlSMJQPaX0Bae5pc+5/LNteb9BseOp4UHwQu6VC9Q==}
+  /babel-preset-solid@1.8.15(@babel/core@7.23.9):
+    resolution: {integrity: sha512-P2yOQbB7Hn/m4YvpXV6ExHIMcgNWXWXcvY4kJzG3yqAB3hKS58OZRsvJ7RObsZWqXRvZTITBIwnpK0BMGu+ZIQ==}
     peerDependencies:
       '@babel/core': ^7.0.0
     dependencies:
       '@babel/core': 7.23.9
-      babel-plugin-jsx-dom-expressions: 0.37.16(@babel/core@7.23.9)
+      babel-plugin-jsx-dom-expressions: 0.37.17(@babel/core@7.23.9)
     dev: false
 
   /bail@2.0.2:
@@ -1787,7 +1787,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001587
-      electron-to-chromium: 1.4.669
+      electron-to-chromium: 1.4.671
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: false
@@ -2161,8 +2161,8 @@ packages:
     resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=}
     dev: false
 
-  /electron-to-chromium@1.4.669:
-    resolution: {integrity: sha512-E2SmpffFPrZhBSgf8ibqanRS2mpuk3FIRDzLDwt7WFpfgJMKDHJs0hmacyP0PS1cWsq0dVkwIIzlscNaterkPg==}
+  /electron-to-chromium@1.4.671:
+    resolution: {integrity: sha512-UUlE+/rWbydmp+FW8xlnnTA5WNA0ZZd2XL8CuMS72rh+k4y1f8+z6yk3UQhEwqHQWj6IBdL78DwWOdGMvYfQyA==}
     dev: false
 
   /emmet@2.4.6:
@@ -2913,8 +2913,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /lilconfig@3.0.0:
-    resolution: {integrity: sha512-K2U4W2Ff5ibV7j7ydLr+zLAkIg5JJ4lPn1Ltsdt+Tz/IjQ8buJ55pZAxoP34lqIiwtF9iAvtLv3JGv7CAyAg+g==}
+  /lilconfig@3.1.0:
+    resolution: {integrity: sha512-p3cz0JV5vw/XeouBU3Ldnp+ZkBjE+n8ydJ4mcwBrOiXXPqNlrzGBqWs9X4MWF7f+iKUBu794Y8Hh8yawiJbCjw==}
     engines: {node: '>=14'}
     dev: false
 
@@ -3793,7 +3793,7 @@ packages:
       ts-node:
         optional: true
     dependencies:
-      lilconfig: 3.0.0
+      lilconfig: 3.1.0
       postcss: 8.4.35
       yaml: 2.3.4
     dev: false
@@ -4963,7 +4963,7 @@ packages:
     dependencies:
       '@babel/core': 7.23.9
       '@types/babel__core': 7.20.5
-      babel-preset-solid: 1.8.12(@babel/core@7.23.9)
+      babel-preset-solid: 1.8.15(@babel/core@7.23.9)
       merge-anything: 5.1.7
       solid-js: 1.8.15
       solid-refresh: 0.6.3(solid-js@1.8.15)
