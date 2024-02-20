@@ -32,7 +32,7 @@
     "@sindresorhus/transliterate": "^1.6.0",
     "@tailwindcss/typography": "^0.5.10",
     "astro": "^4.4.0",
-    "astro-seo": "^0.8.1",
+    "astro-seo": "^0.8.2",
     "better-sqlite3": "^9.4.1",
     "daisyui": "^4.7.2",
     "fastify": "^4.26.1",

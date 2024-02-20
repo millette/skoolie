@@ -39,8 +39,8 @@ dependencies:
     specifier: ^4.4.0
     version: 4.4.0(typescript@5.3.3)
   astro-seo:
-    specifier: ^0.8.1
-    version: 0.8.1(typescript@5.3.3)
+    specifier: ^0.8.2
+    version: 0.8.2(typescript@5.3.3)
   better-sqlite3:
     specifier: ^9.4.1
     version: 9.4.1
@@ -1505,8 +1505,8 @@ packages:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
     dev: false
 
-  /astro-seo@0.8.1(typescript@5.3.3):
-    resolution: {integrity: sha512-BDGtIXxs6gPZXjRkPMo7YeLxcYedxxrAoU4U5+EKaKxJQJLk14b0Ok5UM+LL7LjWg3fo18MPTAxdYYCoj3qKDw==}
+  /astro-seo@0.8.2(typescript@5.3.3):
+    resolution: {integrity: sha512-9hu+2y0QboOShFly9r+LcasfEOsWFhV5GKzsfnPG4kbNm9mqXuEP7YrUt7XrEA7rJOzC1DInOV+cIT+7zBasBQ==}
     dependencies:
       '@astrojs/check': 0.5.4(typescript@5.3.3)
     transitivePeerDependencies:
