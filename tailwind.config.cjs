@@ -1,3 +1,4 @@
+// KEEP!
 // npm
 /** @type {import('tailwindcss').Config} */
 const daisyui = require("daisyui")
@@ -11,13 +12,15 @@ module.exports = {
   ],
   daisyui: {
     themes: [
+
       {
         retro: {
-          ...require('daisyui/src/theming/themes')['[data-theme=retro]'],
-          "info-content": "hsl(235 98% 98%)",
-          "--bc": "",
-        }
+          ...require("daisyui/src/theming/themes")["retro"],
+          "info-content": "#EBF2FF",
+        },
       },
+
+      // 'retro',
       'luxury',
     ],
     darkTheme: 'luxury',
