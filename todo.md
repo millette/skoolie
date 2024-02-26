@@ -1,5 +1,6 @@
 # Todo
 
+* Search is now broken (after sale)
 * attention au prefetch des images full-size
 * ajuster contraste
 * ajouter description aux images
