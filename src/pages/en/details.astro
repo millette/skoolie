@@ -4,21 +4,16 @@ import { Image } from 'astro:assets'
 
 // self
 import Layout from '@layouts/layout.astro'
-import { price, marketplace } from "@libs/constants.js"
-import imgEn from '@assets/for-sale-crop.webp'
+import { price } from "@libs/constants.js"
 import bus0 from '@assets/20230614_115044-90_IMGP.jpg'
 import bus1 from '@assets/20230614_120718.jpg'
 
 const description = `Skoolie for sale ${price} in Otterburn Park (near Mont-Saint-Hilaire & Beloeil): 38' skoolie/bus (immatriculated heavy vehicule, class 3 permit) being converted into an RV requiring class 5 permit to drive.`
-
 ---
-
 <Layout description={description} url="/en/details/" title="Skoolie - Bus - RV - for sale">
 	<main class="text-center mx-auto lg:w-[820px]">
 		<a class="float-right italic link" href="/details/" hreflang="fr-ca">Français</a>
 		<h1 class="text-4xl font-bold">Skoolie <small>Bus/RV</small></h1>
-
-		<Image loading="eager" src={imgEn} alt="For Sale" />
 
 		<div class="my-4 alert alert-info">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -26,7 +21,7 @@ const description = `Skoolie for sale ${price} in Otterburn Park (near Mont-Sain
 			<a href="/en/" class="btn btn-lg btn-secondary">Home</a>
 		</div>
 
-		<div class="my-4 mx-auto w-full stats stats-vertical shadow">  
+		<div class="my-4 mx-auto w-full stats stats-vertical shadow">
 			<a href="tel:5143947877">
 				<div class="stat place-items-center">
 					<div class="stat-title">✆ Call or SMS</div>
@@ -42,15 +37,6 @@ const description = `Skoolie for sale ${price} in Otterburn Park (near Mont-Sain
 			</a>
 		</div>
 
-		<div class="md:flex gap-4 my-4">
-			<div class="flex-1">
-				<h2 class="text-xl font-bold"><a class="link" href={marketplace}>Marketplace</a> ad</h2>
-			</div>
-			<div class="flex-1">
-				<h2 class="text-xl font-bold"><a class="link" href="https://www.kijiji.ca/v-vr-motorise/longueuil-rive-sud/skoolie-autobus-vr/1663218685">Kijiji</a> ad</h2>
-			</div>
-		</div>
-
 		<div class="grid grid-cols-2 grid sm:grid-cols-1 sm:float-right sm:ml-4">
   		<a href="/album/outside/"><Image class="rounded-lg mb-4" src={bus0} width={bus0.width/12} height={bus0.height/12} alt="Bus - devant" /></a>
 			<a href="/album/inside/"><Image class="rounded-lg" src={bus1} width={bus0.width/12} height={bus0.height/12} alt="Bus - devant" /></a>
@@ -59,11 +45,11 @@ const description = `Skoolie for sale ${price} in Otterburn Park (near Mont-Sain
 		<div class="mx-auto prose my-4 text-left">
 			<p>School bus, 38 feet, heavy vehicle plated (class 3 license required), stored. Some modifications have been made in order to turn it into a RV, which will allow it to be driven with class 5. 154,000km, Cummings diesel engine and Allison automatic transmission. Mechanical inspection A1 07-2022. Stored all winter.</p>
 			<p>2 drinking water tanks and 2 waste water. Floating floor and large folding table, air conditioner on wheels, a 15 amp input (with 30 amp adapter).</p>
-			<p>All pipes and fittings come from a Suburban motorhome, so they can be connected to the facilities of a campground. 2 benches of 2 places.</p>			
+			<p>All pipes and fittings come from a Suburban motorhome, so they can be connected to the facilities of a campground. 2 benches of 2 places.</p>
 			<p>Note that the propane installation (tanks and pipes) will have to be revised since we could not be certified at the inspection. Stove, oven, fridge and heater work, however propane tanks and pipes will have to be installed differently to pass the SAAQ inspection.</p>
 			<p>Included: 2 floating floor boxes and wood to finish the partitions, if needed.</p>
-			<p>Official Carfax report and mechanical inspection available.</p>			
-			<p>Reason for sale: our plans have been disrupted by health reasons. We are now looking smaller and are open for trades.</p>			
+			<p>Official Carfax report and mechanical inspection available.</p>
+			<p>Reason for sale: our plans have been disrupted by health reasons. We are now looking smaller and are open for trades.</p>
 			<p>Open for trade.</p>
 			<blockquote>
 				For more, see SAAQ: <a href="https://saaq.gouv.qc.ca/en/transportation-passengers/heavy-vehicles-motor-homes/personal-use">Heavy Vehicles Converted Into Motor Homes for Personal Use</a>.

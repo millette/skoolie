@@ -24,7 +24,7 @@ function fixBody(str) {
     ret.push(s)
     ret.push(s.slice(0, s.length - 1))
   })
-  
+
   return ret.filter(Boolean).join(" ")
 }
 
@@ -49,7 +49,7 @@ function toJson(source) {
     }
     if (name === 'p')
       obj.body.push(transliterate(stripHtml(Markdoc.renderers.html(children)).result).replace(re, " "))
-    
+
     if (i === c2.length - 1) {
       obj.body = obj.body.join(" ")
       items.push(obj)

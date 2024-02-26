@@ -5,7 +5,6 @@ import { getEntry } from 'astro:content'
 // self
 import Search from "@components/search.tsx"
 import Layout from "@layouts/layout.astro"
-import { marketplace } from "@libs/constants.js"
 
 const entry = await getEntry('pages', 'faq-fr')
 
@@ -22,13 +21,12 @@ export async function getStaticPaths() {
   ]
 }
 
-
 const { Content, headings } = await entry.render()
 ---
 
 <Layout url="/faq/" title={`Skoolie à vendre - ${headings[0].text}`}>
   <div class="prose mx-auto">
     <Search client:load lang="fr" />
-    <Content marketplace={marketplace} />
+    <Content />
   </div>
 </Layout>
