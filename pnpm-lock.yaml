@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astrojs/markdoc':
-    specifier: ^0.9.0
-    version: 0.9.0(astro@4.4.10)
+    specifier: ^0.9.1
+    version: 0.9.1(astro@4.4.10)
   '@astrojs/sitemap':
     specifier: ^3.1.1
     version: 3.1.1
@@ -128,8 +128,8 @@ packages:
     transitivePeerDependencies:
       - typescript
 
-  /@astrojs/markdoc@0.9.0(astro@4.4.10):
-    resolution: {integrity: sha512-nqB/4jESJ/7703hULrb4wDFN7w8zQpkyzNgLh6hCKAhoM88ofJMmGxn946haBW2BRL0OsN3INNCuo1XxsJKrQg==}
+  /@astrojs/markdoc@0.9.1(astro@4.4.10):
+    resolution: {integrity: sha512-NYv6dy471Yyvyj85e7KeyC6K9iQwtKd2AxPypx4IvDamnVGn/S4wT2i57HSifxLUsLdRdaHIeoj7bV2YRmZNwA==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
