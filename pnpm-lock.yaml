@@ -24,8 +24,8 @@ dependencies:
     specifier: ^1.6.0
     version: 1.6.0
   '@tailwindcss/typography':
-    specifier: ^0.5.11
-    version: 0.5.11(tailwindcss@3.4.3)
+    specifier: ^0.5.12
+    version: 0.5.12(tailwindcss@3.4.3)
   astro:
     specifier: ^4.5.12
     version: 4.5.12(typescript@5.4.3)
@@ -1321,8 +1321,8 @@ packages:
       escape-string-regexp: 5.0.0
     dev: false
 
-  /@tailwindcss/typography@0.5.11(tailwindcss@3.4.3):
-    resolution: {integrity: sha512-ahOULqBQGCdSqL3vMNjH1R5cU2gxTh059fJIKF2enHXE8c/s3yKGDSKZ1+4poCr7BZRREJS8n5cCFmwsW4Ok3A==}
+  /@tailwindcss/typography@0.5.12(tailwindcss@3.4.3):
+    resolution: {integrity: sha512-CNwpBpconcP7ppxmuq3qvaCxiRWnbhANpY/ruH4L5qs2GCiVDJXde/pjj2HWPV1+Q4G9+V/etrwUYopdcjAlyg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
