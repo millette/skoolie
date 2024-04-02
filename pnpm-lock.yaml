@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astrojs/markdoc':
-    specifier: ^0.9.3
-    version: 0.9.3(astro@4.5.13)
+    specifier: ^0.9.4
+    version: 0.9.4(astro@4.5.13)
   '@astrojs/sitemap':
     specifier: ^3.1.2
     version: 3.1.2
@@ -132,13 +132,14 @@ packages:
     transitivePeerDependencies:
       - typescript
 
-  /@astrojs/markdoc@0.9.3(astro@4.5.13):
-    resolution: {integrity: sha512-NbF51JS0vaHGjWc68OPIYZh5khPOEkGsK0bfYd7njtCyG0wZPCQBFYTCxox4zWL29VFuPHYR/q56RA18JUBUHQ==}
+  /@astrojs/markdoc@0.9.4(astro@4.5.13):
+    resolution: {integrity: sha512-kxzAF1WLO7fvUem8XK68zpjIENbNmGVtcnEr9M46UuaD8gmgTkvHvokq9RCWLah+hpIiE+M96pBLU4cPzby1uA==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
     dependencies:
       '@astrojs/internal-helpers': 0.4.0
+      '@astrojs/markdown-remark': 5.0.0
       '@astrojs/prism': 3.0.0
       '@markdoc/markdoc': 0.3.5
       astro: 4.5.13(typescript@5.4.3)
@@ -151,6 +152,7 @@ packages:
     transitivePeerDependencies:
       - '@types/react'
       - react
+      - supports-color
     dev: false
 
   /@astrojs/markdown-remark@5.0.0:
