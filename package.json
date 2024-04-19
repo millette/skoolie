@@ -3,6 +3,12 @@
   "private": true,
   "type": "module",
   "version": "4.0.0",
+  "engines": {
+    "node": ">=18.18.2",
+    "npm": ">=10.2.1",
+    "pnpm": ">=9.0.3"
+  },
+  "packageManager": "pnpm@9.0.3",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -22,7 +28,7 @@
     "@markdoc/markdoc": "^0.4.0",
     "@sindresorhus/transliterate": "^1.6.0",
     "@tailwindcss/typography": "^0.5.12",
-    "astro": "^4.6.2",
+    "astro": "^4.6.3",
     "astro-seo": "^0.8.3",
     "daisyui": "^4.10.2",
     "github-slugger": "^2.0.0",
