@@ -83,26 +83,11 @@ packages:
     peerDependencies:
       typescript: ^5.0.0
 
-  '@astrojs/compiler@2.7.1':
-    resolution: {integrity: sha512-/POejAYuj8WEw7ZI0J8JBvevjfp9jQ9Wmu/Bg52RiNwGXkMV7JnYpsenVfHvvf1G7R5sXHGKlTcxlQWhoUTiGQ==}
-
   '@astrojs/compiler@2.8.0':
     resolution: {integrity: sha512-yrpD1WRGqsJwANaDIdtHo+YVjvIOFAjC83lu5qENIgrafwZcJgSXDuwVMXOgok4tFzpeKLsFQ6c3FoUdloLWBQ==}
 
   '@astrojs/internal-helpers@0.4.0':
     resolution: {integrity: sha512-6B13lz5n6BrbTqCTwhXjJXuR1sqiX/H6rTxzlXx+lN1NnV4jgnq/KJldCQaUWJzPL5SiWahQyinxAbxQtwgPHA==}
-
-  '@astrojs/language-server@2.8.4':
-    resolution: {integrity: sha512-sJH5vGTBkhgA8+hdhzX78UUp4cFz4Mt7xkEkevD188OS5bDMkaue6hK+dtXWM47mnrXFveXA2u38K7S+5+IRjA==}
-    hasBin: true
-    peerDependencies:
-      prettier: ^3.0.0
-      prettier-plugin-astro: '>=0.11.0'
-    peerDependenciesMeta:
-      prettier:
-        optional: true
-      prettier-plugin-astro:
-        optional: true
 
   '@astrojs/language-server@2.9.0':
     resolution: {integrity: sha512-Q3wtoDh3RRfjYNfE5c7GPncAmZ6RMo3AQQCHBExtH5G4UiXYSxg4mPmSBdq+97yIXZWlN63W5V77OxUReAwQYA==}
@@ -655,9 +640,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@shikijs/core@1.3.0':
-    resolution: {integrity: sha512-7fedsBfuILDTBmrYZNFI8B6ATTxhQAasUHllHmjvSZPnoq4bULWoTpHwmuQvZ8Aq03/tAa2IGo6RXqWtHdWaCA==}
-
   '@shikijs/core@1.5.0':
     resolution: {integrity: sha512-tdYjQu+jnvlPbJg4OjgCQ16zAfHlLk+RzA9o025aeaIyUww6W/Vd9TQ2t+gdZgK1fox29/L2yyqXLU6ErzYA0w==}
 
@@ -694,14 +676,14 @@ packages:
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
 
-  '@types/linkify-it@3.0.5':
-    resolution: {integrity: sha512-yg6E+u0/+Zjva+buc3EIb+29XEg4wltq7cSmd4Uc2EE/1nUVmxyzpX6gUXD0V8jIrG0r7YeOGVIbYRkxeooCtw==}
+  '@types/linkify-it@5.0.0':
+    resolution: {integrity: sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==}
 
   '@types/lodash-es@4.17.12':
     resolution: {integrity: sha512-0NgftHUcV4v34VhXm8QBSftKVXtbkBG3ViCjs6+eJ5a6y6Mi/jiFGPc1sC7QK+9BFhWrURE3EOggmWaSxL9OzQ==}
 
-  '@types/lodash@4.17.0':
-    resolution: {integrity: sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==}
+  '@types/lodash@4.17.1':
+    resolution: {integrity: sha512-X+2qazGS3jxLAIz5JDXDzglAF3KpijdhFxlf/V1+hEsOUc+HnWi81L/uv/EvGuV90WY+7mPGFCUDGfQC3Gj95Q==}
 
   '@types/markdown-it@12.2.3':
     resolution: {integrity: sha512-GKMHFfv3458yYy+v/N8gjufHO6MSZKCOXpZc5GXIWWy8uldwfmPn98vp81gZ5f9SVw8YYBctgfJ22a2d7AOMeQ==}
@@ -709,8 +691,8 @@ packages:
   '@types/mdast@4.0.3':
     resolution: {integrity: sha512-LsjtqsyF+d2/yFOYaN22dHZI1Cpwkrj+g06G8+qtUKlhovPW89YhqSnfKtMbkgmEtYpH2gydRNULd6y8mciAFg==}
 
-  '@types/mdurl@1.0.5':
-    resolution: {integrity: sha512-6L6VymKTzYSrEf4Nev4Xa1LCHKrlTlYCBMTlQKFuddo1CvQcE52I0mwfOJayueUC7MJuXOeHTcIU683lzd0cUA==}
+  '@types/mdurl@2.0.0':
+    resolution: {integrity: sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==}
 
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
@@ -736,48 +718,25 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@volar/kit@2.1.6':
-    resolution: {integrity: sha512-dSuXChDGM0nSG/0fxqlNfadjpAeeo1P1SJPBQ+pDf8H1XrqeJq5gIhxRTEbiS+dyNIG69ATq1CArkbCif+oxJw==}
-    peerDependencies:
-      typescript: '*'
-
   '@volar/kit@2.2.1':
     resolution: {integrity: sha512-Ga1uqGfNATdJd0nlpRxFcJoew6xqJwkATvsPiAMvinmfmmJzkGLdVLZl8aNnaDq2TBId/+5daPbwBMAzdu1Sjw==}
     peerDependencies:
       typescript: '*'
 
-  '@volar/language-core@2.1.6':
-    resolution: {integrity: sha512-pAlMCGX/HatBSiDFMdMyqUshkbwWbLxpN/RL7HCQDOo2gYBE+uS+nanosLc1qR6pTQ/U8q00xt8bdrrAFPSC0A==}
-
   '@volar/language-core@2.2.1':
     resolution: {integrity: sha512-iHJAZKcYldZgyS8gx6DfIZApViVBeqbf6iPhqoZpG5A6F4zsZiFldKfwaKaBA3/wnOTWE2i8VUbXywI1WywCPg==}
-
-  '@volar/language-server@2.1.6':
-    resolution: {integrity: sha512-0w+FV8ro37hVb3qE4ONo3VbS5kEQXv4H/D2xCePyY5dRw6XnbJAPFNKvoxI9mxHTPonvIG1si5rN9MSGSKtgZQ==}
 
   '@volar/language-server@2.2.1':
     resolution: {integrity: sha512-29j2owXGUd9nk9+vuRbasoRp5XcRQSbzHUwBUh9Yhf9zkctTZZJDT+Q1wjBKI+5XohR7UVQCBEvmLp4L+WirwA==}
 
-  '@volar/language-service@2.1.6':
-    resolution: {integrity: sha512-1OpbbPQ6wUIumwMP5r45y8utVEmvq1n6BC8JHqGKsuFr9RGFIldDBlvA/xuO3MDKhjmmPGPHKb54kg1/YN78ow==}
-
   '@volar/language-service@2.2.1':
     resolution: {integrity: sha512-Zt0xELrxTJ+Aag44qkXSFRRIPh2XrhRTYaxUmZNY6QIIu5wWfroySK4LZaA6g7WhloGTrATstk3OxPS0RSlbRw==}
-
-  '@volar/snapshot-document@2.1.6':
-    resolution: {integrity: sha512-YNYk1sCOrGg7VHbZM+1It97q0GWhFxdqIwnxSNFoL0X1LuSRXoCT2DRb/aa1J6aBpPMbKqSFUWHGQEAFUnc4Zw==}
 
   '@volar/snapshot-document@2.2.1':
     resolution: {integrity: sha512-ISq74JwzdPcjw7TjZZ9VdOYdgwPoX/X3Jus3emD4ftG59v0gomIp11yz7Ds65rUi/coss/uTPse+onXR+64rpg==}
 
-  '@volar/source-map@2.1.6':
-    resolution: {integrity: sha512-TeyH8pHHonRCHYI91J7fWUoxi0zWV8whZTVRlsWHSYfjm58Blalkf9LrZ+pj6OiverPTmrHRkBsG17ScQyWECw==}
-
   '@volar/source-map@2.2.1':
     resolution: {integrity: sha512-w1Bgpguhbp7YTr7VUFu6gb4iAZjeEPsOX4zpgiuvlldbzvIWDWy4t0jVifsIsxZ99HAu+c3swiME7wt+GeNqhA==}
-
-  '@volar/typescript@2.1.6':
-    resolution: {integrity: sha512-JgPGhORHqXuyC3r6skPmPHIZj4LoMmGlYErFTuPNBq9Nhc9VTv7ctHY7A3jMN3ngKEfRrfnUcwXHztvdSQqNfw==}
 
   '@volar/typescript@2.2.1':
     resolution: {integrity: sha512-Z/tqluR7Hz5/5dCqQp7wo9C/6tSv/IYl+tTzgzUt2NjTq95bKSsuO4E+V06D0c+3aP9x5S9jggLqw451hpnc6Q==}
@@ -906,8 +865,8 @@ packages:
     resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
     engines: {node: '>=14.16'}
 
-  caniuse-lite@1.0.30001614:
-    resolution: {integrity: sha512-jmZQ1VpmlRwHgdP1/uiKzgiAuGOfLEJsYFP4+GBou/QQ4U6IOJCB4NP1c+1p9RGLpwObcT94jA5/uO+F1vBbog==}
+  caniuse-lite@1.0.30001616:
+    resolution: {integrity: sha512-RHVYKov7IcdNjVHJFNY/78RdG4oGVjbayxv8u5IO74Wv7Hlq4PnJE6mo/OjFijjVFNy5ijnCt6H3IIo4t+wfEw==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -1081,8 +1040,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  electron-to-chromium@1.4.751:
-    resolution: {integrity: sha512-2DEPi++qa89SMGRhufWTiLmzqyuGmNF3SK4+PQetW1JKiZdEpF4XQonJXJCzyuYSA6mauiMhbyVhqYAP45Hvfw==}
+  electron-to-chromium@1.4.759:
+    resolution: {integrity: sha512-qZJc+zsuI+/5UjOSFnpkJBwwLMH1AZgyKqJ7LUNnRsB7v/cDjMu9DvXgp9kH6PTTZxjnPXGp2Uhurw+2Ll4Hjg==}
 
   emmet@2.4.7:
     resolution: {integrity: sha512-O5O5QNqtdlnQM2bmKHtJgyChcrFMgQuulI+WdiOw2NArzprUqqxUW6bgYtKvzKgrsYpuLWalOkdhNP+1jluhCA==}
@@ -1249,8 +1208,8 @@ packages:
   hast-util-parse-selector@4.0.0:
     resolution: {integrity: sha512-wkQCkSYoOGCRKERFWcxMVMOcYE2K1AaNLU8DXS9arxnLOUEWbOXKXiJUNzEpqZ3JOKpnha3jkFrumEjVliDe7A==}
 
-  hast-util-raw@9.0.2:
-    resolution: {integrity: sha512-PldBy71wO9Uq1kyaMch9AHIghtQvIwxBUkv823pKmkTM3oV1JxtsTNYdevMxvUHqcnOAuO65JKU2+0NOxc2ksA==}
+  hast-util-raw@9.0.3:
+    resolution: {integrity: sha512-ICWvVOF2fq4+7CMmtCPD5CM4QKjPbHpPotE6+8tDooV0ZuyJVUzHsrNX+O5NaRbieTf0F7FfeBOMAwi6Td0+yQ==}
 
   hast-util-to-html@9.0.1:
     resolution: {integrity: sha512-hZOofyZANbyWo+9RP75xIDV/gq+OUKx+T46IlwERnKmfpwp81XBFbT9mi26ws+SJchA4RVUQwIBJpqEOBhMzEQ==}
@@ -1460,10 +1419,6 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lru-cache@6.0.0:
-    resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
-    engines: {node: '>=10'}
-
   magic-string@0.30.10:
     resolution: {integrity: sha512-iIRwTIf0QKV3UAnYK4PU8uiEc4SRh5jX0mwpIwETPpHdhVM4f53RSwS/vXvN1JhGX+Cs7B8qIq3d6AH49O5fAQ==}
 
@@ -1620,8 +1575,8 @@ packages:
     resolution: {integrity: sha512-KqWh+VchfxcMNRAJjj2tnsSJdNbHsVgnkBhTNrW7AjVo6OvLtxw8zfT9oLw1JSohlFzJ8jCoTgaoXvJ+kHt6fw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
-  minipass@7.0.4:
-    resolution: {integrity: sha512-jYofLM5Dam9279rdkWzqHozUo4ybjdZmCsDHePy5V/PbBcVMiSZR97gmAy45aqi8CK1lG2ECd356FU86avfwUQ==}
+  minipass@7.1.0:
+    resolution: {integrity: sha512-oGZRv2OT1lO2UF1zUcwdTb3wqUwI0kBGTgt/T7OdSj6M6N5m3o5uPf0AIW6lVxGGoiWUR7e2AwTE+xiwK8WQig==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   mrmime@2.0.0:
@@ -1933,11 +1888,6 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.6.0:
-    resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.6.1:
     resolution: {integrity: sha512-f/vbBsu+fOiYt+lmwZV0rVwJScl46HppnOA1ZvIuBWKOTlllpyJ3bfVax76/OrhCH38dyxoDIA8K7uB963IYgA==}
     engines: {node: '>=10'}
@@ -1964,9 +1914,6 @@ packages:
   shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
-
-  shiki@1.3.0:
-    resolution: {integrity: sha512-9aNdQy/etMXctnPzsje1h1XIGm9YfRcSksKOGqZWXA/qP9G18/8fpz5Bjpma8bOgz3tqIpjERAd6/lLjFyzoww==}
 
   shiki@1.5.0:
     resolution: {integrity: sha512-AMax9zrUW8u8bnvNhnmAD9mHzk244mWCDBZm+zh4Ir3lzncF/sGUcVd5gpy0IlWvOKBUUJ8uu/BFpusGJ/PdVw==}
@@ -2189,8 +2136,8 @@ packages:
   unist-util-visit@5.0.0:
     resolution: {integrity: sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==}
 
-  update-browserslist-db@1.0.13:
-    resolution: {integrity: sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==}
+  update-browserslist-db@1.0.15:
+    resolution: {integrity: sha512-K9HWH62x3/EalU1U6sjSZiylm9C8tgq2mSvshZpqc7QE69RaA2qjhkW2HlNA0tFpEbtyFz7HTqbSdN4MSwUodA==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -2262,26 +2209,10 @@ packages:
       vite:
         optional: true
 
-  volar-service-css@0.0.34:
-    resolution: {integrity: sha512-C7ua0j80ZD7bsgALAz/cA1bykPehoIa5n+3+Ccr+YLpj0fypqw9iLUmGLX11CqzqNCO2XFGe/1eXB/c+SWrF/g==}
-    peerDependencies:
-      '@volar/language-service': ~2.1.0
-    peerDependenciesMeta:
-      '@volar/language-service':
-        optional: true
-
   volar-service-css@0.0.43:
     resolution: {integrity: sha512-rg2gTXhswq6Wz8euZgCRS68+7EPH+3R7SeTqYfAAtHKoU0rS1bwdxP1CWHezyxnHrLMiXEypCgJJWcMTay3W7g==}
     peerDependencies:
       '@volar/language-service': ~2.2.0
-    peerDependenciesMeta:
-      '@volar/language-service':
-        optional: true
-
-  volar-service-emmet@0.0.34:
-    resolution: {integrity: sha512-ubQvMCmHPp8Ic82LMPkgrp9ot+u2p/RDd0RyT0EykRkZpWsagHUF5HWkVheLfiMyx2rFuWx/+7qZPOgypx6h6g==}
-    peerDependencies:
-      '@volar/language-service': ~2.1.0
     peerDependenciesMeta:
       '@volar/language-service':
         optional: true
@@ -2294,31 +2225,12 @@ packages:
       '@volar/language-service':
         optional: true
 
-  volar-service-html@0.0.34:
-    resolution: {integrity: sha512-kMEneea1tQbiRcyKavqdrSVt8zV06t+0/3pGkjO3gV6sikXTNShIDkdtB4Tq9vE2cQdM50TuS7utVV7iysUxHw==}
-    peerDependencies:
-      '@volar/language-service': ~2.1.0
-    peerDependenciesMeta:
-      '@volar/language-service':
-        optional: true
-
   volar-service-html@0.0.43:
     resolution: {integrity: sha512-Z/S7SCkHmpoR708WTQLCE3k+hfT16xjMfq9Htv7Y3yJeykah1jZO8oZX3433OPFfbS/ZFbGa2VlAIgDTVRU5Pg==}
     peerDependencies:
       '@volar/language-service': ~2.2.0
     peerDependenciesMeta:
       '@volar/language-service':
-        optional: true
-
-  volar-service-prettier@0.0.34:
-    resolution: {integrity: sha512-BNfJ8FwfPi1Wm/JkuzNjraOLdtKieGksNT/bDyquygVawv1QUzO2HB1hiMKfZGdcSFG5ZL9R0j7bBfRTfXA2gg==}
-    peerDependencies:
-      '@volar/language-service': ~2.1.0
-      prettier: ^2.2 || ^3.0
-    peerDependenciesMeta:
-      '@volar/language-service':
-        optional: true
-      prettier:
         optional: true
 
   volar-service-prettier@0.0.43:
@@ -2332,26 +2244,10 @@ packages:
       prettier:
         optional: true
 
-  volar-service-typescript-twoslash-queries@0.0.34:
-    resolution: {integrity: sha512-XAY2YtWKUp6ht89gxt3L5Dr46LU45d/VlBkj1KXUwNlinpoWiGN4Nm3B6DRF3VoBThAnQgm4c7WD0S+5yTzh+w==}
-    peerDependencies:
-      '@volar/language-service': ~2.1.0
-    peerDependenciesMeta:
-      '@volar/language-service':
-        optional: true
-
   volar-service-typescript-twoslash-queries@0.0.43:
     resolution: {integrity: sha512-FUqgvK2a6YxNO0P+zmY5syVatD8I7+qEA+mj1lotqQxwtY0Gh3UDCCqTVapX1E4VxF/pvNac7eVOBkCUVVZC5w==}
     peerDependencies:
       '@volar/language-service': ~2.2.0
-    peerDependenciesMeta:
-      '@volar/language-service':
-        optional: true
-
-  volar-service-typescript@0.0.34:
-    resolution: {integrity: sha512-NbAry0w8ZXFgGsflvMwmPDCzgJGx3C+eYxFEbldaumkpTAJiywECWiUbPIOfmEHgpOllUKSnhwtLlWFK4YnfQg==}
-    peerDependencies:
-      '@volar/language-service': ~2.1.0
     peerDependenciesMeta:
       '@volar/language-service':
         optional: true
@@ -2435,9 +2331,6 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  yallist@4.0.0:
-    resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
-
   yaml@2.4.2:
     resolution: {integrity: sha512-B3VqDZ+JAg1nZpaEmWtTXUlBneoGx6CPM9b0TENK6aoSu5t73dItudwdgmi6tHlIZZId4dZ9skcAQ2UbcyAeVA==}
     engines: {node: '>= 14'}
@@ -2464,9 +2357,6 @@ packages:
     peerDependencies:
       zod: ^3.23.3
 
-  zod@3.23.5:
-    resolution: {integrity: sha512-fkwiq0VIQTksNNA131rDOsVJcns0pfVUjHzLrNBiF/O/Xxb5lQyEXkhZWcJ7npWsYlvs+h0jFWXXy4X46Em1JA==}
-
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
@@ -2484,7 +2374,7 @@ snapshots:
 
   '@astrojs/check@0.5.10(typescript@5.4.5)':
     dependencies:
-      '@astrojs/language-server': 2.8.4(typescript@5.4.5)
+      '@astrojs/language-server': 2.9.0(typescript@5.4.5)
       chokidar: 3.6.0
       fast-glob: 3.3.2
       kleur: 4.1.5
@@ -2506,32 +2396,9 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/compiler@2.7.1': {}
-
   '@astrojs/compiler@2.8.0': {}
 
   '@astrojs/internal-helpers@0.4.0': {}
-
-  '@astrojs/language-server@2.8.4(typescript@5.4.5)':
-    dependencies:
-      '@astrojs/compiler': 2.7.1
-      '@jridgewell/sourcemap-codec': 1.4.15
-      '@volar/kit': 2.1.6(typescript@5.4.5)
-      '@volar/language-core': 2.1.6
-      '@volar/language-server': 2.1.6
-      '@volar/language-service': 2.1.6
-      '@volar/typescript': 2.1.6
-      fast-glob: 3.3.2
-      volar-service-css: 0.0.34(@volar/language-service@2.1.6)
-      volar-service-emmet: 0.0.34(@volar/language-service@2.1.6)
-      volar-service-html: 0.0.34(@volar/language-service@2.1.6)
-      volar-service-prettier: 0.0.34(@volar/language-service@2.1.6)
-      volar-service-typescript: 0.0.34(@volar/language-service@2.1.6)
-      volar-service-typescript-twoslash-queries: 0.0.34(@volar/language-service@2.1.6)
-      vscode-html-languageservice: 5.2.0
-      vscode-uri: 3.0.8
-    transitivePeerDependencies:
-      - typescript
 
   '@astrojs/language-server@2.9.0(typescript@5.4.5)':
     dependencies:
@@ -2566,7 +2433,7 @@ snapshots:
       gray-matter: 4.0.3
       htmlparser2: 9.1.0
       kleur: 4.1.5
-      zod: 3.23.5
+      zod: 3.23.8
     transitivePeerDependencies:
       - '@types/react'
       - react
@@ -2586,7 +2453,7 @@ snapshots:
       remark-parse: 11.0.0
       remark-rehype: 11.1.0
       remark-smartypants: 2.1.0
-      shiki: 1.3.0
+      shiki: 1.5.0
       unified: 11.0.4
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
@@ -2603,7 +2470,7 @@ snapshots:
     dependencies:
       sitemap: 7.1.1
       stream-replace-string: 2.0.0
-      zod: 3.23.5
+      zod: 3.23.8
 
   '@astrojs/solid-js@4.1.0(solid-js@1.8.17)(vite@5.2.11(@types/node@20.12.11))':
     dependencies:
@@ -3045,8 +2912,6 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.17.2':
     optional: true
 
-  '@shikijs/core@1.3.0': {}
-
   '@shikijs/core@1.5.0': {}
 
   '@sindresorhus/transliterate@1.6.0':
@@ -3094,26 +2959,26 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.2
 
-  '@types/linkify-it@3.0.5':
+  '@types/linkify-it@5.0.0':
     optional: true
 
   '@types/lodash-es@4.17.12':
     dependencies:
-      '@types/lodash': 4.17.0
+      '@types/lodash': 4.17.1
 
-  '@types/lodash@4.17.0': {}
+  '@types/lodash@4.17.1': {}
 
   '@types/markdown-it@12.2.3':
     dependencies:
-      '@types/linkify-it': 3.0.5
-      '@types/mdurl': 1.0.5
+      '@types/linkify-it': 5.0.0
+      '@types/mdurl': 2.0.0
     optional: true
 
   '@types/mdast@4.0.3':
     dependencies:
       '@types/unist': 3.0.2
 
-  '@types/mdurl@1.0.5':
+  '@types/mdurl@2.0.0':
     optional: true
 
   '@types/ms@0.7.34': {}
@@ -3139,15 +3004,6 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@volar/kit@2.1.6(typescript@5.4.5)':
-    dependencies:
-      '@volar/language-service': 2.1.6
-      '@volar/typescript': 2.1.6
-      typesafe-path: 0.2.2
-      typescript: 5.4.5
-      vscode-languageserver-textdocument: 1.0.11
-      vscode-uri: 3.0.8
-
   '@volar/kit@2.2.1(typescript@5.4.5)':
     dependencies:
       '@volar/language-service': 2.2.1
@@ -3157,27 +3013,9 @@ snapshots:
       vscode-languageserver-textdocument: 1.0.11
       vscode-uri: 3.0.8
 
-  '@volar/language-core@2.1.6':
-    dependencies:
-      '@volar/source-map': 2.1.6
-
   '@volar/language-core@2.2.1':
     dependencies:
       '@volar/source-map': 2.2.1
-
-  '@volar/language-server@2.1.6':
-    dependencies:
-      '@volar/language-core': 2.1.6
-      '@volar/language-service': 2.1.6
-      '@volar/snapshot-document': 2.1.6
-      '@volar/typescript': 2.1.6
-      '@vscode/l10n': 0.0.16
-      path-browserify: 1.0.1
-      request-light: 0.7.0
-      vscode-languageserver: 9.0.1
-      vscode-languageserver-protocol: 3.17.5
-      vscode-languageserver-textdocument: 1.0.11
-      vscode-uri: 3.0.8
 
   '@volar/language-server@2.2.1':
     dependencies:
@@ -3193,13 +3031,6 @@ snapshots:
       vscode-languageserver-textdocument: 1.0.11
       vscode-uri: 3.0.8
 
-  '@volar/language-service@2.1.6':
-    dependencies:
-      '@volar/language-core': 2.1.6
-      vscode-languageserver-protocol: 3.17.5
-      vscode-languageserver-textdocument: 1.0.11
-      vscode-uri: 3.0.8
-
   '@volar/language-service@2.2.1':
     dependencies:
       '@volar/language-core': 2.2.1
@@ -3207,28 +3038,14 @@ snapshots:
       vscode-languageserver-textdocument: 1.0.11
       vscode-uri: 3.0.8
 
-  '@volar/snapshot-document@2.1.6':
-    dependencies:
-      vscode-languageserver-protocol: 3.17.5
-      vscode-languageserver-textdocument: 1.0.11
-
   '@volar/snapshot-document@2.2.1':
     dependencies:
       vscode-languageserver-protocol: 3.17.5
       vscode-languageserver-textdocument: 1.0.11
 
-  '@volar/source-map@2.1.6':
-    dependencies:
-      muggle-string: 0.4.1
-
   '@volar/source-map@2.2.1':
     dependencies:
       muggle-string: 0.4.1
-
-  '@volar/typescript@2.1.6':
-    dependencies:
-      '@volar/language-core': 2.1.6
-      path-browserify: 1.0.1
 
   '@volar/typescript@2.2.1':
     dependencies:
@@ -3377,7 +3194,7 @@ snapshots:
   autoprefixer@10.4.19(postcss@8.4.38):
     dependencies:
       browserslist: 4.23.0
-      caniuse-lite: 1.0.30001614
+      caniuse-lite: 1.0.30001616
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -3431,16 +3248,16 @@ snapshots:
 
   browserslist@4.23.0:
     dependencies:
-      caniuse-lite: 1.0.30001614
-      electron-to-chromium: 1.4.751
+      caniuse-lite: 1.0.30001616
+      electron-to-chromium: 1.4.759
       node-releases: 2.0.14
-      update-browserslist-db: 1.0.13(browserslist@4.23.0)
+      update-browserslist-db: 1.0.15(browserslist@4.23.0)
 
   camelcase-css@2.0.1: {}
 
   camelcase@7.0.1: {}
 
-  caniuse-lite@1.0.30001614: {}
+  caniuse-lite@1.0.30001616: {}
 
   ccount@2.0.1: {}
 
@@ -3600,7 +3417,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.4.751: {}
+  electron-to-chromium@1.4.759: {}
 
   emmet@2.4.7:
     dependencies:
@@ -3745,7 +3562,7 @@ snapshots:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
       minimatch: 9.0.4
-      minipass: 7.0.4
+      minipass: 7.1.0
       path-scurry: 1.10.2
 
   globals@11.12.0: {}
@@ -3793,7 +3610,7 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
 
-  hast-util-raw@9.0.2:
+  hast-util-raw@9.0.3:
     dependencies:
       '@types/hast': 3.0.4
       '@types/unist': 3.0.2
@@ -3815,7 +3632,7 @@ snapshots:
       '@types/unist': 3.0.2
       ccount: 2.0.1
       comma-separated-tokens: 2.0.3
-      hast-util-raw: 9.0.2
+      hast-util-raw: 9.0.3
       hast-util-whitespace: 3.0.0
       html-void-elements: 3.0.0
       mdast-util-to-hast: 13.1.0
@@ -3994,10 +3811,6 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
-
-  lru-cache@6.0.0:
-    dependencies:
-      yallist: 4.0.0
 
   magic-string@0.30.10:
     dependencies:
@@ -4336,7 +4149,7 @@ snapshots:
     dependencies:
       brace-expansion: 2.0.1
 
-  minipass@7.0.4: {}
+  minipass@7.1.0: {}
 
   mrmime@2.0.0: {}
 
@@ -4442,7 +4255,7 @@ snapshots:
   path-scurry@1.10.2:
     dependencies:
       lru-cache: 10.2.2
-      minipass: 7.0.4
+      minipass: 7.1.0
 
   path-to-regexp@6.2.2: {}
 
@@ -4556,7 +4369,7 @@ snapshots:
   rehype-raw@7.0.0:
     dependencies:
       '@types/hast': 3.0.4
-      hast-util-raw: 9.0.2
+      hast-util-raw: 9.0.3
       vfile: 6.0.1
 
   rehype-stringify@10.0.0:
@@ -4693,10 +4506,6 @@ snapshots:
 
   semver@6.3.1: {}
 
-  semver@7.6.0:
-    dependencies:
-      lru-cache: 6.0.0
-
   semver@7.6.1: {}
 
   seroval-plugins@1.0.5(seroval@1.0.5):
@@ -4709,7 +4518,7 @@ snapshots:
     dependencies:
       color: 4.2.3
       detect-libc: 2.0.3
-      semver: 7.6.0
+      semver: 7.6.1
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.33.3
       '@img/sharp-darwin-x64': 0.33.3
@@ -4736,10 +4545,6 @@ snapshots:
       shebang-regex: 3.0.0
 
   shebang-regex@3.0.0: {}
-
-  shiki@1.3.0:
-    dependencies:
-      '@shikijs/core': 1.3.0
 
   shiki@1.5.0:
     dependencies:
@@ -4919,7 +4724,7 @@ snapshots:
 
   typescript-auto-import-cache@0.3.2:
     dependencies:
-      semver: 7.6.0
+      semver: 7.6.1
 
   typescript@5.4.5: {}
 
@@ -5009,7 +4814,7 @@ snapshots:
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
 
-  update-browserslist-db@1.0.13(browserslist@4.23.0):
+  update-browserslist-db@1.0.15(browserslist@4.23.0):
     dependencies:
       browserslist: 4.23.0
       escalade: 3.1.2
@@ -5073,14 +4878,6 @@ snapshots:
     optionalDependencies:
       vite: 5.2.11(@types/node@20.12.11)
 
-  volar-service-css@0.0.34(@volar/language-service@2.1.6):
-    dependencies:
-      vscode-css-languageservice: 6.2.14
-      vscode-languageserver-textdocument: 1.0.11
-      vscode-uri: 3.0.8
-    optionalDependencies:
-      '@volar/language-service': 2.1.6
-
   volar-service-css@0.0.43(@volar/language-service@2.2.1):
     dependencies:
       vscode-css-languageservice: 6.2.14
@@ -5089,27 +4886,12 @@ snapshots:
     optionalDependencies:
       '@volar/language-service': 2.2.1
 
-  volar-service-emmet@0.0.34(@volar/language-service@2.1.6):
-    dependencies:
-      '@vscode/emmet-helper': 2.9.3
-      vscode-html-languageservice: 5.2.0
-    optionalDependencies:
-      '@volar/language-service': 2.1.6
-
   volar-service-emmet@0.0.43(@volar/language-service@2.2.1):
     dependencies:
       '@vscode/emmet-helper': 2.9.3
       vscode-html-languageservice: '@johnsoncodehk/vscode-html-languageservice@5.2.0-34a5462'
     optionalDependencies:
       '@volar/language-service': 2.2.1
-
-  volar-service-html@0.0.34(@volar/language-service@2.1.6):
-    dependencies:
-      vscode-html-languageservice: 5.2.0
-      vscode-languageserver-textdocument: 1.0.11
-      vscode-uri: 3.0.8
-    optionalDependencies:
-      '@volar/language-service': 2.1.6
 
   volar-service-html@0.0.43(@volar/language-service@2.2.1):
     dependencies:
@@ -5119,35 +4901,15 @@ snapshots:
     optionalDependencies:
       '@volar/language-service': 2.2.1
 
-  volar-service-prettier@0.0.34(@volar/language-service@2.1.6):
-    dependencies:
-      vscode-uri: 3.0.8
-    optionalDependencies:
-      '@volar/language-service': 2.1.6
-
   volar-service-prettier@0.0.43(@volar/language-service@2.2.1):
     dependencies:
       vscode-uri: 3.0.8
     optionalDependencies:
       '@volar/language-service': 2.2.1
 
-  volar-service-typescript-twoslash-queries@0.0.34(@volar/language-service@2.1.6):
-    optionalDependencies:
-      '@volar/language-service': 2.1.6
-
   volar-service-typescript-twoslash-queries@0.0.43(@volar/language-service@2.2.1):
     optionalDependencies:
       '@volar/language-service': 2.2.1
-
-  volar-service-typescript@0.0.34(@volar/language-service@2.1.6):
-    dependencies:
-      path-browserify: 1.0.1
-      semver: 7.6.0
-      typescript-auto-import-cache: 0.3.2
-      vscode-languageserver-textdocument: 1.0.11
-      vscode-nls: 5.2.0
-    optionalDependencies:
-      '@volar/language-service': 2.1.6
 
   volar-service-typescript@0.0.43(@volar/language-service@2.2.1):
     dependencies:
@@ -5232,8 +4994,6 @@ snapshots:
 
   yallist@3.1.1: {}
 
-  yallist@4.0.0: {}
-
   yaml@2.4.2: {}
 
   yargs-parser@21.1.1: {}
@@ -5255,8 +5015,6 @@ snapshots:
   zod-to-json-schema@3.23.0(zod@3.23.8):
     dependencies:
       zod: 3.23.8
-
-  zod@3.23.5: {}
 
   zod@3.23.8: {}
 
