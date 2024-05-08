@@ -30,7 +30,7 @@
     "@tailwindcss/typography": "^0.5.13",
     "astro": "^4.7.1",
     "astro-seo": "^0.8.3",
-    "daisyui": "^4.10.2",
+    "daisyui": "^4.11.1",
     "github-slugger": "^2.0.0",
     "sharp": "^0.33.3",
     "solid-js": "^1.8.17",
