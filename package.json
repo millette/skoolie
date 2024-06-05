@@ -29,7 +29,7 @@
     "@sindresorhus/transliterate": "^1.6.0",
     "@tailwindcss/typography": "^0.5.13",
     "astro": "^4.9.3",
-    "astro-seo": "^0.8.3",
+    "astro-seo": "^0.8.4",
     "daisyui": "^4.12.2",
     "github-slugger": "^2.0.0",
     "sharp": "^0.33.4",
