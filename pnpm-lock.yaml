@@ -15,8 +15,8 @@ importers:
         specifier: ^3.1.5
         version: 3.1.5
       '@astrojs/solid-js':
-        specifier: ^4.2.0
-        version: 4.2.0(solid-js@1.8.17)(vite@5.2.12(@types/node@20.14.2))
+        specifier: ^4.3.0
+        version: 4.3.0(solid-js@1.8.17)(vite@5.2.12(@types/node@20.14.2))
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.10.0(@types/node@20.14.2)(typescript@5.4.5))(tailwindcss@3.4.3)
@@ -117,8 +117,8 @@ packages:
   '@astrojs/sitemap@3.1.5':
     resolution: {integrity: sha512-GLdzJ01387Uzb8RKYpsYLlg/GzoPnGbmDeQNkarSE11i2+l9Qp8Nj/WoTEy9nkTS25fxxy0kxDfJmreeVleCqg==}
 
-  '@astrojs/solid-js@4.2.0':
-    resolution: {integrity: sha512-DxlwdHCotk8ENYTFmqt7ZGm45Lwg4jR/kUyy7ZfR8bfKNB4RVQd4bItJid3nMm0MD6WVnF4UjUdf8L0ew9Jr9Q==}
+  '@astrojs/solid-js@4.3.0':
+    resolution: {integrity: sha512-oOtyNkwsRHHuFJ8kc2MUVVQTSZf3eO0evWQyITKBuCVl0JUUaFYkhnVKHwoc/gntQ1oYk79oAKWWexW9xXojAg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
     peerDependencies:
       solid-devtools: ^0.30.1
@@ -2631,7 +2631,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/solid-js@4.2.0(solid-js@1.8.17)(vite@5.2.12(@types/node@20.14.2))':
+  '@astrojs/solid-js@4.3.0(solid-js@1.8.17)(vite@5.2.12(@types/node@20.14.2))':
     dependencies:
       solid-js: 1.8.17
       vite-plugin-solid: 2.10.2(solid-js@1.8.17)(vite@5.2.12(@types/node@20.14.2))
