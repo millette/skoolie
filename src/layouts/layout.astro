@@ -7,9 +7,9 @@ import { SEO } from "astro-seo"
 import { ViewTransitions } from 'astro:transitions'
 
 // self
+import OP from "!components/openpanel.astro"
 import Footer from "@components/footer.astro"
 import FooterEn from "@components/footer-en.astro"
-
 import Header from "@components/header.astro"
 import HeaderEn from "@components/header-en.astro"
 
@@ -163,5 +163,6 @@ if (alternateUrl && hreflang)
 		  <slot />
 		</div>
 		{lang === 'fr' ? <Footer /> : <FooterEn />}
+		<OP />
 	</body>
 </html>
