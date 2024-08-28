@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@astrojs/markdoc':
-        specifier: ^0.11.3
-        version: 0.11.3(astro@4.14.6(@types/node@22.5.1)(rollup@4.21.1)(typescript@5.5.4))
+        specifier: ^0.11.4
+        version: 0.11.4(astro@4.14.6(@types/node@22.5.1)(rollup@4.21.1)(typescript@5.5.4))
       '@astrojs/sitemap':
         specifier: ^3.1.6
         version: 3.1.6
@@ -101,8 +101,8 @@ packages:
       prettier-plugin-astro:
         optional: true
 
-  '@astrojs/markdoc@0.11.3':
-    resolution: {integrity: sha512-t9pxu//dBTkaTNC3VMMSoh3WO9bTRXHD3gMuMdEaj5s/Qy7kZUtgoBdvZ6d+QHwXurRtL16lA9n0RXT0FJhGqw==}
+  '@astrojs/markdoc@0.11.4':
+    resolution: {integrity: sha512-6s60ZpsODsEvws57TEpUPXq5Uo+eSHsTVUUAQbbkSL+nQHIy1tR7tI6vbbO2y/VOLj214kATAc18/iRjFp2TbQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
@@ -1879,8 +1879,8 @@ packages:
   retext-latin@4.0.0:
     resolution: {integrity: sha512-hv9woG7Fy0M9IlRQloq/N6atV82NxLGveq+3H2WOi79dtIYWN8OaxogDm77f8YnVXJL2VD3bbqowu5E3EMhBYA==}
 
-  retext-smartypants@6.1.0:
-    resolution: {integrity: sha512-LDPXg95346bqFZnDMHo0S7Rq5p64+B+N8Vz733+wPMDtwb9rCOs9LIdIEhrUOU+TAywX9St+ocQWJt8wrzivcQ==}
+  retext-smartypants@6.1.1:
+    resolution: {integrity: sha512-onsHf34i/GzgElJgtT1K2V+31yEhWs7NJboKNxXJcmVMMPxLpgxZ9iADoMdydd6j/bHic5F/aNq0CGqElEtu2g==}
 
   retext-stringify@4.0.0:
     resolution: {integrity: sha512-rtfN/0o8kL1e+78+uxPTqu1Klt0yPzKuQ2BfWwwfgIUSayyzxpM1PJzkKt4V8803uB9qSy32MvI7Xep9khTpiA==}
@@ -2464,7 +2464,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@astrojs/markdoc@0.11.3(astro@4.14.6(@types/node@22.5.1)(rollup@4.21.1)(typescript@5.5.4))':
+  '@astrojs/markdoc@0.11.4(astro@4.14.6(@types/node@22.5.1)(rollup@4.21.1)(typescript@5.5.4))':
     dependencies:
       '@astrojs/internal-helpers': 0.4.1
       '@astrojs/markdown-remark': 5.2.0
@@ -2475,8 +2475,6 @@ snapshots:
       github-slugger: 2.0.0
       gray-matter: 4.0.3
       htmlparser2: 9.1.0
-      kleur: 4.1.5
-      zod: 3.23.8
     transitivePeerDependencies:
       - '@types/react'
       - react
@@ -2501,7 +2499,7 @@ snapshots:
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
       unist-util-visit-parents: 6.0.1
-      vfile: 6.0.2
+      vfile: 6.0.3
     transitivePeerDependencies:
       - supports-color
 
@@ -4303,7 +4301,7 @@ snapshots:
       nlcst-to-string: 4.0.0
       unist-util-modify-children: 4.0.0
       unist-util-visit-children: 3.0.0
-      vfile: 6.0.2
+      vfile: 6.0.3
 
   parse5@7.1.2:
     dependencies:
@@ -4439,7 +4437,7 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
       hast-util-raw: 9.0.4
-      vfile: 6.0.2
+      vfile: 6.0.3
 
   rehype-stringify@10.0.0:
     dependencies:
@@ -4480,12 +4478,12 @@ snapshots:
       '@types/mdast': 4.0.4
       mdast-util-to-hast: 13.2.0
       unified: 11.0.5
-      vfile: 6.0.2
+      vfile: 6.0.3
 
   remark-smartypants@3.0.2:
     dependencies:
       retext: 9.0.0
-      retext-smartypants: 6.1.0
+      retext-smartypants: 6.1.1
       unified: 11.0.5
       unist-util-visit: 5.0.0
 
@@ -4520,7 +4518,7 @@ snapshots:
       parse-latin: 7.0.0
       unified: 11.0.5
 
-  retext-smartypants@6.1.0:
+  retext-smartypants@6.1.1:
     dependencies:
       '@types/nlcst': 2.0.3
       nlcst-to-string: 4.0.0
