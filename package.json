@@ -2,7 +2,7 @@
   "name": "skoolie-bus-rv",
   "private": true,
   "type": "module",
-  "version": "4.1.3",
+  "version": "4.1.4",
   "engines": {
     "node": ">=20.17.0",
     "npm": ">=10.8.2",
