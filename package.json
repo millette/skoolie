@@ -13,11 +13,11 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "check": "astro check",
+    "check:astro": "astro check",
     "check:tsc": "tsc --noEmit",
-    "check:all": "astro check && tsc --noEmit",
+    "check": "pnpm check:astro && pnpm check:tsc",
     "preview": "astro preview",
-    "go": "astro build && astro preview",
+    "go": "pnpm build && pnpm preview",
     "astro": "astro"
   },
   "dependencies": {
